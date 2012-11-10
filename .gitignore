@@ -19,3 +19,7 @@ eclipse-workspace/pololu3pi/Debug/pololu3pi.elf
 eclipse-workspace/pololu3pi/Debug/pololu3pi.lss
 
 eclipse-workspace/pololu3pi/Debug/pololu3pi.map
+
+*.o
+
+eclipse-workspace/pololu3pi/Debug/main.o
