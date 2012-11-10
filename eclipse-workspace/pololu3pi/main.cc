@@ -45,6 +45,7 @@ int main (){
 	while (1) {
 		//set_analog_mode(MODE_8_BIT);
 		//int max = read_trimpot();
+		//
 		max = ajustavelmax(max);
 		wait_for_button_release(BUTTON_B);
 
