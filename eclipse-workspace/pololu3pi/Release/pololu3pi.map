@@ -1,0 +1,1082 @@
+Archive member included because of file (symbol)
+
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                              ./main.o (clear)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                              ./main.o (_ZN15OrangutanMotors9setSpeedsEii)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                              ./main.o (wait_for_button_press)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                              ./main.o (delay_ms)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+                              ./main.o (__divmodhi4)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o) (__udivmodsi4)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o) (__prologue_saves__)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o) (__epilogue_restores__)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o (exit)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+                              ./main.o (__do_copy_data)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o) (__do_clear_bss)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o) (__udivmodhi4)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o) (malloc)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o) (fdevopen)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o) (__iob)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o) (calloc)
+/usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(memset.o)
+                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o) (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+__brkval            0x2               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__flp               0x2               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__iob               0x6               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+LOAD ./main.o
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libm.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a
+LOAD /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x156a
+ *(.vectors)
+ .vectors       0x00000000       0x68 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000068                . = ALIGN (0x2)
+                0x00000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000068        0x0 linker stubs
+ *(.trampolines*)
+                0x00000068                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000068                __ctors_start = .
+ *(.ctors)
+                0x00000068                __ctors_end = .
+                0x00000068                __dtors_start = .
+ *(.dtors)
+                0x00000068                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000068        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+                0x00000068                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000068        0xc /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000074       0x16 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+                0x00000074                __do_copy_data
+ .init4         0x0000008a       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+                0x0000008a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000009a        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+ *(.init9)
+ *(.text)
+ .text          0x000000a2        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+                0x000000a2                __vector_20
+                0x000000a2                __vector_1
+                0x000000a2                __vector_24
+                0x000000a2                __vector_12
+                0x000000a2                __bad_interrupt
+                0x000000a2                __vector_6
+                0x000000a2                __vector_3
+                0x000000a2                __vector_23
+                0x000000a2                __vector_25
+                0x000000a2                __vector_11
+                0x000000a2                __vector_13
+                0x000000a2                __vector_17
+                0x000000a2                __vector_19
+                0x000000a2                __vector_7
+                0x000000a2                __vector_5
+                0x000000a2                __vector_4
+                0x000000a2                __vector_2
+                0x000000a2                __vector_21
+                0x000000a2                __vector_15
+                0x000000a2                __vector_8
+                0x000000a2                __vector_14
+                0x000000a2                __vector_10
+                0x000000a2                __vector_16
+                0x000000a2                __vector_18
+                0x000000a2                __vector_22
+ .text          0x000000a6      0x112 ./main.o
+                0x000000b2                _Z8adelantei
+                0x000000ba                _Z13giroIzquierdai
+                0x000000e4                _Z9detenersev
+                0x000000f2                _Z12ajustavelmaxi
+                0x00000158                main
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+ .text          0x000001b8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(memset.o)
+                0x000001b8                . = ALIGN (0x2)
+ *(.text.*)
+ .text.void_getchar
+                0x000001b8        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000001b8                void_getchar
+ .text.delayMicroseconds.clone.0
+                0x000001be       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .text._ZN12OrangutanLCDC2Ev
+                0x000001d2        0x2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000001d2                _ZN12OrangutanLCDC2Ev
+                0x000001d2                _ZN12OrangutanLCDC1Ev
+ .text._ZN12OrangutanLCD8busyWaitEv
+                0x000001d4       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000001d4                _ZN12OrangutanLCD8busyWaitEv
+ .text._ZN12OrangutanLCD8sendDataEh
+                0x00000234       0x4a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000234                _ZN12OrangutanLCD8sendDataEh
+ .text._ZN12OrangutanLCD4sendEhhh
+                0x0000027e       0x60 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000027e                _ZN12OrangutanLCD4sendEhhh
+ .text._ZN12OrangutanLCD8send_cmdEh
+                0x000002de        0xa /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000002de                _ZN12OrangutanLCD8send_cmdEh
+ .text._ZN12OrangutanLCD9send_dataEh
+                0x000002e8        0xa /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000002e8                _ZN12OrangutanLCD9send_dataEh
+ .text._ZN12OrangutanLCD19loadCustomCharacterEPKch
+                0x000002f2       0x4a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000002f2                _ZN12OrangutanLCD19loadCustomCharacterEPKch
+ .text.lcd_load_custom_character
+                0x0000033c        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000033c                lcd_load_custom_character
+ .text.print_character
+                0x00000342        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000342                print_character
+ .text._ZN12OrangutanLCD13send_4bit_cmdEh
+                0x00000348        0xa /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000348                _ZN12OrangutanLCD13send_4bit_cmdEh
+ .text._ZN12OrangutanLCD5init2Ev
+                0x00000352       0x7e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000352                _ZN12OrangutanLCD5init2Ev
+ .text._ZN12OrangutanLCD4initEv
+                0x000003d0       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000003d0                _ZN12OrangutanLCD4initEv
+ .text._ZN12OrangutanLCD5clearEv
+                0x000003e4       0x58 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000003e4                _ZN12OrangutanLCD5clearEv
+ .text.clear    0x0000043c        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000043c                clear
+ .text._ZN12OrangutanLCD5printEc
+                0x00000442        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000442                _ZN12OrangutanLCD5printEc
+ .text._ZN12OrangutanLCD5printEPKc
+                0x00000448       0x1a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000448                _ZN12OrangutanLCD5printEPKc
+ .text.print    0x00000462        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000462                print
+ .text._ZN12OrangutanLCD21printFromProgramSpaceEPKc
+                0x00000468       0x1c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000468                _ZN12OrangutanLCD21printFromProgramSpaceEPKc
+ .text.print_from_program_space
+                0x00000484        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000484                print_from_program_space
+ .text._ZN12OrangutanLCD7printInEPKc
+                0x0000048a        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000048a                _ZN12OrangutanLCD7printInEPKc
+ .text._ZN12OrangutanLCD5printEm
+                0x00000490       0x7c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000490                _ZN12OrangutanLCD5printEm
+ .text._ZN12OrangutanLCD5printEl
+                0x0000050c       0x38 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000050c                _ZN12OrangutanLCD5printEl
+ .text.print_long
+                0x00000544        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000544                print_long
+ .text.print_unsigned_long
+                0x0000054a        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000054a                print_unsigned_long
+ .text._ZN12OrangutanLCD14printHexNibbleEh
+                0x00000550       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000550                _ZN12OrangutanLCD14printHexNibbleEh
+ .text._ZN12OrangutanLCD8printHexEh
+                0x00000560       0x18 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000560                _ZN12OrangutanLCD8printHexEh
+ .text._ZN12OrangutanLCD8printHexEj
+                0x00000578       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000578                _ZN12OrangutanLCD8printHexEj
+ .text.print_hex
+                0x0000058c        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000058c                print_hex
+ .text.print_hex_byte
+                0x00000592        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000592                print_hex_byte
+ .text._ZN12OrangutanLCD11printBinaryEh
+                0x00000598       0x2c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000598                _ZN12OrangutanLCD11printBinaryEh
+ .text.print_binary
+                0x000005c4        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000005c4                print_binary
+ .text._ZN12OrangutanLCD6gotoXYEhh
+                0x000005ca       0x40 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000005ca                _ZN12OrangutanLCD6gotoXYEhh
+ .text.lcd_goto_xy
+                0x0000060a        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000060a                lcd_goto_xy
+ .text.lcd_putchar
+                0x00000610      0x224 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000610                lcd_putchar
+ .text._ZN12OrangutanLCD10showCursorEh
+                0x00000834       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000834                _ZN12OrangutanLCD10showCursorEh
+ .text.lcd_show_cursor
+                0x00000844        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000844                lcd_show_cursor
+ .text._ZN12OrangutanLCD10hideCursorEv
+                0x0000084a        0x8 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000084a                _ZN12OrangutanLCD10hideCursorEv
+ .text.lcd_hide_cursor
+                0x00000852        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000852                lcd_hide_cursor
+ .text._ZN12OrangutanLCD10moveCursorEhh
+                0x00000858       0x24 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000858                _ZN12OrangutanLCD10moveCursorEhh
+ .text.lcd_move_cursor
+                0x0000087c        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000087c                lcd_move_cursor
+ .text._ZN12OrangutanLCD6scrollEhhj
+                0x00000882       0x34 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000882                _ZN12OrangutanLCD6scrollEhhj
+ .text.lcd_scroll
+                0x000008b6        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000008b6                lcd_scroll
+ .text._ZN12OrangutanLCD10initPrintfEv
+                0x000008bc       0x8a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x000008bc                _ZN12OrangutanLCD10initPrintfEv
+ .text.lcd_init_printf
+                0x00000946        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00000946                lcd_init_printf
+ .text.lcd_init_printf_with_dimensions
+                0x0000094c        0xe /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000094c                lcd_init_printf_with_dimensions
+ .text._ZN12OrangutanLCD10initPrintfEhh
+                0x0000095a        0xe /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x0000095a                _ZN12OrangutanLCD10initPrintfEhh
+ .text._ZN16OrangutanDigital14getIORegistersEP8IOStructh
+                0x00000968       0x96 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000968                _ZN16OrangutanDigital14getIORegistersEP8IOStructh
+ .text._ZN16OrangutanDigital16setDataDirectionEP8IOStructh
+                0x000009fe       0x1e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x000009fe                _ZN16OrangutanDigital16setDataDirectionEP8IOStructh
+ .text._ZN16OrangutanDigital14setOutputValueEP8IOStructh
+                0x00000a1c       0x2e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000a1c                _ZN16OrangutanDigital14setOutputValueEP8IOStructh
+ .text._ZN16OrangutanDigital9setOutputEhh
+                0x00000a4a       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000a4a                _ZN16OrangutanDigital9setOutputEhh
+ .text._ZN15OrangutanMotorsC2Ev
+                0x00000a80        0x2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000a80                _ZN15OrangutanMotorsC2Ev
+                0x00000a80                _ZN15OrangutanMotorsC1Ev
+ .text._ZN15OrangutanMotors5init2Ev
+                0x00000a82       0x50 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000a82                _ZN15OrangutanMotors5init2Ev
+ .text._ZN15OrangutanMotors4initEv
+                0x00000ad2       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000ad2                _ZN15OrangutanMotors4initEv
+ .text._ZN15OrangutanMotors10setM1SpeedEi
+                0x00000ae6       0x3a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000ae6                _ZN15OrangutanMotors10setM1SpeedEi
+ .text.set_m1_speed
+                0x00000b20        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000b20                set_m1_speed
+ .text._ZN15OrangutanMotors10setM2SpeedEi
+                0x00000b26       0x42 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000b26                _ZN15OrangutanMotors10setM2SpeedEi
+ .text.set_m2_speed
+                0x00000b68        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000b68                set_m2_speed
+ .text._ZN15OrangutanMotors9setSpeedsEii
+                0x00000b6e       0x16 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000b6e                _ZN15OrangutanMotors9setSpeedsEii
+ .text.set_motors
+                0x00000b84        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00000b84                set_motors
+ .text._ZN20OrangutanPushbuttonsC2Ev
+                0x00000b8a        0x2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000b8a                _ZN20OrangutanPushbuttonsC1Ev
+                0x00000b8a                _ZN20OrangutanPushbuttonsC2Ev
+ .text._ZN20OrangutanPushbuttons5init2Ev
+                0x00000b8c       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000b8c                _ZN20OrangutanPushbuttons5init2Ev
+ .text._ZN20OrangutanPushbuttons4initEv
+                0x00000bac       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000bac                _ZN20OrangutanPushbuttons4initEv
+ .text._ZN20OrangutanPushbuttons12waitForPressEh
+                0x00000bc0       0x4a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000bc0                _ZN20OrangutanPushbuttons12waitForPressEh
+ .text.wait_for_button_press
+                0x00000c0a        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000c0a                wait_for_button_press
+ .text._ZN20OrangutanPushbuttons14waitForReleaseEh
+                0x00000c10       0x24 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000c10                _ZN20OrangutanPushbuttons14waitForReleaseEh
+ .text.wait_for_button_release
+                0x00000c34        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000c34                wait_for_button_release
+ .text._ZN20OrangutanPushbuttons13waitForButtonEh
+                0x00000c3a       0x12 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000c3a                _ZN20OrangutanPushbuttons13waitForButtonEh
+ .text.wait_for_button
+                0x00000c4c        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000c4c                wait_for_button
+ .text._ZN20OrangutanPushbuttons9isPressedEh
+                0x00000c52       0x22 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000c52                _ZN20OrangutanPushbuttons9isPressedEh
+ .text.button_is_pressed
+                0x00000c74        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000c74                button_is_pressed
+ .text._ZN20OrangutanPushbuttons23getSingleDebouncedPressEh
+                0x00000c7a      0x146 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000c7a                _ZN20OrangutanPushbuttons23getSingleDebouncedPressEh
+ .text.get_single_debounced_button_press
+                0x00000dc0        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000dc0                get_single_debounced_button_press
+ .text._ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh
+                0x00000dc6      0x144 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000dc6                _ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh
+ .text.get_single_debounced_button_release
+                0x00000f0a        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x00000f0a                get_single_debounced_button_release
+ .text._ZN13OrangutanTime17delayMicrosecondsEj
+                0x00000f10       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x00000f10                _ZN13OrangutanTime17delayMicrosecondsEj
+ .text.__vector_9
+                0x00000f20       0x74 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x00000f20                __vector_9
+ .text.ticks_to_microseconds
+                0x00000f94       0x2a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x00000f94                ticks_to_microseconds
+ .text._ZN13OrangutanTime19ticksToMicrosecondsEm
+                0x00000fbe       0x2a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x00000fbe                _ZN13OrangutanTime19ticksToMicrosecondsEm
+ .text._ZN13OrangutanTime17delayMillisecondsEj
+                0x00000fe8       0x1c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x00000fe8                _ZN13OrangutanTime17delayMillisecondsEj
+ .text.delay_ms
+                0x00001004        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x00001004                delay_ms
+ .text._ZN13OrangutanTime5init2Ev
+                0x0000100a       0x30 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x0000100a                _ZN13OrangutanTime5init2Ev
+ .text._ZN13OrangutanTime4initEv
+                0x0000103a       0x14 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x0000103a                _ZN13OrangutanTime4initEv
+ .text._ZN13OrangutanTime2msEv
+                0x0000104e       0x2a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x0000104e                _ZN13OrangutanTime2msEv
+ .text.get_ms   0x00001078        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x00001078                get_ms
+ .text._ZN13OrangutanTime5ticksEv
+                0x0000107e       0x68 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x0000107e                _ZN13OrangutanTime5ticksEv
+ .text.get_ticks
+                0x000010e6        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x000010e6                get_ticks
+ .text._ZN13OrangutanTime5resetEv
+                0x000010ec       0x2e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x000010ec                _ZN13OrangutanTime5resetEv
+ .text.time_reset
+                0x0000111a        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x0000111a                time_reset
+ .text.libgcc   0x00001120       0x26 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+                0x00001120                __divmodhi4
+                0x00001120                _div
+ .text.libgcc   0x00001146       0x44 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+                0x00001146                __udivmodsi4
+ .text.libgcc   0x0000118a       0x38 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+                0x0000118a                __prologue_saves__
+ .text.libgcc   0x000011c2       0x36 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+                0x000011c2                __epilogue_restores__
+ .text.libgcc   0x000011f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x000011f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x000011f8        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000011f8       0x28 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+                0x000011f8                __udivmodhi4
+ .text.avr-libc
+                0x00001220      0x266 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                0x00001220                malloc
+                0x00001354                free
+ .text.avr-libc
+                0x00001486       0x96 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+                0x00001486                fdevopen
+ .text.avr-libc
+                0x0000151c       0x3c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+                0x0000151c                calloc
+ .text.avr-libc
+                0x00001558        0xe /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(memset.o)
+                0x00001558                memset
+                0x00001566                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001566        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+                0x00001566                exit
+                0x00001566                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001566        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000156a                _etext = .
+
+.data           0x00800100       0x20 load address 0x0000156a
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+ .data          0x00800100       0x18 ./main.o
+ .data          0x00800118        0x2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00800118                numLCDRows
+                0x00800119                numLCDCols
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0080011a        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x0080011a        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                0x0080011a                __malloc_margin
+                0x0080011c                __malloc_heap_start
+                0x0080011e                __malloc_heap_end
+ .data          0x00800120        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .data          0x00800120        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+ .data          0x00800120        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+ .data          0x00800120        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(memset.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800120                . = ALIGN (0x2)
+                0x00800120                _edata = .
+                0x00800120                PROVIDE (__data_end, .)
+
+.bss            0x00800120       0x2c
+                0x00800120                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800120        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+ .bss           0x00800120        0x0 ./main.o
+ .bss           0x00800120        0x9 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                0x00800120                printf_chars
+                0x00800122                row
+                0x00800123                col
+                0x00800124                lcdTimeout
+                0x00800128                _ZZN12OrangutanLCD4initEvE11initialized
+ .bss           0x00800129        0x1 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                0x00800129                _ZZN15OrangutanMotors4initEvE11initialized
+ .bss           0x0080012a        0xd /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                0x0080012a                _ZZN20OrangutanPushbuttons4initEvE11initialized
+ .bss           0x00800137        0xb /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                0x00800137                tickCount
+                0x0080013b                msCounter
+                0x0080013f                us_over_10
+                0x00800141                _ZZN13OrangutanTime4initEvE11initialized
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+ .bss           0x00800142        0x0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(memset.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00800142        0x4 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                0x00800142                __brkval
+                0x00800144                __flp
+ COMMON         0x00800146        0x6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+                0x00800146                __iob
+                0x0080014c                PROVIDE (__bss_end, .)
+                0x0000156a                __data_load_start = LOADADDR (.data)
+                0x0000158a                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080014c        0x0
+                0x0080014c                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080014c                PROVIDE (__noinit_end, .)
+                0x0080014c                _end = .
+                0x0080014c                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000      0x738
+ *(.stab)
+ .stab          0x00000000      0x6cc /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+ .stab          0x000006cc       0x6c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(memset.o)
+                                 0x78 (size before relaxing)
+
+.stabstr        0x00000000       0xdc
+ *(.stabstr)
+ .stabstr       0x00000000       0xdc /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x398
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x198 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_aranges
+                0x00000198       0x80 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_aranges
+                0x00000218       0x90 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_aranges
+                0x000002a8       0x88 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_aranges
+                0x00000330       0x28 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_aranges
+                0x00000358       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_aranges
+                0x00000378       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+
+.debug_pubnames
+                0x00000000      0xb33
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x4ea /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_pubnames
+                0x000004ea      0x19d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_pubnames
+                0x00000687      0x240 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_pubnames
+                0x000008c7      0x195 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_pubnames
+                0x00000a5c       0x7f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_pubnames
+                0x00000adb       0x1f /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_pubnames
+                0x00000afa       0x1c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+ .debug_pubnames
+                0x00000b16       0x1d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+
+.debug_info     0x00000000     0x23b9
+ *(.debug_info)
+ .debug_info    0x00000000     0x1071 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_info    0x00001071      0x462 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_info    0x000014d3      0x573 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_info    0x00001a46      0x34c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_info    0x00001d92      0x29a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_info    0x0000202c      0x1a5 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_info    0x000021d1      0x153 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+ .debug_info    0x00002324       0x95 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0xc83
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x3c0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_abbrev  0x000003c0      0x1e2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_abbrev  0x000005a2      0x1ca /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_abbrev  0x0000076c      0x1e6 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_abbrev  0x00000952       0xf7 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_abbrev  0x00000a49       0xfc /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_abbrev  0x00000b45       0xc7 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+ .debug_abbrev  0x00000c0c       0x77 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+
+.debug_line     0x00000000     0x2052
+ *(.debug_line)
+ .debug_line    0x00000000      0xdc3 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_line    0x00000dc3      0x46a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_line    0x0000122d      0x52b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_line    0x00001758      0x31c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_line    0x00001a74      0x348 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_line    0x00001dbc      0x12c /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_line    0x00001ee8       0x83 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+ .debug_line    0x00001f6b       0xe7 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+
+.debug_frame    0x00000000      0x650
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x310 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_frame   0x00000310       0xe0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_frame   0x000003f0      0x100 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_frame   0x000004f0       0xf0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_frame   0x000005e0       0x30 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_frame   0x00000610       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_frame   0x00000630       0x20 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+
+.debug_str      0x00000000     0x1174
+ *(.debug_str)
+ .debug_str     0x00000000      0x7d2 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                0x83f (size before relaxing)
+ .debug_str     0x000007d2      0x2d0 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                                0x3a2 (size before relaxing)
+ .debug_str     0x00000aa2      0x339 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                                0x445 (size before relaxing)
+ .debug_str     0x00000ddb      0x20a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                                0x307 (size before relaxing)
+ .debug_str     0x00000fe5      0x11d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                                0x192 (size before relaxing)
+ .debug_str     0x00001102       0x2e /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+                                0x128 (size before relaxing)
+ .debug_str     0x00001130       0x1a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+                                0x11a (size before relaxing)
+ .debug_str     0x0000114a       0x2a /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+                                 0xb4 (size before relaxing)
+
+.debug_loc      0x00000000     0x134f
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x8ff /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_loc     0x000008ff      0x250 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_loc     0x00000b4f      0x219 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_loc     0x00000d68       0xee /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_loc     0x00000e56      0x429 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_loc     0x0000127f       0x78 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_loc     0x000012f7       0x58 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(pololu3pi.elf elf32-avr)
+LOAD linker stubs
+
+.debug_pubtypes
+                0x00000000      0x186
+ .debug_pubtypes
+                0x00000000       0x47 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_pubtypes
+                0x00000047       0x48 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_pubtypes
+                0x0000008f       0x2b /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_pubtypes
+                0x000000ba       0x24 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_pubtypes
+                0x000000de       0x39 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_pubtypes
+                0x00000117       0x29 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_pubtypes
+                0x00000140       0x29 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+ .debug_pubtypes
+                0x00000169       0x1d /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+
+.debug_ranges   0x00000000      0x328
+ .debug_ranges  0x00000000      0x188 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+ .debug_ranges  0x00000188       0x70 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+ .debug_ranges  0x000001f8       0x80 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+ .debug_ranges  0x00000278       0x78 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ .debug_ranges  0x000002f0       0x18 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+ .debug_ranges  0x00000308       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+ .debug_ranges  0x00000318       0x10 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+
+Cross Reference Table
+
+Symbol                                            File
+OrangutanDigital::getIORegisters(IOStruct*, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanDigital::setDataDirection(IOStruct*, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanDigital::setOutput(unsigned char, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanDigital::setOutputValue(IOStruct*, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanLCD::OrangutanLCD()                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::OrangutanLCD()                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::busyWait()                          /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::clear()                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::gotoXY(unsigned char, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                                  ./main.o
+OrangutanLCD::hideCursor()                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::init()                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::init()::initialized                 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::init2()                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::initPrintf()                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::initPrintf(unsigned char, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::loadCustomCharacter(char const*, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::moveCursor(unsigned char, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::print(char const*)                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                                  ./main.o
+OrangutanLCD::print(char)                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::print(long)                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                                  ./main.o
+OrangutanLCD::print(unsigned long)                /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::printBinary(unsigned char)          /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::printFromProgramSpace(char const*)  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::printHex(unsigned char)             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::printHex(unsigned int)              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::printHexNibble(unsigned char)       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::printIn(char const*)                /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::scroll(unsigned char, unsigned char, unsigned int) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::send(unsigned char, unsigned char, unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::sendData(unsigned char)             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::send_4bit_cmd(unsigned char)        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::send_cmd(unsigned char)             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::send_data(unsigned char)            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanLCD::showCursor(unsigned char)           /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+OrangutanMotors::OrangutanMotors()                /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanMotors::OrangutanMotors()                /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanMotors::init()                           /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanMotors::init()::initialized              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanMotors::init2()                          /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanMotors::setM1Speed(int)                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanMotors::setM2Speed(int)                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+OrangutanMotors::setSpeeds(int, int)              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                                                  ./main.o
+OrangutanPushbuttons::OrangutanPushbuttons()      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::OrangutanPushbuttons()      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::getSingleDebouncedPress(unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::getSingleDebouncedRelease(unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::init()                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::init()::initialized         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::init2()                     /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::isPressed(unsigned char)    /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::waitForButton(unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::waitForPress(unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanPushbuttons::waitForRelease(unsigned char) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+OrangutanTime::delayMicroseconds(unsigned int)    /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+OrangutanTime::delayMilliseconds(unsigned int)    /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+OrangutanTime::init()                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+OrangutanTime::init()::initialized                /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+OrangutanTime::init2()                            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+OrangutanTime::ms()                               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+OrangutanTime::reset()                            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+OrangutanTime::ticks()                            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+OrangutanTime::ticksToMicroseconds(unsigned long) /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+__bad_interrupt                                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__brkval                                          /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__bss_end                                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+__data_start                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+__divmodhi4                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+                                                  ./main.o
+__do_clear_bss                                    /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_clear_bss.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+__do_copy_data                                    /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_copy_data.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                                  ./main.o
+__epilogue_restores__                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_epilogue.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+__flp                                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__heap_end                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__heap_start                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__init                                            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__iob                                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(iob.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+__malloc_heap_end                                 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__malloc_heap_start                               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__malloc_margin                                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+__prologue_saves__                                /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_prologue.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+__stack                                           /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__udivmodhi4                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodhi4.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+__udivmodsi4                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_udivmodsi4.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+__vector_1                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_10                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_11                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_12                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_13                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_14                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_15                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_16                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_17                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_18                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_19                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_2                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_20                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_21                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_22                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_23                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_24                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_25                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_3                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_4                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_5                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_6                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_7                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_8                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_9                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vector_default                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+__vectors                                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+_div                                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_divmodhi4.o)
+_exit                                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+adelante(int)                                     ./main.o
+ajustavelmax(int)                                 ./main.o
+button_is_pressed                                 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                                                  ./main.o
+calloc                                            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+clear                                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                                  ./main.o
+col                                               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+delay_ms                                          /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                                  ./main.o
+detenerse()                                       ./main.o
+exit                                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/avr5/libgcc.a(_exit.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+fdevopen                                          /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(fdevopen.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+free                                              /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+get_ms                                            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+get_single_debounced_button_press                 /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+get_single_debounced_button_release               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+get_ticks                                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+giroIzquierda(int)                                ./main.o
+lcdTimeout                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+lcd_goto_xy                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                                  ./main.o
+lcd_hide_cursor                                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+lcd_init_printf                                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+lcd_init_printf_with_dimensions                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+lcd_load_custom_character                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+lcd_move_cursor                                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+lcd_putchar                                       /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+lcd_scroll                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+lcd_show_cursor                                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+main                                              ./main.o
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/crtm328p.o
+malloc                                            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(malloc.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+memset                                            /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(memset.o)
+                                                  /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/avr5/libc.a(calloc.o)
+msCounter                                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+numLCDCols                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+numLCDRows                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+print                                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+                                                  ./main.o
+print_binary                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+print_character                                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+print_from_program_space                          /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+print_hex                                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+print_hex_byte                                    /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+print_long                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+print_unsigned_long                               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+printf_chars                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+row                                               /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+set_m1_speed                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+set_m2_speed                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+set_motors                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanMotors.o)
+tickCount                                         /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+ticks_to_microseconds                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+time_reset                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+us_over_10                                        /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanTime.o)
+void_getchar                                      /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanLCD.o)
+wait_for_button                                   /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+wait_for_button_press                             /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                                                  ./main.o
+wait_for_button_release                           /usr/local/CrossPack-AVR-20120217/lib/gcc/avr/4.5.1/../../../../avr/lib/libpololu_atmega328p.a(OrangutanPushbuttons.o)
+                                                  ./main.o

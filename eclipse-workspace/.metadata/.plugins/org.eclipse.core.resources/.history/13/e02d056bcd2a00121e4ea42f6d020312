@@ -1,0 +1,20 @@
+/*
+ * main.cc
+ *
+ *  Created on: Nov 9, 2012
+ *      Author: lucho
+ */
+
+#include "pololu/3pi.h";
+
+void adelante (int velmax){
+	set_motors(velmax,velmax);
+}
+
+int main (){
+	while (1) {
+		set_analog_mode(MODE_8_BIT);
+		int max = read_trimpot();
+		adelante(200);
+	}
+}

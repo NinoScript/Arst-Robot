@@ -1,0 +1,4361 @@
+
+pololu3pi.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000020  00800100  00001646  000016da  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001646  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000002c  00800120  00800120  000016fa  2**0
+                  ALLOC
+  3 .stab         00000f6c  00000000  00000000  000016fc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00001000  00000000  00000000  00002668  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000398  00000000  00000000  00003668  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 00000b33  00000000  00000000  00003a00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   000023b9  00000000  00000000  00004533  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 00000c83  00000000  00000000  000068ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00002052  00000000  00000000  0000756f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000650  00000000  00000000  000095c4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00001174  00000000  00000000  00009c14  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    0000134f  00000000  00000000  0000ad88  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_pubtypes 00000186  00000000  00000000  0000c0d7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 00000328  00000000  00000000  0000c25d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+       4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+       8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+       c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      24:	0c 94 fe 07 	jmp	0xffc	; 0xffc <__vector_9>
+      28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      38:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+      64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+      68:	11 24       	eor	r1, r1
+      6a:	1f be       	out	0x3f, r1	; 63
+      6c:	cf ef       	ldi	r28, 0xFF	; 255
+      6e:	d8 e0       	ldi	r29, 0x08	; 8
+      70:	de bf       	out	0x3e, r29	; 62
+      72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+      74:	11 e0       	ldi	r17, 0x01	; 1
+      76:	a0 e0       	ldi	r26, 0x00	; 0
+      78:	b1 e0       	ldi	r27, 0x01	; 1
+      7a:	e6 e4       	ldi	r30, 0x46	; 70
+      7c:	f6 e1       	ldi	r31, 0x16	; 22
+      7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+      80:	05 90       	lpm	r0, Z+
+      82:	0d 92       	st	X+, r0
+      84:	a0 32       	cpi	r26, 0x20	; 32
+      86:	b1 07       	cpc	r27, r17
+      88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+
+0000008a <__do_clear_bss>:
+      8a:	11 e0       	ldi	r17, 0x01	; 1
+      8c:	a0 e2       	ldi	r26, 0x20	; 32
+      8e:	b1 e0       	ldi	r27, 0x01	; 1
+      90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+      92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+      94:	ac 34       	cpi	r26, 0x4C	; 76
+      96:	b1 07       	cpc	r27, r17
+      98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+      9a:	0e 94 11 01 	call	0x222	; 0x222 <main>
+      9e:	0c 94 21 0b 	jmp	0x1642	; 0x1642 <_exit>
+
+000000a2 <__bad_interrupt>:
+      a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <_ZN12OrangutanLCD5printEi>:
+	static void print(long value);
+	static inline void print(unsigned int value)
+	{
+		print((unsigned long)value);
+	};
+	static inline void print(int value)
+      a6:	df 93       	push	r29
+      a8:	cf 93       	push	r28
+      aa:	00 d0       	rcall	.+0      	; 0xac <_ZN12OrangutanLCD5printEi+0x6>
+      ac:	cd b7       	in	r28, 0x3d	; 61
+      ae:	de b7       	in	r29, 0x3e	; 62
+      b0:	9a 83       	std	Y+2, r25	; 0x02
+      b2:	89 83       	std	Y+1, r24	; 0x01
+	{
+		print((long)value);
+      b4:	89 81       	ldd	r24, Y+1	; 0x01
+      b6:	9a 81       	ldd	r25, Y+2	; 0x02
+      b8:	aa 27       	eor	r26, r26
+      ba:	97 fd       	sbrc	r25, 7
+      bc:	a0 95       	com	r26
+      be:	ba 2f       	mov	r27, r26
+      c0:	bc 01       	movw	r22, r24
+      c2:	cd 01       	movw	r24, r26
+      c4:	0e 94 f4 02 	call	0x5e8	; 0x5e8 <_ZN12OrangutanLCD5printEl>
+	};
+      c8:	0f 90       	pop	r0
+      ca:	0f 90       	pop	r0
+      cc:	cf 91       	pop	r28
+      ce:	df 91       	pop	r29
+      d0:	08 95       	ret
+
+000000d2 <_ZL33_pololu_atmel_studio_6_workaroundv>:
+
+#ifndef _POLOLU_ATMEL_STUDIO_6_WORKAROUND
+#define _POLOLU_ATMEL_STUDIO_6_WORKAROUND
+
+static void __attribute__((used)) _pololu_atmel_studio_6_workaround(void)
+{
+      d2:	df 93       	push	r29
+      d4:	cf 93       	push	r28
+      d6:	cd b7       	in	r28, 0x3d	; 61
+      d8:	de b7       	in	r29, 0x3e	; 62
+    static volatile unsigned char w = 1;
+    w++;
+      da:	80 91 17 01 	lds	r24, 0x0117
+      de:	8f 5f       	subi	r24, 0xFF	; 255
+      e0:	80 93 17 01 	sts	0x0117, r24
+}
+      e4:	cf 91       	pop	r28
+      e6:	df 91       	pop	r29
+      e8:	08 95       	ret
+
+000000ea <_Z8adelantei>:
+ */
+
+#include "pololu/3pi.h"
+
+
+void adelante (int velmax){
+      ea:	df 93       	push	r29
+      ec:	cf 93       	push	r28
+      ee:	00 d0       	rcall	.+0      	; 0xf0 <_Z8adelantei+0x6>
+      f0:	cd b7       	in	r28, 0x3d	; 61
+      f2:	de b7       	in	r29, 0x3e	; 62
+      f4:	9a 83       	std	Y+2, r25	; 0x02
+      f6:	89 83       	std	Y+1, r24	; 0x01
+	OrangutanMotors::setSpeeds(velmax,velmax);
+      f8:	89 81       	ldd	r24, Y+1	; 0x01
+      fa:	9a 81       	ldd	r25, Y+2	; 0x02
+      fc:	29 81       	ldd	r18, Y+1	; 0x01
+      fe:	3a 81       	ldd	r19, Y+2	; 0x02
+     100:	b9 01       	movw	r22, r18
+     102:	0e 94 25 06 	call	0xc4a	; 0xc4a <_ZN15OrangutanMotors9setSpeedsEii>
+}
+     106:	0f 90       	pop	r0
+     108:	0f 90       	pop	r0
+     10a:	cf 91       	pop	r28
+     10c:	df 91       	pop	r29
+     10e:	08 95       	ret
+
+00000110 <_Z13giroIzquierdai>:
+
+void giroIzquierda (int velmax){
+     110:	df 93       	push	r29
+     112:	cf 93       	push	r28
+     114:	00 d0       	rcall	.+0      	; 0x116 <_Z13giroIzquierdai+0x6>
+     116:	00 d0       	rcall	.+0      	; 0x118 <_Z13giroIzquierdai+0x8>
+     118:	cd b7       	in	r28, 0x3d	; 61
+     11a:	de b7       	in	r29, 0x3e	; 62
+     11c:	9c 83       	std	Y+4, r25	; 0x04
+     11e:	8b 83       	std	Y+3, r24	; 0x03
+	int tProp = 16000/velmax; //1600 numero sacado de ejemplos de pololu
+     120:	80 e8       	ldi	r24, 0x80	; 128
+     122:	9e e3       	ldi	r25, 0x3E	; 62
+     124:	2b 81       	ldd	r18, Y+3	; 0x03
+     126:	3c 81       	ldd	r19, Y+4	; 0x04
+     128:	b9 01       	movw	r22, r18
+     12a:	0e 94 fe 08 	call	0x11fc	; 0x11fc <__divmodhi4>
+     12e:	9b 01       	movw	r18, r22
+     130:	3a 83       	std	Y+2, r19	; 0x02
+     132:	29 83       	std	Y+1, r18	; 0x01
+							//
+	OrangutanMotors::setSpeeds(-velmax,velmax);
+     134:	8b 81       	ldd	r24, Y+3	; 0x03
+     136:	9c 81       	ldd	r25, Y+4	; 0x04
+     138:	90 95       	com	r25
+     13a:	81 95       	neg	r24
+     13c:	9f 4f       	sbci	r25, 0xFF	; 255
+     13e:	2b 81       	ldd	r18, Y+3	; 0x03
+     140:	3c 81       	ldd	r19, Y+4	; 0x04
+     142:	b9 01       	movw	r22, r18
+     144:	0e 94 25 06 	call	0xc4a	; 0xc4a <_ZN15OrangutanMotors9setSpeedsEii>
+	delay_ms(tProp);
+     148:	89 81       	ldd	r24, Y+1	; 0x01
+     14a:	9a 81       	ldd	r25, Y+2	; 0x02
+     14c:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+}
+     150:	0f 90       	pop	r0
+     152:	0f 90       	pop	r0
+     154:	0f 90       	pop	r0
+     156:	0f 90       	pop	r0
+     158:	cf 91       	pop	r28
+     15a:	df 91       	pop	r29
+     15c:	08 95       	ret
+
+0000015e <_Z9detenersev>:
+
+void detenerse(){
+     15e:	df 93       	push	r29
+     160:	cf 93       	push	r28
+     162:	cd b7       	in	r28, 0x3d	; 61
+     164:	de b7       	in	r29, 0x3e	; 62
+	OrangutanMotors::setSpeeds(0,0);
+     166:	80 e0       	ldi	r24, 0x00	; 0
+     168:	90 e0       	ldi	r25, 0x00	; 0
+     16a:	60 e0       	ldi	r22, 0x00	; 0
+     16c:	70 e0       	ldi	r23, 0x00	; 0
+     16e:	0e 94 25 06 	call	0xc4a	; 0xc4a <_ZN15OrangutanMotors9setSpeedsEii>
+}
+     172:	cf 91       	pop	r28
+     174:	df 91       	pop	r29
+     176:	08 95       	ret
+
+00000178 <_Z12ajustavelmaxi>:
+
+int ajustavelmax(int max){
+     178:	df 93       	push	r29
+     17a:	cf 93       	push	r28
+     17c:	00 d0       	rcall	.+0      	; 0x17e <_Z12ajustavelmaxi+0x6>
+     17e:	cd b7       	in	r28, 0x3d	; 61
+     180:	de b7       	in	r29, 0x3e	; 62
+     182:	9a 83       	std	Y+2, r25	; 0x02
+     184:	89 83       	std	Y+1, r24	; 0x01
+	while(!button_is_pressed(BUTTON_B)){
+     186:	3b c0       	rjmp	.+118    	; 0x1fe <_Z12ajustavelmaxi+0x86>
+		OrangutanLCD::gotoXY(0,0);
+     188:	80 e0       	ldi	r24, 0x00	; 0
+     18a:	60 e0       	ldi	r22, 0x00	; 0
+     18c:	0e 94 53 03 	call	0x6a6	; 0x6a6 <_ZN12OrangutanLCD6gotoXYEhh>
+		OrangutanLCD::print("Vel: ");
+     190:	80 e0       	ldi	r24, 0x00	; 0
+     192:	91 e0       	ldi	r25, 0x01	; 1
+     194:	0e 94 92 02 	call	0x524	; 0x524 <_ZN12OrangutanLCD5printEPKc>
+		OrangutanLCD::print(max);
+     198:	89 81       	ldd	r24, Y+1	; 0x01
+     19a:	9a 81       	ldd	r25, Y+2	; 0x02
+     19c:	0e 94 53 00 	call	0xa6	; 0xa6 <_ZN12OrangutanLCD5printEi>
+		if(button_is_pressed(BUTTON_A)){
+     1a0:	82 e0       	ldi	r24, 0x02	; 2
+     1a2:	0e 94 a8 06 	call	0xd50	; 0xd50 <button_is_pressed>
+     1a6:	98 2f       	mov	r25, r24
+     1a8:	81 e0       	ldi	r24, 0x01	; 1
+     1aa:	99 23       	and	r25, r25
+     1ac:	09 f4       	brne	.+2      	; 0x1b0 <_Z12ajustavelmaxi+0x38>
+     1ae:	80 e0       	ldi	r24, 0x00	; 0
+     1b0:	88 23       	and	r24, r24
+     1b2:	71 f0       	breq	.+28     	; 0x1d0 <_Z12ajustavelmaxi+0x58>
+			max>10? max-=10: max;
+     1b4:	89 81       	ldd	r24, Y+1	; 0x01
+     1b6:	9a 81       	ldd	r25, Y+2	; 0x02
+     1b8:	8b 30       	cpi	r24, 0x0B	; 11
+     1ba:	91 05       	cpc	r25, r1
+     1bc:	2c f0       	brlt	.+10     	; 0x1c8 <_Z12ajustavelmaxi+0x50>
+     1be:	89 81       	ldd	r24, Y+1	; 0x01
+     1c0:	9a 81       	ldd	r25, Y+2	; 0x02
+     1c2:	0a 97       	sbiw	r24, 0x0a	; 10
+     1c4:	9a 83       	std	Y+2, r25	; 0x02
+     1c6:	89 83       	std	Y+1, r24	; 0x01
+			wait_for_button_release(BUTTON_A);
+     1c8:	82 e0       	ldi	r24, 0x02	; 2
+     1ca:	0e 94 88 06 	call	0xd10	; 0xd10 <wait_for_button_release>
+     1ce:	17 c0       	rjmp	.+46     	; 0x1fe <_Z12ajustavelmaxi+0x86>
+		} else if(button_is_pressed(BUTTON_C)){
+     1d0:	80 e2       	ldi	r24, 0x20	; 32
+     1d2:	0e 94 a8 06 	call	0xd50	; 0xd50 <button_is_pressed>
+     1d6:	98 2f       	mov	r25, r24
+     1d8:	81 e0       	ldi	r24, 0x01	; 1
+     1da:	99 23       	and	r25, r25
+     1dc:	09 f4       	brne	.+2      	; 0x1e0 <_Z12ajustavelmaxi+0x68>
+     1de:	80 e0       	ldi	r24, 0x00	; 0
+     1e0:	88 23       	and	r24, r24
+     1e2:	69 f0       	breq	.+26     	; 0x1fe <_Z12ajustavelmaxi+0x86>
+			max<246? max+=10: max;
+     1e4:	89 81       	ldd	r24, Y+1	; 0x01
+     1e6:	9a 81       	ldd	r25, Y+2	; 0x02
+     1e8:	86 3f       	cpi	r24, 0xF6	; 246
+     1ea:	91 05       	cpc	r25, r1
+     1ec:	2c f4       	brge	.+10     	; 0x1f8 <_Z12ajustavelmaxi+0x80>
+     1ee:	89 81       	ldd	r24, Y+1	; 0x01
+     1f0:	9a 81       	ldd	r25, Y+2	; 0x02
+     1f2:	0a 96       	adiw	r24, 0x0a	; 10
+     1f4:	9a 83       	std	Y+2, r25	; 0x02
+     1f6:	89 83       	std	Y+1, r24	; 0x01
+			wait_for_button_release(BUTTON_C);
+     1f8:	80 e2       	ldi	r24, 0x20	; 32
+     1fa:	0e 94 88 06 	call	0xd10	; 0xd10 <wait_for_button_release>
+void detenerse(){
+	OrangutanMotors::setSpeeds(0,0);
+}
+
+int ajustavelmax(int max){
+	while(!button_is_pressed(BUTTON_B)){
+     1fe:	80 e1       	ldi	r24, 0x10	; 16
+     200:	0e 94 a8 06 	call	0xd50	; 0xd50 <button_is_pressed>
+     204:	98 2f       	mov	r25, r24
+     206:	81 e0       	ldi	r24, 0x01	; 1
+     208:	99 23       	and	r25, r25
+     20a:	09 f0       	breq	.+2      	; 0x20e <_Z12ajustavelmaxi+0x96>
+     20c:	80 e0       	ldi	r24, 0x00	; 0
+     20e:	88 23       	and	r24, r24
+     210:	09 f0       	breq	.+2      	; 0x214 <_Z12ajustavelmaxi+0x9c>
+     212:	ba cf       	rjmp	.-140    	; 0x188 <_Z12ajustavelmaxi+0x10>
+		} else if(button_is_pressed(BUTTON_C)){
+			max<246? max+=10: max;
+			wait_for_button_release(BUTTON_C);
+		}
+	}
+	return max;
+     214:	89 81       	ldd	r24, Y+1	; 0x01
+     216:	9a 81       	ldd	r25, Y+2	; 0x02
+}
+     218:	0f 90       	pop	r0
+     21a:	0f 90       	pop	r0
+     21c:	cf 91       	pop	r28
+     21e:	df 91       	pop	r29
+     220:	08 95       	ret
+
+00000222 <main>:
+
+int main (){
+     222:	df 93       	push	r29
+     224:	cf 93       	push	r28
+     226:	00 d0       	rcall	.+0      	; 0x228 <main+0x6>
+     228:	cd b7       	in	r28, 0x3d	; 61
+     22a:	de b7       	in	r29, 0x3e	; 62
+	int max = 125;
+     22c:	8d e7       	ldi	r24, 0x7D	; 125
+     22e:	90 e0       	ldi	r25, 0x00	; 0
+     230:	9a 83       	std	Y+2, r25	; 0x02
+     232:	89 83       	std	Y+1, r24	; 0x01
+	while (1) {
+		//set_analog_mode(MODE_8_BIT);
+		//int max = read_trimpot();
+		max = ajustavelmax(max);
+     234:	89 81       	ldd	r24, Y+1	; 0x01
+     236:	9a 81       	ldd	r25, Y+2	; 0x02
+     238:	0e 94 bc 00 	call	0x178	; 0x178 <_Z12ajustavelmaxi>
+     23c:	9a 83       	std	Y+2, r25	; 0x02
+     23e:	89 83       	std	Y+1, r24	; 0x01
+		wait_for_button_release(BUTTON_B);
+     240:	80 e1       	ldi	r24, 0x10	; 16
+     242:	0e 94 88 06 	call	0xd10	; 0xd10 <wait_for_button_release>
+
+		clear();
+     246:	0e 94 8c 02 	call	0x518	; 0x518 <clear>
+		print("Press B");
+     24a:	86 e0       	ldi	r24, 0x06	; 6
+     24c:	91 e0       	ldi	r25, 0x01	; 1
+     24e:	0e 94 9f 02 	call	0x53e	; 0x53e <print>
+		lcd_goto_xy(0,1);
+     252:	80 e0       	ldi	r24, 0x00	; 0
+     254:	61 e0       	ldi	r22, 0x01	; 1
+     256:	0e 94 73 03 	call	0x6e6	; 0x6e6 <lcd_goto_xy>
+		print("And Wait");
+     25a:	8e e0       	ldi	r24, 0x0E	; 14
+     25c:	91 e0       	ldi	r25, 0x01	; 1
+     25e:	0e 94 9f 02 	call	0x53e	; 0x53e <print>
+		wait_for_button_press(BUTTON_B);
+     262:	80 e1       	ldi	r24, 0x10	; 16
+     264:	0e 94 73 06 	call	0xce6	; 0xce6 <wait_for_button_press>
+		wait_for_button_release(BUTTON_B);
+     268:	80 e1       	ldi	r24, 0x10	; 16
+     26a:	0e 94 88 06 	call	0xd10	; 0xd10 <wait_for_button_release>
+		delay_ms(100);
+     26e:	84 e6       	ldi	r24, 0x64	; 100
+     270:	90 e0       	ldi	r25, 0x00	; 0
+     272:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+
+		adelante(max);
+     276:	89 81       	ldd	r24, Y+1	; 0x01
+     278:	9a 81       	ldd	r25, Y+2	; 0x02
+     27a:	0e 94 75 00 	call	0xea	; 0xea <_Z8adelantei>
+		delay_ms(500);
+     27e:	84 ef       	ldi	r24, 0xF4	; 244
+     280:	91 e0       	ldi	r25, 0x01	; 1
+     282:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+		giroIzquierda(max);
+     286:	89 81       	ldd	r24, Y+1	; 0x01
+     288:	9a 81       	ldd	r25, Y+2	; 0x02
+     28a:	0e 94 88 00 	call	0x110	; 0x110 <_Z13giroIzquierdai>
+
+		detenerse();
+     28e:	0e 94 af 00 	call	0x15e	; 0x15e <_Z9detenersev>
+	return max;
+}
+
+int main (){
+	int max = 125;
+	while (1) {
+     292:	d0 cf       	rjmp	.-96     	; 0x234 <main+0x12>
+
+00000294 <void_getchar>:
+	return c;
+}
+
+extern "C" int void_getchar(FILE *f) {
+	return 0;
+}
+     294:	80 e0       	ldi	r24, 0x00	; 0
+     296:	90 e0       	ldi	r25, 0x00	; 0
+     298:	08 95       	ret
+
+0000029a <delayMicroseconds.clone.0>:
+		    "   pop  r22"     "\n\t"   
+		    "   sbiw %0, 1"   "\n\t"
+		    "   brne 1b"
+		    : "=w" ( microseconds )  
+		    : "0" ( microseconds )
+		    );  
+     29a:	81 e0       	ldi	r24, 0x01	; 1
+     29c:	90 e0       	ldi	r25, 0x00	; 0
+     29e:	6f 93       	push	r22
+     2a0:	64 e0       	ldi	r22, 0x04	; 4
+     2a2:	6a 95       	dec	r22
+     2a4:	f1 f7       	brne	.-4      	; 0x2a2 <delayMicroseconds.clone.0+0x8>
+     2a6:	6f 91       	pop	r22
+     2a8:	01 97       	sbiw	r24, 0x01	; 1
+     2aa:	c9 f7       	brne	.-14     	; 0x29e <delayMicroseconds.clone.0+0x4>
+}
+
+// These are alternative aliases:
+static inline void delay(unsigned int milliseconds) { delay_ms(milliseconds); }
+static inline unsigned long millis(void) { return get_ms(); }
+static inline void delayMicroseconds(unsigned int microseconds) { delay_us(microseconds); }
+     2ac:	08 95       	ret
+
+000002ae <_ZN12OrangutanLCDC1Ev>:
+
+// constructor (doesn't do anything)
+
+OrangutanLCD::OrangutanLCD()
+{
+}
+     2ae:	08 95       	ret
+
+000002b0 <_ZN12OrangutanLCD8busyWaitEv>:
+// Wait for the busy flag to clear.  The 4-bit interface is 
+// more complicated than the 8-bit interface because E must
+// be strobed twice to get the full eight bits back from
+// the LCD, even though we're only interested in one of them.
+void OrangutanLCD::busyWait()
+{
+     2b0:	0f 93       	push	r16
+     2b2:	1f 93       	push	r17
+     2b4:	cf 93       	push	r28
+     2b6:	df 93       	push	r29
+	uint8_t temp_ddr, data;
+
+	// Save our DDR information
+	temp_ddr = LCD_BF_DDR;
+     2b8:	1a b1       	in	r17, 0x0a	; 10
+
+	// Set up the data DDR for input
+	LCD_BF_DDR &= ~LCD_BF_MASK;
+     2ba:	57 98       	cbi	0x0a, 7	; 10
+
+	// Set up RS and RW to read the state of the LCD's busy flag
+	LCD_RS_PORT &= ~(1 << LCD_RS);
+     2bc:	5a 98       	cbi	0x0b, 2	; 11
+	LCD_RW_PORT |= 1 << LCD_RW;
+     2be:	28 9a       	sbi	0x05, 0	; 5
+	
+	unsigned int usCounter = 0;
+     2c0:	c0 e0       	ldi	r28, 0x00	; 0
+     2c2:	d0 e0       	ldi	r29, 0x00	; 0
+
+	do
+	{
+		delayMicroseconds(1);
+     2c4:	0e 94 4d 01 	call	0x29a	; 0x29a <delayMicroseconds.clone.0>
+		
+		// Bring E high
+		LCD_E_PORT |= 1 << LCD_E;
+     2c8:	5c 9a       	sbi	0x0b, 4	; 11
+
+		// Wait at least 120ns (1us is excessive)
+		delayMicroseconds(1);
+     2ca:	0e 94 4d 01 	call	0x29a	; 0x29a <delayMicroseconds.clone.0>
+
+		// Get the data back from the LCD
+		data = LCD_BF_PIN;
+     2ce:	09 b1       	in	r16, 0x09	; 9
+		// That excessive delay means our cycle time on E cannot be
+		// shorter than 1000ns (500ns being the spec), so no further
+		// delays are required
+
+		// Bring E low
+		LCD_E_PORT &= ~(1 << LCD_E);
+     2d0:	5c 98       	cbi	0x0b, 4	; 11
+		usCounter += 2;
+
+#ifndef _ORANGUTAN_X2
+
+		// Wait a small bit
+		delayMicroseconds(1);
+     2d2:	0e 94 4d 01 	call	0x29a	; 0x29a <delayMicroseconds.clone.0>
+
+		// When using the 4-bit interface, we still need to
+		// strobe out the 4 bits we don't care about:
+
+		// Bring E high
+		LCD_E_PORT |= 1 << LCD_E;
+     2d6:	5c 9a       	sbi	0x0b, 4	; 11
+
+		// Wait at least 120ns (1us is excessive)
+		delayMicroseconds(1);
+     2d8:	0e 94 4d 01 	call	0x29a	; 0x29a <delayMicroseconds.clone.0>
+
+		// Bring E low
+		LCD_E_PORT &= ~(1 << LCD_E);
+     2dc:	5c 98       	cbi	0x0b, 4	; 11
+	LCD_RS_PORT &= ~(1 << LCD_RS);
+	LCD_RW_PORT |= 1 << LCD_RW;
+	
+	unsigned int usCounter = 0;
+
+	do
+     2de:	07 ff       	sbrs	r16, 7
+     2e0:	11 c0       	rjmp	.+34     	; 0x304 <_ZN12OrangutanLCD8busyWaitEv+0x54>
+		delayMicroseconds(1);
+
+		// Bring E low
+		LCD_E_PORT &= ~(1 << LCD_E);
+		
+		usCounter += 2;
+     2e2:	24 96       	adiw	r28, 0x04	; 4
+	LCD_RS_PORT &= ~(1 << LCD_RS);
+	LCD_RW_PORT |= 1 << LCD_RW;
+	
+	unsigned int usCounter = 0;
+
+	do
+     2e4:	9e 01       	movw	r18, r28
+     2e6:	40 e0       	ldi	r20, 0x00	; 0
+     2e8:	50 e0       	ldi	r21, 0x00	; 0
+     2ea:	80 91 24 01 	lds	r24, 0x0124
+     2ee:	90 91 25 01 	lds	r25, 0x0125
+     2f2:	a0 91 26 01 	lds	r26, 0x0126
+     2f6:	b0 91 27 01 	lds	r27, 0x0127
+     2fa:	28 17       	cp	r18, r24
+     2fc:	39 07       	cpc	r19, r25
+     2fe:	4a 07       	cpc	r20, r26
+     300:	5b 07       	cpc	r21, r27
+     302:	00 f3       	brcs	.-64     	; 0x2c4 <_ZN12OrangutanLCD8busyWaitEv+0x14>
+	}
+	
+#endif
+
+	// Restore our DDR information
+	LCD_BF_DDR = temp_ddr;
+     304:	1a b9       	out	0x0a, r17	; 10
+}
+     306:	df 91       	pop	r29
+     308:	cf 91       	pop	r28
+     30a:	1f 91       	pop	r17
+     30c:	0f 91       	pop	r16
+     30e:	08 95       	ret
+
+00000310 <_ZN12OrangutanLCD8sendDataEh>:
+#ifdef _ORANGUTAN_SVP
+	PORTC = (PORTC & ~LCD_PORTC_MASK) | LCD_PORTC_DATA(data);
+#elif defined(_ORANGUTAN_X2)
+	PORTC = data;
+#else
+	PORTB = (PORTB & ~LCD_PORTB_MASK) | LCD_PORTB_DATA(data);
+     310:	65 b1       	in	r22, 0x05	; 5
+     312:	90 e0       	ldi	r25, 0x00	; 0
+     314:	ac 01       	movw	r20, r24
+     316:	41 70       	andi	r20, 0x01	; 1
+     318:	50 70       	andi	r21, 0x00	; 0
+     31a:	44 0f       	add	r20, r20
+     31c:	55 1f       	adc	r21, r21
+     31e:	9c 01       	movw	r18, r24
+     320:	26 70       	andi	r18, 0x06	; 6
+     322:	30 70       	andi	r19, 0x00	; 0
+     324:	53 e0       	ldi	r21, 0x03	; 3
+     326:	22 0f       	add	r18, r18
+     328:	33 1f       	adc	r19, r19
+     32a:	5a 95       	dec	r21
+     32c:	e1 f7       	brne	.-8      	; 0x326 <_ZN12OrangutanLCD8sendDataEh+0x16>
+     32e:	24 2b       	or	r18, r20
+     330:	6d 7c       	andi	r22, 0xCD	; 205
+     332:	26 2b       	or	r18, r22
+     334:	25 b9       	out	0x05, r18	; 5
+	PORTD = (PORTD & ~LCD_PORTD_MASK) | LCD_PORTD_DATA(data);
+     336:	2b b1       	in	r18, 0x0b	; 11
+     338:	88 70       	andi	r24, 0x08	; 8
+     33a:	90 70       	andi	r25, 0x00	; 0
+     33c:	34 e0       	ldi	r19, 0x04	; 4
+     33e:	88 0f       	add	r24, r24
+     340:	99 1f       	adc	r25, r25
+     342:	3a 95       	dec	r19
+     344:	e1 f7       	brne	.-8      	; 0x33e <_ZN12OrangutanLCD8sendDataEh+0x2e>
+     346:	2f 77       	andi	r18, 0x7F	; 127
+     348:	28 2b       	or	r18, r24
+     34a:	2b b9       	out	0x0b, r18	; 11
+
+	// At this point the four data lines are set, so the Enable pin 
+	// is strobed to let the LCD latch them.
+
+	// Bring E high
+	LCD_E_PORT |= 1 << LCD_E;
+     34c:	5c 9a       	sbi	0x0b, 4	; 11
+	
+	// Wait => 450ns (1us is excessive)
+	delayMicroseconds(1);
+     34e:	0e 94 4d 01 	call	0x29a	; 0x29a <delayMicroseconds.clone.0>
+
+	// Bring E low
+	LCD_E_PORT &= ~(1 << LCD_E);
+     352:	5c 98       	cbi	0x0b, 4	; 11
+
+	delayMicroseconds(1);
+     354:	0e 94 4d 01 	call	0x29a	; 0x29a <delayMicroseconds.clone.0>
+	// Dropping out of the routine will take at least 10ns, the time
+	// given by the datasheet for the LCD controller to read the
+	// nibble on the falling edge of E
+
+	// Our nibble has now been sent to the LCD.
+}
+     358:	08 95       	ret
+
+0000035a <_ZN12OrangutanLCD4sendEhhh>:
+
+
+// Send either data or a command
+void OrangutanLCD::send(unsigned char data, unsigned char rs, unsigned char numSends)
+{	
+     35a:	a2 e0       	ldi	r26, 0x02	; 2
+     35c:	b0 e0       	ldi	r27, 0x00	; 0
+     35e:	e3 eb       	ldi	r30, 0xB3	; 179
+     360:	f1 e0       	ldi	r31, 0x01	; 1
+     362:	0c 94 3e 09 	jmp	0x127c	; 0x127c <__prologue_saves__+0x16>
+     366:	e8 2e       	mov	r14, r24
+	init();  // initialize the LCD if we haven't already
+     368:	4a 83       	std	Y+2, r20	; 0x02
+     36a:	69 83       	std	Y+1, r22	; 0x01
+     36c:	0e 94 56 02 	call	0x4ac	; 0x4ac <_ZN12OrangutanLCD4initEv>
+
+	// Wait until the busy flag clears
+	busyWait();
+     370:	0e 94 58 01 	call	0x2b0	; 0x2b0 <_ZN12OrangutanLCD8busyWaitEv>
+	unsigned char temp_ddrc, temp_portc;
+	temp_ddrc = DDRC;
+	temp_portc = PORTC;
+#else
+	unsigned char temp_ddrb, temp_portb, temp_ddrd, temp_portd;
+	temp_ddrb = DDRB;
+     374:	14 b1       	in	r17, 0x04	; 4
+	temp_portb = PORTB;
+     376:	d5 b0       	in	r13, 0x05	; 5
+	temp_ddrd = DDRD;
+     378:	fa b0       	in	r15, 0x0a	; 10
+	temp_portd = PORTD;
+     37a:	0b b1       	in	r16, 0x0b	; 11
+#endif
+
+	// Clear RW and set or clear RS based on the rs argument
+	LCD_RW_PORT &= ~(1 << LCD_RW);
+     37c:	28 98       	cbi	0x05, 0	; 5
+	if (rs)
+     37e:	69 81       	ldd	r22, Y+1	; 0x01
+     380:	4a 81       	ldd	r20, Y+2	; 0x02
+     382:	66 23       	and	r22, r22
+     384:	11 f0       	breq	.+4      	; 0x38a <_ZN12OrangutanLCD4sendEhhh+0x30>
+		LCD_RS_PORT |= 1 << LCD_RS;
+     386:	5a 9a       	sbi	0x0b, 2	; 11
+     388:	01 c0       	rjmp	.+2      	; 0x38c <_ZN12OrangutanLCD4sendEhhh+0x32>
+	else
+		LCD_RS_PORT &= ~(1 << LCD_RS);
+     38a:	5a 98       	cbi	0x0b, 2	; 11
+#else
+
+  #ifdef _ORANGUTAN_SVP
+	DDRC |= LCD_PORTC_MASK;
+  #else
+	DDRB |= LCD_PORTB_MASK;
+     38c:	84 b1       	in	r24, 0x04	; 4
+     38e:	82 63       	ori	r24, 0x32	; 50
+     390:	84 b9       	out	0x04, r24	; 4
+	DDRD |= LCD_PORTD_MASK;
+     392:	57 9a       	sbi	0x0a, 7	; 10
+  #endif  // ifdef _ORANGUTAN_SVP
+
+	if (numSends != 1)
+     394:	41 30       	cpi	r20, 0x01	; 1
+     396:	29 f0       	breq	.+10     	; 0x3a2 <_ZN12OrangutanLCD4sendEhhh+0x48>
+		sendData(data >> 4);	// send high nibble via 4-bit interface
+     398:	8e 2d       	mov	r24, r14
+     39a:	82 95       	swap	r24
+     39c:	8f 70       	andi	r24, 0x0F	; 15
+     39e:	0e 94 88 01 	call	0x310	; 0x310 <_ZN12OrangutanLCD8sendDataEh>
+	sendData(data & 0x0F);	// send low nibble via 4-bit interface
+     3a2:	8e 2d       	mov	r24, r14
+     3a4:	8f 70       	andi	r24, 0x0F	; 15
+     3a6:	0e 94 88 01 	call	0x310	; 0x310 <_ZN12OrangutanLCD8sendDataEh>
+	// Restore our DDR and port information
+#if defined(_ORANGUTAN_SVP) || defined(_ORANGUTAN_X2)
+	DDRC = temp_ddrc;
+	PORTC = temp_portc;
+#else
+	DDRD = temp_ddrd;
+     3aa:	fa b8       	out	0x0a, r15	; 10
+	PORTD = temp_portd;
+     3ac:	0b b9       	out	0x0b, r16	; 11
+	DDRB = temp_ddrb;
+     3ae:	14 b9       	out	0x04, r17	; 4
+	PORTB = temp_portb;
+     3b0:	d5 b8       	out	0x05, r13	; 5
+#endif
+}
+     3b2:	22 96       	adiw	r28, 0x02	; 2
+     3b4:	e7 e0       	ldi	r30, 0x07	; 7
+     3b6:	0c 94 5a 09 	jmp	0x12b4	; 0x12b4 <__epilogue_restores__+0x16>
+
+000003ba <_ZN12OrangutanLCD8send_cmdEh>:
+	// sent via a single 8-bit transfer.
+	static void send(unsigned char data, unsigned char rs, unsigned char numSends);
+	
+	static inline void send_cmd(unsigned char cmd)
+	{
+		send(cmd, 0, 2);
+     3ba:	60 e0       	ldi	r22, 0x00	; 0
+     3bc:	42 e0       	ldi	r20, 0x02	; 2
+     3be:	0e 94 ad 01 	call	0x35a	; 0x35a <_ZN12OrangutanLCD4sendEhhh>
+	}
+     3c2:	08 95       	ret
+
+000003c4 <_ZN12OrangutanLCD9send_dataEh>:
+		send(cmd, 0, 1);
+	}
+
+	static inline void send_data(unsigned char data)
+	{
+		send(data, 1, 2);
+     3c4:	61 e0       	ldi	r22, 0x01	; 1
+     3c6:	42 e0       	ldi	r20, 0x02	; 2
+     3c8:	0e 94 ad 01 	call	0x35a	; 0x35a <_ZN12OrangutanLCD4sendEhhh>
+	}
+     3cc:	08 95       	ret
+
+000003ce <_ZN12OrangutanLCD19loadCustomCharacterEPKch>:
+
+#define LCD_CGRAM   6
+
+// Loads a custom character
+void OrangutanLCD::loadCustomCharacter(const char *picture_p, unsigned char number)
+{
+     3ce:	ef 92       	push	r14
+     3d0:	ff 92       	push	r15
+     3d2:	1f 93       	push	r17
+     3d4:	df 93       	push	r29
+     3d6:	cf 93       	push	r28
+     3d8:	0f 92       	push	r0
+     3da:	cd b7       	in	r28, 0x3d	; 61
+     3dc:	de b7       	in	r29, 0x3e	; 62
+  unsigned char i;
+
+  // Each character takes up 8 bytes of the character memory, so we
+  // multiply by 8 to get the address.
+  number *= 8;
+     3de:	66 0f       	add	r22, r22
+     3e0:	66 0f       	add	r22, r22
+     3e2:	66 0f       	add	r22, r22
+     3e4:	7c 01       	movw	r14, r24
+
+  for(i=0; i<8; i++)
+     3e6:	10 e0       	ldi	r17, 0x00	; 0
+
+
+#define LCD_CGRAM   6
+
+// Loads a custom character
+void OrangutanLCD::loadCustomCharacter(const char *picture_p, unsigned char number)
+     3e8:	81 2f       	mov	r24, r17
+     3ea:	86 0f       	add	r24, r22
+  number *= 8;
+
+  for(i=0; i<8; i++)
+  {
+    // set CG RAM address
+    send_cmd((1<<LCD_CGRAM) | (number+i));
+     3ec:	80 64       	ori	r24, 0x40	; 64
+     3ee:	69 83       	std	Y+1, r22	; 0x01
+     3f0:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+
+    // write character data
+    send_data(pgm_read_byte(picture_p+i));
+     3f4:	f7 01       	movw	r30, r14
+     3f6:	84 91       	lpm	r24, Z+
+     3f8:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+
+  // Each character takes up 8 bytes of the character memory, so we
+  // multiply by 8 to get the address.
+  number *= 8;
+
+  for(i=0; i<8; i++)
+     3fc:	1f 5f       	subi	r17, 0xFF	; 255
+     3fe:	08 94       	sec
+     400:	e1 1c       	adc	r14, r1
+     402:	f1 1c       	adc	r15, r1
+     404:	69 81       	ldd	r22, Y+1	; 0x01
+     406:	18 30       	cpi	r17, 0x08	; 8
+     408:	79 f7       	brne	.-34     	; 0x3e8 <_ZN12OrangutanLCD19loadCustomCharacterEPKch+0x1a>
+    send_cmd((1<<LCD_CGRAM) | (number+i));
+
+    // write character data
+    send_data(pgm_read_byte(picture_p+i));
+  }
+}
+     40a:	0f 90       	pop	r0
+     40c:	cf 91       	pop	r28
+     40e:	df 91       	pop	r29
+     410:	1f 91       	pop	r17
+     412:	ff 90       	pop	r15
+     414:	ef 90       	pop	r14
+     416:	08 95       	ret
+
+00000418 <lcd_load_custom_character>:
+	OrangutanLCD::scroll(direction, num, delay_time);
+}
+
+extern "C" void lcd_load_custom_character(const char *picture_p, unsigned char number)
+{
+	OrangutanLCD::loadCustomCharacter(picture_p, number);
+     418:	0e 94 e7 01 	call	0x3ce	; 0x3ce <_ZN12OrangutanLCD19loadCustomCharacterEPKch>
+}
+     41c:	08 95       	ret
+
+0000041e <print_character>:
+
+
+// prints a single character at the current cursor location
+void OrangutanLCD::print(char character)
+{
+	send_data(character);
+     41e:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+}
+
+extern "C" void print_character(char c)
+{
+	OrangutanLCD::print(c);
+}
+     422:	08 95       	ret
+
+00000424 <_ZN12OrangutanLCD13send_4bit_cmdEh>:
+		send(cmd, 0, 2);
+	}
+
+	static inline void send_4bit_cmd(unsigned char cmd)
+	{
+		send(cmd, 0, 1);
+     424:	60 e0       	ldi	r22, 0x00	; 0
+     426:	41 e0       	ldi	r20, 0x01	; 1
+     428:	0e 94 ad 01 	call	0x35a	; 0x35a <_ZN12OrangutanLCD4sendEhhh>
+	}
+     42c:	08 95       	ret
+
+0000042e <_ZN12OrangutanLCD5init2Ev>:
+	LCD_BF_DDR &= ~LCD_BF_MASK;		// make pull-up pin an input
+	LCD_BF_PORT |= LCD_BF_MASK;		// enable pull-up on BF pin
+	lcdTimeout = 30000;		// 20ms
+
+#else
+	lcdTimeout = 10000;		// 3ms
+     42e:	80 e1       	ldi	r24, 0x10	; 16
+     430:	97 e2       	ldi	r25, 0x27	; 39
+     432:	a0 e0       	ldi	r26, 0x00	; 0
+     434:	b0 e0       	ldi	r27, 0x00	; 0
+     436:	80 93 24 01 	sts	0x0124, r24
+     43a:	90 93 25 01 	sts	0x0125, r25
+     43e:	a0 93 26 01 	sts	0x0126, r26
+     442:	b0 93 27 01 	sts	0x0127, r27
+#endif
+	
+	// Set up the DDR for the LCD control lines
+	LCD_RS_DDR |= 1 << LCD_RS;
+     446:	52 9a       	sbi	0x0a, 2	; 10
+	LCD_RW_DDR |= 1 << LCD_RW;
+     448:	20 9a       	sbi	0x04, 0	; 4
+	LCD_E_DDR |= 1 << LCD_E;
+     44a:	54 9a       	sbi	0x0a, 4	; 10
+		    : "0" ( microseconds )
+		    );  
+}
+
+// These are alternative aliases:
+static inline void delay(unsigned int milliseconds) { delay_ms(milliseconds); }
+     44c:	8e e1       	ldi	r24, 0x1E	; 30
+     44e:	90 e0       	ldi	r25, 0x00	; 0
+     450:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+	delay(2);	// wait >100us
+	send_cmd(0x38);	// 8-bit, 2 line, 5x8 dots char (busy flag is now valid)
+
+#else	// Orangutan SVP, LV, SV, and 3pi robot
+
+	send_4bit_cmd(0x3);	// function set
+     454:	83 e0       	ldi	r24, 0x03	; 3
+     456:	0e 94 12 02 	call	0x424	; 0x424 <_ZN12OrangutanLCD13send_4bit_cmdEh>
+     45a:	86 e0       	ldi	r24, 0x06	; 6
+     45c:	90 e0       	ldi	r25, 0x00	; 0
+     45e:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+	delay(6);	// wait >4.1ms
+	send_4bit_cmd(0x3);	// function set
+     462:	83 e0       	ldi	r24, 0x03	; 3
+     464:	0e 94 12 02 	call	0x424	; 0x424 <_ZN12OrangutanLCD13send_4bit_cmdEh>
+     468:	82 e0       	ldi	r24, 0x02	; 2
+     46a:	90 e0       	ldi	r25, 0x00	; 0
+     46c:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+	delay(2);	// wait >100us
+	send_4bit_cmd(0x3);	// function set
+     470:	83 e0       	ldi	r24, 0x03	; 3
+     472:	0e 94 12 02 	call	0x424	; 0x424 <_ZN12OrangutanLCD13send_4bit_cmdEh>
+     476:	82 e0       	ldi	r24, 0x02	; 2
+     478:	90 e0       	ldi	r25, 0x00	; 0
+     47a:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+	delay(2);	// wait >100us
+	send_4bit_cmd(0x2);	// 4-bit interface
+     47e:	82 e0       	ldi	r24, 0x02	; 2
+     480:	0e 94 12 02 	call	0x424	; 0x424 <_ZN12OrangutanLCD13send_4bit_cmdEh>
+     484:	82 e0       	ldi	r24, 0x02	; 2
+     486:	90 e0       	ldi	r25, 0x00	; 0
+     488:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+	delay(2);
+	send_cmd(0x28);	// 4-bit, 2 line, 5x8 dots char (busy flag is now valid)
+     48c:	88 e2       	ldi	r24, 0x28	; 40
+     48e:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+
+#endif
+
+	send_cmd(0x08);	// display off, cursor off, blinking off
+     492:	88 e0       	ldi	r24, 0x08	; 8
+     494:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+	send_cmd(0x01);	// clear display
+     498:	81 e0       	ldi	r24, 0x01	; 1
+     49a:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+	send_cmd(0x06);	// set entry mode: cursor shifts right, no scrolling
+     49e:	86 e0       	ldi	r24, 0x06	; 6
+     4a0:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+	send_cmd(0x0C);	// display on, cursor off, blinking off
+     4a4:	8c e0       	ldi	r24, 0x0C	; 12
+     4a6:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+}
+     4aa:	08 95       	ret
+
+000004ac <_ZN12OrangutanLCD4initEv>:
+  
+	static inline void init()
+	{
+		static unsigned char initialized = 0;
+
+		if (!initialized)
+     4ac:	80 91 28 01 	lds	r24, 0x0128
+     4b0:	88 23       	and	r24, r24
+     4b2:	29 f4       	brne	.+10     	; 0x4be <_ZN12OrangutanLCD4initEv+0x12>
+		{
+			initialized = 1;
+     4b4:	81 e0       	ldi	r24, 0x01	; 1
+     4b6:	80 93 28 01 	sts	0x0128, r24
+			init2();
+     4ba:	0e 94 17 02 	call	0x42e	; 0x42e <_ZN12OrangutanLCD5init2Ev>
+     4be:	08 95       	ret
+
+000004c0 <_ZN12OrangutanLCD5clearEv>:
+
+
+// clears the LCD screen and returns the cursor to position (0, 0)
+void OrangutanLCD::clear()
+{
+	send_cmd(LCD_CLEAR);
+     4c0:	81 e0       	ldi	r24, 0x01	; 1
+     4c2:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+
+	if (printf_chars == 0)		// if we haven't used printf(), return now
+     4c6:	80 91 20 01 	lds	r24, 0x0120
+     4ca:	90 91 21 01 	lds	r25, 0x0121
+     4ce:	00 97       	sbiw	r24, 0x00	; 0
+     4d0:	11 f1       	breq	.+68     	; 0x516 <_ZN12OrangutanLCD5clearEv+0x56>
+     4d2:	a0 e0       	ldi	r26, 0x00	; 0
+
+	unsigned char i;
+
+	// clear out the LCD
+	for(i = 0; i < SAVED_CHARS; i++)
+		printf_chars[i] = ' ';
+     4d4:	b0 e2       	ldi	r27, 0x20	; 32
+     4d6:	08 c0       	rjmp	.+16     	; 0x4e8 <_ZN12OrangutanLCD5clearEv+0x28>
+     4d8:	e0 91 20 01 	lds	r30, 0x0120
+     4dc:	f0 91 21 01 	lds	r31, 0x0121
+     4e0:	e2 0f       	add	r30, r18
+     4e2:	f3 1f       	adc	r31, r19
+     4e4:	b0 83       	st	Z, r27
+		return;
+
+	unsigned char i;
+
+	// clear out the LCD
+	for(i = 0; i < SAVED_CHARS; i++)
+     4e6:	af 5f       	subi	r26, 0xFF	; 255
+     4e8:	2a 2f       	mov	r18, r26
+     4ea:	30 e0       	ldi	r19, 0x00	; 0
+     4ec:	80 91 18 01 	lds	r24, 0x0118
+     4f0:	90 e0       	ldi	r25, 0x00	; 0
+     4f2:	01 97       	sbiw	r24, 0x01	; 1
+     4f4:	60 91 19 01 	lds	r22, 0x0119
+     4f8:	70 e0       	ldi	r23, 0x00	; 0
+     4fa:	86 9f       	mul	r24, r22
+     4fc:	a0 01       	movw	r20, r0
+     4fe:	87 9f       	mul	r24, r23
+     500:	50 0d       	add	r21, r0
+     502:	96 9f       	mul	r25, r22
+     504:	50 0d       	add	r21, r0
+     506:	11 24       	eor	r1, r1
+     508:	24 17       	cp	r18, r20
+     50a:	35 07       	cpc	r19, r21
+     50c:	2c f3       	brlt	.-54     	; 0x4d8 <_ZN12OrangutanLCD5clearEv+0x18>
+		printf_chars[i] = ' ';
+
+	col = 0;
+     50e:	10 92 23 01 	sts	0x0123, r1
+	row = 0;
+     512:	10 92 22 01 	sts	0x0122, r1
+     516:	08 95       	ret
+
+00000518 <clear>:
+	OrangutanLCD::initPrintf(width, height);
+}
+
+extern "C" void clear()
+{
+	OrangutanLCD::clear();
+     518:	0e 94 60 02 	call	0x4c0	; 0x4c0 <_ZN12OrangutanLCD5clearEv>
+}
+     51c:	08 95       	ret
+
+0000051e <_ZN12OrangutanLCD5printEc>:
+
+
+// prints a single character at the current cursor location
+void OrangutanLCD::print(char character)
+{
+	send_data(character);
+     51e:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+}
+     522:	08 95       	ret
+
+00000524 <_ZN12OrangutanLCD5printEPKc>:
+
+// sends a string to the LCD.  The string is printed from 
+// wherever the cursor is and will not span lines.  (This lets you 
+// concatenate print statements.)
+void OrangutanLCD::print(const char *str)
+{
+     524:	cf 93       	push	r28
+     526:	df 93       	push	r29
+     528:	c8 2f       	mov	r28, r24
+     52a:	d9 2f       	mov	r29, r25
+	while (*str != 0)
+     52c:	02 c0       	rjmp	.+4      	; 0x532 <_ZN12OrangutanLCD5printEPKc+0xe>
+		send_data(*str++);
+     52e:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+// sends a string to the LCD.  The string is printed from 
+// wherever the cursor is and will not span lines.  (This lets you 
+// concatenate print statements.)
+void OrangutanLCD::print(const char *str)
+{
+	while (*str != 0)
+     532:	89 91       	ld	r24, Y+
+     534:	88 23       	and	r24, r24
+     536:	d9 f7       	brne	.-10     	; 0x52e <_ZN12OrangutanLCD5printEPKc+0xa>
+		send_data(*str++);
+}
+     538:	df 91       	pop	r29
+     53a:	cf 91       	pop	r28
+     53c:	08 95       	ret
+
+0000053e <print>:
+	OrangutanLCD::clear();
+}
+
+extern "C" void print(const char *str)
+{
+	OrangutanLCD::print(str);
+     53e:	0e 94 92 02 	call	0x524	; 0x524 <_ZN12OrangutanLCD5printEPKc>
+}
+     542:	08 95       	ret
+
+00000544 <_ZN12OrangutanLCD21printFromProgramSpaceEPKc>:
+
+// sends a string to the LCD.  The string is printed from 
+// wherever the cursor is and will not span lines.  (This lets you 
+// concatenate print statements.)
+void OrangutanLCD::printFromProgramSpace(const char *str)
+{
+     544:	cf 93       	push	r28
+     546:	df 93       	push	r29
+     548:	ec 01       	movw	r28, r24
+	char c;
+	while ((c = pgm_read_byte(str)) != 0)
+     54a:	03 c0       	rjmp	.+6      	; 0x552 <_ZN12OrangutanLCD21printFromProgramSpaceEPKc+0xe>
+	{
+		send_data(c);
+     54c:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+		str ++;
+     550:	21 96       	adiw	r28, 0x01	; 1
+// wherever the cursor is and will not span lines.  (This lets you 
+// concatenate print statements.)
+void OrangutanLCD::printFromProgramSpace(const char *str)
+{
+	char c;
+	while ((c = pgm_read_byte(str)) != 0)
+     552:	fe 01       	movw	r30, r28
+     554:	84 91       	lpm	r24, Z+
+     556:	88 23       	and	r24, r24
+     558:	c9 f7       	brne	.-14     	; 0x54c <_ZN12OrangutanLCD21printFromProgramSpaceEPKc+0x8>
+	{
+		send_data(c);
+		str ++;
+	}
+}
+     55a:	df 91       	pop	r29
+     55c:	cf 91       	pop	r28
+     55e:	08 95       	ret
+
+00000560 <print_from_program_space>:
+	OrangutanLCD::print(str);
+}
+
+extern "C" void print_from_program_space(const char *str)
+{
+	OrangutanLCD::printFromProgramSpace(str);
+     560:	0e 94 a2 02 	call	0x544	; 0x544 <_ZN12OrangutanLCD21printFromProgramSpaceEPKc>
+}
+     564:	08 95       	ret
+
+00000566 <_ZN12OrangutanLCD7printInEPKc>:
+
+// other LCD libraries have this incorrectly named method, so it is here to
+// provide some semblance of compatibility
+void OrangutanLCD::printIn(const char *str)
+{
+	print(str);
+     566:	0e 94 92 02 	call	0x524	; 0x524 <_ZN12OrangutanLCD5printEPKc>
+}
+     56a:	08 95       	ret
+
+0000056c <_ZN12OrangutanLCD5printEm>:
+
+// prints an unsigned long.  This prints from wherever the cursor is and will
+// not span lines.  (This lets you concatenate print statements.)  This
+// will only print as many characters as there are digits in the number.
+void OrangutanLCD::print(unsigned long value)
+{
+     56c:	aa e0       	ldi	r26, 0x0A	; 10
+     56e:	b0 e0       	ldi	r27, 0x00	; 0
+     570:	ec eb       	ldi	r30, 0xBC	; 188
+     572:	f2 e0       	ldi	r31, 0x02	; 2
+     574:	0c 94 3b 09 	jmp	0x1276	; 0x1276 <__prologue_saves__+0x10>
+     578:	9b 01       	movw	r18, r22
+     57a:	ac 01       	movw	r20, r24
+	unsigned char str[10];
+	unsigned char i = 10;
+     57c:	1a e0       	ldi	r17, 0x0A	; 10
+	unsigned char digit;
+
+	do
+	{
+		digit = value;
+		value /= 10;
+     57e:	ea e0       	ldi	r30, 0x0A	; 10
+     580:	ce 2e       	mov	r12, r30
+     582:	d1 2c       	mov	r13, r1
+     584:	e1 2c       	mov	r14, r1
+     586:	f1 2c       	mov	r15, r1
+		digit -= value * 10;
+		str[--i] = '0' + (unsigned char)digit;
+     588:	5e 01       	movw	r10, r28
+     58a:	08 94       	sec
+     58c:	a1 1c       	adc	r10, r1
+     58e:	b1 1c       	adc	r11, r1
+    // print_long on the Orangutan SVP, but I don't know why.  -David
+	unsigned char digit;
+
+	do
+	{
+		digit = value;
+     590:	02 2f       	mov	r16, r18
+		value /= 10;
+     592:	ca 01       	movw	r24, r20
+     594:	b9 01       	movw	r22, r18
+     596:	a7 01       	movw	r20, r14
+     598:	96 01       	movw	r18, r12
+     59a:	0e 94 11 09 	call	0x1222	; 0x1222 <__udivmodsi4>
+		digit -= value * 10;
+		str[--i] = '0' + (unsigned char)digit;
+     59e:	11 50       	subi	r17, 0x01	; 1
+     5a0:	f5 01       	movw	r30, r10
+     5a2:	e1 0f       	add	r30, r17
+     5a4:	f1 1d       	adc	r31, r1
+
+	do
+	{
+		digit = value;
+		value /= 10;
+		digit -= value * 10;
+     5a6:	00 5d       	subi	r16, 0xD0	; 208
+     5a8:	92 2f       	mov	r25, r18
+     5aa:	99 0f       	add	r25, r25
+     5ac:	89 2f       	mov	r24, r25
+     5ae:	88 0f       	add	r24, r24
+     5b0:	88 0f       	add	r24, r24
+     5b2:	89 0f       	add	r24, r25
+		str[--i] = '0' + (unsigned char)digit;
+     5b4:	08 1b       	sub	r16, r24
+     5b6:	00 83       	st	Z, r16
+
+    // Changed digit from a long to char 2009-11-20.  This fixed a bug with
+    // print_long on the Orangutan SVP, but I don't know why.  -David
+	unsigned char digit;
+
+	do
+     5b8:	21 15       	cp	r18, r1
+     5ba:	31 05       	cpc	r19, r1
+     5bc:	41 05       	cpc	r20, r1
+     5be:	51 05       	cpc	r21, r1
+     5c0:	39 f7       	brne	.-50     	; 0x590 <_ZN12OrangutanLCD5printEm+0x24>
+     5c2:	08 c0       	rjmp	.+16     	; 0x5d4 <_ZN12OrangutanLCD5printEm+0x68>
+		str[--i] = '0' + (unsigned char)digit;
+	}
+	while (value != 0);
+
+	for(; i < 10; i++)
+		send_data(str[i]);
+     5c4:	f6 01       	movw	r30, r12
+     5c6:	e1 0f       	add	r30, r17
+     5c8:	f1 1d       	adc	r31, r1
+     5ca:	80 81       	ld	r24, Z
+     5cc:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+		digit -= value * 10;
+		str[--i] = '0' + (unsigned char)digit;
+	}
+	while (value != 0);
+
+	for(; i < 10; i++)
+     5d0:	1f 5f       	subi	r17, 0xFF	; 255
+     5d2:	04 c0       	rjmp	.+8      	; 0x5dc <_ZN12OrangutanLCD5printEm+0x70>
+		send_data(str[i]);
+     5d4:	6e 01       	movw	r12, r28
+     5d6:	08 94       	sec
+     5d8:	c1 1c       	adc	r12, r1
+     5da:	d1 1c       	adc	r13, r1
+		digit -= value * 10;
+		str[--i] = '0' + (unsigned char)digit;
+	}
+	while (value != 0);
+
+	for(; i < 10; i++)
+     5dc:	1a 30       	cpi	r17, 0x0A	; 10
+     5de:	90 f3       	brcs	.-28     	; 0x5c4 <_ZN12OrangutanLCD5printEm+0x58>
+		send_data(str[i]);
+}
+     5e0:	2a 96       	adiw	r28, 0x0a	; 10
+     5e2:	ea e0       	ldi	r30, 0x0A	; 10
+     5e4:	0c 94 57 09 	jmp	0x12ae	; 0x12ae <__epilogue_restores__+0x10>
+
+000005e8 <_ZN12OrangutanLCD5printEl>:
+// prints a signed long.  This prints from wherever the cursor is and will not
+// span lines.  (This lets you concatenate print statements.)  This function
+// will only print as many characters as there are digits in the number (plus
+// a minus sign if the number is negative).
+void OrangutanLCD::print(long value)
+{
+     5e8:	ef 92       	push	r14
+     5ea:	ff 92       	push	r15
+     5ec:	0f 93       	push	r16
+     5ee:	1f 93       	push	r17
+     5f0:	7b 01       	movw	r14, r22
+     5f2:	8c 01       	movw	r16, r24
+	if (value < 0)
+     5f4:	97 ff       	sbrs	r25, 7
+     5f6:	0b c0       	rjmp	.+22     	; 0x60e <_ZN12OrangutanLCD5printEl+0x26>
+	{
+		value = -value;
+     5f8:	10 95       	com	r17
+     5fa:	00 95       	com	r16
+     5fc:	f0 94       	com	r15
+     5fe:	e0 94       	com	r14
+     600:	e1 1c       	adc	r14, r1
+     602:	f1 1c       	adc	r15, r1
+     604:	01 1d       	adc	r16, r1
+     606:	11 1d       	adc	r17, r1
+		send_data('-');		// print the minus sign
+     608:	8d e2       	ldi	r24, 0x2D	; 45
+     60a:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+	}
+	print((unsigned long)value);
+     60e:	c8 01       	movw	r24, r16
+     610:	b7 01       	movw	r22, r14
+     612:	0e 94 b6 02 	call	0x56c	; 0x56c <_ZN12OrangutanLCD5printEm>
+}
+     616:	1f 91       	pop	r17
+     618:	0f 91       	pop	r16
+     61a:	ff 90       	pop	r15
+     61c:	ef 90       	pop	r14
+     61e:	08 95       	ret
+
+00000620 <print_long>:
+	OrangutanLCD::print(c);
+}
+
+extern "C" void print_long(long value)
+{
+	OrangutanLCD::print(value);
+     620:	0e 94 f4 02 	call	0x5e8	; 0x5e8 <_ZN12OrangutanLCD5printEl>
+}
+     624:	08 95       	ret
+
+00000626 <print_unsigned_long>:
+
+extern "C" void print_unsigned_long(unsigned long value)
+{
+	OrangutanLCD::print(value);
+     626:	0e 94 b6 02 	call	0x56c	; 0x56c <_ZN12OrangutanLCD5printEm>
+}
+     62a:	08 95       	ret
+
+0000062c <_ZN12OrangutanLCD14printHexNibbleEh>:
+
+
+// display a hex nibble (half of a hex byte) at your current cursor location
+void OrangutanLCD::printHexNibble(unsigned char nibble)
+{
+	if (nibble < 10)
+     62c:	8a 30       	cpi	r24, 0x0A	; 10
+     62e:	10 f4       	brcc	.+4      	; 0x634 <_ZN12OrangutanLCD14printHexNibbleEh+0x8>
+		send_data('0' + nibble);
+     630:	80 5d       	subi	r24, 0xD0	; 208
+     632:	01 c0       	rjmp	.+2      	; 0x636 <_ZN12OrangutanLCD14printHexNibbleEh+0xa>
+	else
+		send_data('A' + (nibble - 10));
+     634:	89 5c       	subi	r24, 0xC9	; 201
+     636:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+     63a:	08 95       	ret
+
+0000063c <_ZN12OrangutanLCD8printHexEh>:
+	printHex((unsigned char)word);
+}
+
+// display a single-byte value in hex (00 - FF) at the current cursor location
+void OrangutanLCD::printHex(unsigned char byte)
+{
+     63c:	cf 93       	push	r28
+     63e:	c8 2f       	mov	r28, r24
+	printHexNibble(byte >> 4);	 // display high byte high nibble
+     640:	82 95       	swap	r24
+     642:	8f 70       	andi	r24, 0x0F	; 15
+     644:	0e 94 16 03 	call	0x62c	; 0x62c <_ZN12OrangutanLCD14printHexNibbleEh>
+	printHexNibble(byte & 0x0F); // display high byte low nibble
+     648:	8c 2f       	mov	r24, r28
+     64a:	8f 70       	andi	r24, 0x0F	; 15
+     64c:	0e 94 16 03 	call	0x62c	; 0x62c <_ZN12OrangutanLCD14printHexNibbleEh>
+}
+     650:	cf 91       	pop	r28
+     652:	08 95       	ret
+
+00000654 <_ZN12OrangutanLCD8printHexEj>:
+		send_data('A' + (nibble - 10));
+}
+
+// display a two-byte value in hex (0000 - FFFF) at the current cursor location
+void OrangutanLCD::printHex(unsigned int word)
+{
+     654:	cf 93       	push	r28
+     656:	c8 2f       	mov	r28, r24
+	printHex((unsigned char)(word >> 8));
+     658:	89 2f       	mov	r24, r25
+     65a:	0e 94 1e 03 	call	0x63c	; 0x63c <_ZN12OrangutanLCD8printHexEh>
+	printHex((unsigned char)word);
+     65e:	8c 2f       	mov	r24, r28
+     660:	0e 94 1e 03 	call	0x63c	; 0x63c <_ZN12OrangutanLCD8printHexEh>
+}
+     664:	cf 91       	pop	r28
+     666:	08 95       	ret
+
+00000668 <print_hex>:
+	OrangutanLCD::print(value);
+}
+
+extern "C" void print_hex(unsigned int value)
+{
+	OrangutanLCD::printHex(value);
+     668:	0e 94 2a 03 	call	0x654	; 0x654 <_ZN12OrangutanLCD8printHexEj>
+}
+     66c:	08 95       	ret
+
+0000066e <print_hex_byte>:
+
+extern "C" void print_hex_byte(unsigned char value)
+{
+	OrangutanLCD::printHex(value);
+     66e:	0e 94 1e 03 	call	0x63c	; 0x63c <_ZN12OrangutanLCD8printHexEh>
+}
+     672:	08 95       	ret
+
+00000674 <_ZN12OrangutanLCD11printBinaryEh>:
+}
+
+
+// display a byte in binary starting at your current cursor location
+void OrangutanLCD::printBinary(unsigned char byte)
+{
+     674:	1f 93       	push	r17
+     676:	cf 93       	push	r28
+     678:	df 93       	push	r29
+     67a:	18 2f       	mov	r17, r24
+     67c:	d8 e0       	ldi	r29, 0x08	; 8
+	unsigned char i, bitmask;
+
+	bitmask = 1 << 7;
+     67e:	c0 e8       	ldi	r28, 0x80	; 128
+	for (i = 0; i < 8; i++)
+	{
+		if (byte & bitmask)
+     680:	8c 2f       	mov	r24, r28
+     682:	81 23       	and	r24, r17
+     684:	11 f0       	breq	.+4      	; 0x68a <_ZN12OrangutanLCD11printBinaryEh+0x16>
+			send_data('1');
+     686:	81 e3       	ldi	r24, 0x31	; 49
+     688:	01 c0       	rjmp	.+2      	; 0x68c <_ZN12OrangutanLCD11printBinaryEh+0x18>
+		else
+			send_data('0');
+     68a:	80 e3       	ldi	r24, 0x30	; 48
+     68c:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+     690:	d1 50       	subi	r29, 0x01	; 1
+void OrangutanLCD::printBinary(unsigned char byte)
+{
+	unsigned char i, bitmask;
+
+	bitmask = 1 << 7;
+	for (i = 0; i < 8; i++)
+     692:	11 f0       	breq	.+4      	; 0x698 <_ZN12OrangutanLCD11printBinaryEh+0x24>
+	{
+		if (byte & bitmask)
+			send_data('1');
+		else
+			send_data('0');
+		bitmask >>= 1;
+     694:	c6 95       	lsr	r28
+     696:	f4 cf       	rjmp	.-24     	; 0x680 <_ZN12OrangutanLCD11printBinaryEh+0xc>
+	}
+}
+     698:	df 91       	pop	r29
+     69a:	cf 91       	pop	r28
+     69c:	1f 91       	pop	r17
+     69e:	08 95       	ret
+
+000006a0 <print_binary>:
+	OrangutanLCD::printHex(value);
+}
+
+extern "C" void print_binary(unsigned char value)
+{
+	OrangutanLCD::printBinary(value);
+     6a0:	0e 94 3a 03 	call	0x674	; 0x674 <_ZN12OrangutanLCD11printBinaryEh>
+}
+     6a4:	08 95       	ret
+
+000006a6 <_ZN12OrangutanLCD6gotoXYEhh>:
+
+// moves the cursor to the specified (x, y) position
+// x is a zero-based column indicator (0 <= x <= 7)
+// y is a zero-based row indicator (0 <= y <= LCD rows-1)
+void OrangutanLCD::gotoXY(unsigned char x, unsigned char y)
+{
+     6a6:	a5 e0       	ldi	r26, 0x05	; 5
+     6a8:	b0 e0       	ldi	r27, 0x00	; 0
+     6aa:	e9 e5       	ldi	r30, 0x59	; 89
+     6ac:	f3 e0       	ldi	r31, 0x03	; 3
+     6ae:	0c 94 42 09 	jmp	0x1284	; 0x1284 <__prologue_saves__+0x1e>
+     6b2:	18 2f       	mov	r17, r24
+	// The actual memory locations are 0x00, and 0x40, but since
+	// D7 needs to be high in order to set a new memory location, we can go
+	// ahead and make the seventh bit of our memory location bytes to 1,
+	// which makes the numbers 0x80 and 0xC0:
+
+	unsigned char line_mem[] = {0x80, 0xC0, 0x94, 0xD4};
+     6b4:	80 e8       	ldi	r24, 0x80	; 128
+     6b6:	89 83       	std	Y+1, r24	; 0x01
+     6b8:	80 ec       	ldi	r24, 0xC0	; 192
+     6ba:	8a 83       	std	Y+2, r24	; 0x02
+     6bc:	84 e9       	ldi	r24, 0x94	; 148
+     6be:	8b 83       	std	Y+3, r24	; 0x03
+     6c0:	84 ed       	ldi	r24, 0xD4	; 212
+     6c2:	8c 83       	std	Y+4, r24	; 0x04
+
+	// Grab the location in the LCD's memory of the start of line y,
+	// and add X to it to get the right character location.
+	send_cmd(line_mem[y] + x);
+     6c4:	fe 01       	movw	r30, r28
+     6c6:	e6 0f       	add	r30, r22
+     6c8:	f1 1d       	adc	r31, r1
+     6ca:	81 81       	ldd	r24, Z+1	; 0x01
+     6cc:	81 0f       	add	r24, r17
+     6ce:	6d 83       	std	Y+5, r22	; 0x05
+     6d0:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+
+	// Save it for use with printf.
+	col = x;
+     6d4:	10 93 23 01 	sts	0x0123, r17
+	row = y;
+     6d8:	6d 81       	ldd	r22, Y+5	; 0x05
+     6da:	60 93 22 01 	sts	0x0122, r22
+}
+     6de:	25 96       	adiw	r28, 0x05	; 5
+     6e0:	e3 e0       	ldi	r30, 0x03	; 3
+     6e2:	0c 94 5e 09 	jmp	0x12bc	; 0x12bc <__epilogue_restores__+0x1e>
+
+000006e6 <lcd_goto_xy>:
+	return 0;
+}
+
+extern "C" void lcd_goto_xy(unsigned char col, unsigned char row)
+{
+	OrangutanLCD::gotoXY(col,row);
+     6e6:	0e 94 53 03 	call	0x6a6	; 0x6a6 <_ZN12OrangutanLCD6gotoXYEhh>
+}
+     6ea:	08 95       	ret
+
+000006ec <lcd_putchar>:
+unsigned char numLCDCols = LCD_WIDTH;
+#define SAVED_CHARS		(numLCDCols*(numLCDRows-1))
+
+// This function is called by printf.
+extern "C" int lcd_putchar(char c, FILE *f)
+{
+     6ec:	a0 e0       	ldi	r26, 0x00	; 0
+     6ee:	b0 e0       	ldi	r27, 0x00	; 0
+     6f0:	ec e7       	ldi	r30, 0x7C	; 124
+     6f2:	f3 e0       	ldi	r31, 0x03	; 3
+     6f4:	0c 94 3d 09 	jmp	0x127a	; 0x127a <__prologue_saves__+0x14>
+     6f8:	d8 2e       	mov	r13, r24
+	unsigned char nextline=0; /* should we go to next line after output? */
+	unsigned char repos=0; /* should we relocate */
+	unsigned char i;
+
+	if (printf_chars == 0)
+     6fa:	80 91 20 01 	lds	r24, 0x0120
+     6fe:	90 91 21 01 	lds	r25, 0x0121
+     702:	00 97       	sbiw	r24, 0x00	; 0
+     704:	09 f4       	brne	.+2      	; 0x708 <lcd_putchar+0x1c>
+     706:	fa c0       	rjmp	.+500    	; 0x8fc <lcd_putchar+0x210>
+	{
+		return c;
+	}
+
+	/* control characters */
+	if (c == '\n')
+     708:	8d 2d       	mov	r24, r13
+     70a:	8a 30       	cpi	r24, 0x0A	; 10
+     70c:	09 f4       	brne	.+2      	; 0x710 <lcd_putchar+0x24>
+     70e:	43 c0       	rjmp	.+134    	; 0x796 <lcd_putchar+0xaa>
+	{
+		nextline = 1;
+	}
+	else if (c == 8) { // ^H
+     710:	88 30       	cpi	r24, 0x08	; 8
+     712:	c9 f4       	brne	.+50     	; 0x746 <lcd_putchar+0x5a>
+		col--;
+     714:	80 91 23 01 	lds	r24, 0x0123
+     718:	81 50       	subi	r24, 0x01	; 1
+     71a:	80 93 23 01 	sts	0x0123, r24
+		if (col == (unsigned char)-1) { row--; col = numLCDCols-1; }
+     71e:	8f 3f       	cpi	r24, 0xFF	; 255
+     720:	51 f4       	brne	.+20     	; 0x736 <lcd_putchar+0x4a>
+     722:	80 91 22 01 	lds	r24, 0x0122
+     726:	81 50       	subi	r24, 0x01	; 1
+     728:	80 93 22 01 	sts	0x0122, r24
+     72c:	80 91 19 01 	lds	r24, 0x0119
+     730:	81 50       	subi	r24, 0x01	; 1
+     732:	80 93 23 01 	sts	0x0123, r24
+		if (row == (unsigned char)-1) { row = 0; col = 0; }
+     736:	80 91 22 01 	lds	r24, 0x0122
+     73a:	8f 3f       	cpi	r24, 0xFF	; 255
+     73c:	09 f0       	breq	.+2      	; 0x740 <lcd_putchar+0x54>
+     73e:	d8 c0       	rjmp	.+432    	; 0x8f0 <lcd_putchar+0x204>
+     740:	10 92 22 01 	sts	0x0122, r1
+     744:	d3 c0       	rjmp	.+422    	; 0x8ec <lcd_putchar+0x200>
+
+
+// prints a single character at the current cursor location
+void OrangutanLCD::print(char character)
+{
+	send_data(character);
+     746:	8d 2d       	mov	r24, r13
+     748:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+		repos = 1;
+	}
+	else
+	{
+		OrangutanLCD::print(c); /* write the character */
+		if (row != 0) printf_chars[(row-1)*numLCDCols + col]=c; /* remember the character */
+     74c:	80 91 22 01 	lds	r24, 0x0122
+     750:	88 23       	and	r24, r24
+     752:	b9 f0       	breq	.+46     	; 0x782 <lcd_putchar+0x96>
+     754:	90 e0       	ldi	r25, 0x00	; 0
+     756:	01 97       	sbiw	r24, 0x01	; 1
+     758:	40 91 19 01 	lds	r20, 0x0119
+     75c:	50 e0       	ldi	r21, 0x00	; 0
+     75e:	84 9f       	mul	r24, r20
+     760:	90 01       	movw	r18, r0
+     762:	85 9f       	mul	r24, r21
+     764:	30 0d       	add	r19, r0
+     766:	94 9f       	mul	r25, r20
+     768:	30 0d       	add	r19, r0
+     76a:	11 24       	eor	r1, r1
+     76c:	80 91 23 01 	lds	r24, 0x0123
+     770:	e0 91 20 01 	lds	r30, 0x0120
+     774:	f0 91 21 01 	lds	r31, 0x0121
+     778:	e2 0f       	add	r30, r18
+     77a:	f3 1f       	adc	r31, r19
+     77c:	e8 0f       	add	r30, r24
+     77e:	f1 1d       	adc	r31, r1
+     780:	d0 82       	st	Z, r13
+		col++;
+     782:	80 91 23 01 	lds	r24, 0x0123
+     786:	8f 5f       	subi	r24, 0xFF	; 255
+     788:	80 93 23 01 	sts	0x0123, r24
+
+		if (col == numLCDCols) nextline = 1;
+     78c:	90 91 19 01 	lds	r25, 0x0119
+     790:	89 17       	cp	r24, r25
+     792:	09 f0       	breq	.+2      	; 0x796 <lcd_putchar+0xaa>
+     794:	b3 c0       	rjmp	.+358    	; 0x8fc <lcd_putchar+0x210>
+	}
+
+	if (nextline)
+	{
+		if (row == numLCDRows - 1)
+     796:	40 91 22 01 	lds	r20, 0x0122
+     79a:	24 2f       	mov	r18, r20
+     79c:	30 e0       	ldi	r19, 0x00	; 0
+     79e:	80 91 18 01 	lds	r24, 0x0118
+     7a2:	90 e0       	ldi	r25, 0x00	; 0
+     7a4:	01 97       	sbiw	r24, 0x01	; 1
+     7a6:	28 17       	cp	r18, r24
+     7a8:	39 07       	cpc	r19, r25
+     7aa:	09 f0       	breq	.+2      	; 0x7ae <lcd_putchar+0xc2>
+     7ac:	9c c0       	rjmp	.+312    	; 0x8e6 <lcd_putchar+0x1fa>
+     7ae:	c0 e0       	ldi	r28, 0x00	; 0
+     7b0:	d0 e0       	ldi	r29, 0x00	; 0
+     7b2:	41 c0       	rjmp	.+130    	; 0x836 <lcd_putchar+0x14a>
+            // it is never possible for the user to use the lower
+            // right corner of his LCD.
+			char j;
+			for (j = 0; j < numLCDRows-2; j++)  	// draw top LCD_HEIGHT-2 rows
+			{
+				OrangutanLCD::gotoXY(0, j);
+     7b4:	80 e0       	ldi	r24, 0x00	; 0
+     7b6:	6c 2f       	mov	r22, r28
+     7b8:	0e 94 53 03 	call	0x6a6	; 0x6a6 <_ZN12OrangutanLCD6gotoXYEhh>
+				for (i = 0; i < numLCDCols; i++)
+     7bc:	cc 24       	eor	r12, r12
+     7be:	8e 01       	movw	r16, r28
+     7c0:	0f 5f       	subi	r16, 0xFF	; 255
+     7c2:	1f 4f       	sbci	r17, 0xFF	; 255
+     7c4:	33 c0       	rjmp	.+102    	; 0x82c <lcd_putchar+0x140>
+				{
+					OrangutanLCD::print(printf_chars[j*numLCDCols + i]);
+     7c6:	ec 2c       	mov	r14, r12
+     7c8:	ff 24       	eor	r15, r15
+     7ca:	30 e0       	ldi	r19, 0x00	; 0
+     7cc:	c2 9f       	mul	r28, r18
+     7ce:	c0 01       	movw	r24, r0
+     7d0:	c3 9f       	mul	r28, r19
+     7d2:	90 0d       	add	r25, r0
+     7d4:	d2 9f       	mul	r29, r18
+     7d6:	90 0d       	add	r25, r0
+     7d8:	11 24       	eor	r1, r1
+     7da:	e0 91 20 01 	lds	r30, 0x0120
+     7de:	f0 91 21 01 	lds	r31, 0x0121
+     7e2:	ee 0d       	add	r30, r14
+     7e4:	ff 1d       	adc	r31, r15
+     7e6:	e8 0f       	add	r30, r24
+     7e8:	f9 1f       	adc	r31, r25
+
+
+// prints a single character at the current cursor location
+void OrangutanLCD::print(char character)
+{
+	send_data(character);
+     7ea:	80 81       	ld	r24, Z
+     7ec:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+			{
+				OrangutanLCD::gotoXY(0, j);
+				for (i = 0; i < numLCDCols; i++)
+				{
+					OrangutanLCD::print(printf_chars[j*numLCDCols + i]);
+					printf_chars[j*numLCDCols + i] = printf_chars[(j+1)*numLCDCols + i];
+     7f0:	80 91 20 01 	lds	r24, 0x0120
+     7f4:	90 91 21 01 	lds	r25, 0x0121
+     7f8:	20 91 19 01 	lds	r18, 0x0119
+     7fc:	30 e0       	ldi	r19, 0x00	; 0
+     7fe:	c2 9f       	mul	r28, r18
+     800:	f0 01       	movw	r30, r0
+     802:	c3 9f       	mul	r28, r19
+     804:	f0 0d       	add	r31, r0
+     806:	d2 9f       	mul	r29, r18
+     808:	f0 0d       	add	r31, r0
+     80a:	11 24       	eor	r1, r1
+     80c:	8e 0d       	add	r24, r14
+     80e:	9f 1d       	adc	r25, r15
+     810:	e8 0f       	add	r30, r24
+     812:	f9 1f       	adc	r31, r25
+     814:	02 9f       	mul	r16, r18
+     816:	d0 01       	movw	r26, r0
+     818:	03 9f       	mul	r16, r19
+     81a:	b0 0d       	add	r27, r0
+     81c:	12 9f       	mul	r17, r18
+     81e:	b0 0d       	add	r27, r0
+     820:	11 24       	eor	r1, r1
+     822:	a8 0f       	add	r26, r24
+     824:	b9 1f       	adc	r27, r25
+     826:	8c 91       	ld	r24, X
+     828:	80 83       	st	Z, r24
+            // right corner of his LCD.
+			char j;
+			for (j = 0; j < numLCDRows-2; j++)  	// draw top LCD_HEIGHT-2 rows
+			{
+				OrangutanLCD::gotoXY(0, j);
+				for (i = 0; i < numLCDCols; i++)
+     82a:	c3 94       	inc	r12
+     82c:	20 91 19 01 	lds	r18, 0x0119
+     830:	c2 16       	cp	r12, r18
+     832:	48 f2       	brcs	.-110    	; 0x7c6 <lcd_putchar+0xda>
+     834:	e8 01       	movw	r28, r16
+			/******* scroll! *******/
+            // Note: because of the way we implement scrolling,
+            // it is never possible for the user to use the lower
+            // right corner of his LCD.
+			char j;
+			for (j = 0; j < numLCDRows-2; j++)  	// draw top LCD_HEIGHT-2 rows
+     836:	60 91 18 01 	lds	r22, 0x0118
+     83a:	86 2f       	mov	r24, r22
+     83c:	90 e0       	ldi	r25, 0x00	; 0
+     83e:	02 97       	sbiw	r24, 0x02	; 2
+     840:	c8 17       	cp	r28, r24
+     842:	d9 07       	cpc	r29, r25
+     844:	0c f4       	brge	.+2      	; 0x848 <lcd_putchar+0x15c>
+     846:	b6 cf       	rjmp	.-148    	; 0x7b4 <lcd_putchar+0xc8>
+				{
+					OrangutanLCD::print(printf_chars[j*numLCDCols + i]);
+					printf_chars[j*numLCDCols + i] = printf_chars[(j+1)*numLCDCols + i];
+				}
+			}
+			if (numLCDRows >= 2)
+     848:	62 30       	cpi	r22, 0x02	; 2
+     84a:	e0 f1       	brcs	.+120    	; 0x8c4 <lcd_putchar+0x1d8>
+			{
+				OrangutanLCD::gotoXY(0, numLCDRows-2);	// draw row above bottom row
+     84c:	62 50       	subi	r22, 0x02	; 2
+     84e:	80 e0       	ldi	r24, 0x00	; 0
+     850:	0e 94 53 03 	call	0x6a6	; 0x6a6 <_ZN12OrangutanLCD6gotoXYEhh>
+				for (i = 0; i < numLCDCols; i++)
+     854:	00 e0       	ldi	r16, 0x00	; 0
+				{
+					OrangutanLCD::print(printf_chars[(numLCDRows-2)*numLCDCols + i]);
+					printf_chars[(numLCDRows-2)*numLCDCols + i] = ' ';	// clear saved bottom row
+     856:	10 e2       	ldi	r17, 0x20	; 32
+				}
+			}
+			if (numLCDRows >= 2)
+			{
+				OrangutanLCD::gotoXY(0, numLCDRows-2);	// draw row above bottom row
+				for (i = 0; i < numLCDCols; i++)
+     858:	31 c0       	rjmp	.+98     	; 0x8bc <lcd_putchar+0x1d0>
+				{
+					OrangutanLCD::print(printf_chars[(numLCDRows-2)*numLCDCols + i]);
+     85a:	c0 2f       	mov	r28, r16
+     85c:	d0 e0       	ldi	r29, 0x00	; 0
+     85e:	80 91 18 01 	lds	r24, 0x0118
+     862:	90 e0       	ldi	r25, 0x00	; 0
+     864:	02 97       	sbiw	r24, 0x02	; 2
+     866:	50 e0       	ldi	r21, 0x00	; 0
+     868:	84 9f       	mul	r24, r20
+     86a:	90 01       	movw	r18, r0
+     86c:	85 9f       	mul	r24, r21
+     86e:	30 0d       	add	r19, r0
+     870:	94 9f       	mul	r25, r20
+     872:	30 0d       	add	r19, r0
+     874:	11 24       	eor	r1, r1
+     876:	e0 91 20 01 	lds	r30, 0x0120
+     87a:	f0 91 21 01 	lds	r31, 0x0121
+     87e:	ec 0f       	add	r30, r28
+     880:	fd 1f       	adc	r31, r29
+     882:	e2 0f       	add	r30, r18
+     884:	f3 1f       	adc	r31, r19
+
+
+// prints a single character at the current cursor location
+void OrangutanLCD::print(char character)
+{
+	send_data(character);
+     886:	80 81       	ld	r24, Z
+     888:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+			{
+				OrangutanLCD::gotoXY(0, numLCDRows-2);	// draw row above bottom row
+				for (i = 0; i < numLCDCols; i++)
+				{
+					OrangutanLCD::print(printf_chars[(numLCDRows-2)*numLCDCols + i]);
+					printf_chars[(numLCDRows-2)*numLCDCols + i] = ' ';	// clear saved bottom row
+     88c:	80 91 18 01 	lds	r24, 0x0118
+     890:	90 e0       	ldi	r25, 0x00	; 0
+     892:	02 97       	sbiw	r24, 0x02	; 2
+     894:	40 91 19 01 	lds	r20, 0x0119
+     898:	50 e0       	ldi	r21, 0x00	; 0
+     89a:	84 9f       	mul	r24, r20
+     89c:	90 01       	movw	r18, r0
+     89e:	85 9f       	mul	r24, r21
+     8a0:	30 0d       	add	r19, r0
+     8a2:	94 9f       	mul	r25, r20
+     8a4:	30 0d       	add	r19, r0
+     8a6:	11 24       	eor	r1, r1
+     8a8:	e0 91 20 01 	lds	r30, 0x0120
+     8ac:	f0 91 21 01 	lds	r31, 0x0121
+     8b0:	ec 0f       	add	r30, r28
+     8b2:	fd 1f       	adc	r31, r29
+     8b4:	e2 0f       	add	r30, r18
+     8b6:	f3 1f       	adc	r31, r19
+     8b8:	10 83       	st	Z, r17
+				}
+			}
+			if (numLCDRows >= 2)
+			{
+				OrangutanLCD::gotoXY(0, numLCDRows-2);	// draw row above bottom row
+				for (i = 0; i < numLCDCols; i++)
+     8ba:	0f 5f       	subi	r16, 0xFF	; 255
+     8bc:	40 91 19 01 	lds	r20, 0x0119
+     8c0:	04 17       	cp	r16, r20
+     8c2:	58 f2       	brcs	.-106    	; 0x85a <lcd_putchar+0x16e>
+				{
+					OrangutanLCD::print(printf_chars[(numLCDRows-2)*numLCDCols + i]);
+					printf_chars[(numLCDRows-2)*numLCDCols + i] = ' ';	// clear saved bottom row
+				}
+			}
+			OrangutanLCD::gotoXY(0, numLCDRows-1);		// erase bottom row
+     8c4:	60 91 18 01 	lds	r22, 0x0118
+     8c8:	61 50       	subi	r22, 0x01	; 1
+     8ca:	80 e0       	ldi	r24, 0x00	; 0
+     8cc:	0e 94 53 03 	call	0x6a6	; 0x6a6 <_ZN12OrangutanLCD6gotoXYEhh>
+			for (i = 0; i < numLCDCols; i++)
+     8d0:	c0 e0       	ldi	r28, 0x00	; 0
+     8d2:	04 c0       	rjmp	.+8      	; 0x8dc <lcd_putchar+0x1f0>
+
+
+// prints a single character at the current cursor location
+void OrangutanLCD::print(char character)
+{
+	send_data(character);
+     8d4:	80 e2       	ldi	r24, 0x20	; 32
+     8d6:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <_ZN12OrangutanLCD9send_dataEh>
+					OrangutanLCD::print(printf_chars[(numLCDRows-2)*numLCDCols + i]);
+					printf_chars[(numLCDRows-2)*numLCDCols + i] = ' ';	// clear saved bottom row
+				}
+			}
+			OrangutanLCD::gotoXY(0, numLCDRows-1);		// erase bottom row
+			for (i = 0; i < numLCDCols; i++)
+     8da:	cf 5f       	subi	r28, 0xFF	; 255
+     8dc:	80 91 19 01 	lds	r24, 0x0119
+     8e0:	c8 17       	cp	r28, r24
+     8e2:	c0 f3       	brcs	.-16     	; 0x8d4 <lcd_putchar+0x1e8>
+     8e4:	03 c0       	rjmp	.+6      	; 0x8ec <lcd_putchar+0x200>
+			{
+				OrangutanLCD::print(' ');
+			}
+		}
+		else
+			row++;
+     8e6:	4f 5f       	subi	r20, 0xFF	; 255
+     8e8:	40 93 22 01 	sts	0x0122, r20
+		col = 0;
+     8ec:	10 92 23 01 	sts	0x0123, r1
+		repos = 1;
+	}
+
+	if (repos)
+	{
+		OrangutanLCD::gotoXY(col, row);
+     8f0:	80 91 23 01 	lds	r24, 0x0123
+     8f4:	60 91 22 01 	lds	r22, 0x0122
+     8f8:	0e 94 53 03 	call	0x6a6	; 0x6a6 <_ZN12OrangutanLCD6gotoXYEhh>
+	}
+
+	return c;
+     8fc:	2d 2d       	mov	r18, r13
+     8fe:	33 27       	eor	r19, r19
+     900:	27 fd       	sbrc	r18, 7
+     902:	30 95       	com	r19
+}
+     904:	c9 01       	movw	r24, r18
+     906:	cd b7       	in	r28, 0x3d	; 61
+     908:	de b7       	in	r29, 0x3e	; 62
+     90a:	e8 e0       	ldi	r30, 0x08	; 8
+     90c:	0c 94 59 09 	jmp	0x12b2	; 0x12b2 <__epilogue_restores__+0x14>
+
+00000910 <_ZN12OrangutanLCD10showCursorEh>:
+
+// Shows the cursor as either a BLINKING or SOLID block
+// cursorType should be either CURSOR_BLINKING or CURSOR_SOLID
+void OrangutanLCD::showCursor(unsigned char cursorType)
+{
+	if (cursorType == CURSOR_BLINKING)
+     910:	81 30       	cpi	r24, 0x01	; 1
+     912:	11 f4       	brne	.+4      	; 0x918 <_ZN12OrangutanLCD10showCursorEh+0x8>
+		send_cmd(LCD_SHOW_BLINK);
+     914:	8f e0       	ldi	r24, 0x0F	; 15
+     916:	01 c0       	rjmp	.+2      	; 0x91a <_ZN12OrangutanLCD10showCursorEh+0xa>
+	else
+		send_cmd(LCD_SHOW_SOLID);
+     918:	8e e0       	ldi	r24, 0x0E	; 14
+     91a:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+     91e:	08 95       	ret
+
+00000920 <lcd_show_cursor>:
+	OrangutanLCD::printBinary(value);
+}
+
+extern "C" void lcd_show_cursor(unsigned char cursorType)
+{
+	OrangutanLCD::showCursor(cursorType);
+     920:	0e 94 88 04 	call	0x910	; 0x910 <_ZN12OrangutanLCD10showCursorEh>
+}
+     924:	08 95       	ret
+
+00000926 <_ZN12OrangutanLCD10hideCursorEv>:
+
+
+// Hides the cursor
+void OrangutanLCD::hideCursor()
+{
+	send_cmd(LCD_HIDE);
+     926:	8c e0       	ldi	r24, 0x0C	; 12
+     928:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+}
+     92c:	08 95       	ret
+
+0000092e <lcd_hide_cursor>:
+	OrangutanLCD::showCursor(cursorType);
+}
+
+extern "C" void lcd_hide_cursor()
+{
+	OrangutanLCD::hideCursor();
+     92e:	0e 94 93 04 	call	0x926	; 0x926 <_ZN12OrangutanLCD10hideCursorEv>
+}
+     932:	08 95       	ret
+
+00000934 <_ZN12OrangutanLCD10moveCursorEhh>:
+
+// shifts the cursor LEFT or RIGHT the given number of positions.
+// direction should be either LCD_LEFT or LCD_RIGHT
+void OrangutanLCD::moveCursor(unsigned char direction, 
+							   unsigned char num)
+{
+     934:	cf 93       	push	r28
+     936:	df 93       	push	r29
+     938:	c8 2f       	mov	r28, r24
+     93a:	d6 2f       	mov	r29, r22
+	while(num-- > 0)
+     93c:	08 c0       	rjmp	.+16     	; 0x94e <_ZN12OrangutanLCD10moveCursorEhh+0x1a>
+	{
+		if (direction == LCD_LEFT)
+     93e:	cc 23       	and	r28, r28
+     940:	11 f4       	brne	.+4      	; 0x946 <_ZN12OrangutanLCD10moveCursorEhh+0x12>
+			send_cmd(LCD_CURSOR_L);
+     942:	80 e1       	ldi	r24, 0x10	; 16
+     944:	01 c0       	rjmp	.+2      	; 0x948 <_ZN12OrangutanLCD10moveCursorEhh+0x14>
+		else
+			send_cmd(LCD_CURSOR_R);
+     946:	84 e1       	ldi	r24, 0x14	; 20
+     948:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+     94c:	d1 50       	subi	r29, 0x01	; 1
+// shifts the cursor LEFT or RIGHT the given number of positions.
+// direction should be either LCD_LEFT or LCD_RIGHT
+void OrangutanLCD::moveCursor(unsigned char direction, 
+							   unsigned char num)
+{
+	while(num-- > 0)
+     94e:	dd 23       	and	r29, r29
+     950:	b1 f7       	brne	.-20     	; 0x93e <_ZN12OrangutanLCD10moveCursorEhh+0xa>
+		if (direction == LCD_LEFT)
+			send_cmd(LCD_CURSOR_L);
+		else
+			send_cmd(LCD_CURSOR_R);
+	}
+}
+     952:	df 91       	pop	r29
+     954:	cf 91       	pop	r28
+     956:	08 95       	ret
+
+00000958 <lcd_move_cursor>:
+	OrangutanLCD::hideCursor();
+}
+
+extern "C" void lcd_move_cursor(unsigned char direction, unsigned char num)
+{
+	OrangutanLCD::moveCursor(direction, num);
+     958:	0e 94 9a 04 	call	0x934	; 0x934 <_ZN12OrangutanLCD10moveCursorEhh>
+}
+     95c:	08 95       	ret
+
+0000095e <_ZN12OrangutanLCD6scrollEhhj>:
+// positions, delaying for delay_time milliseconds between each shift.
+// This is what you'd use for a scrolling display.
+// direction should be either LCD_LEFT or LCD_RIGHT
+void OrangutanLCD::scroll(unsigned char direction, unsigned char num, 
+						   unsigned int delay_time)
+{
+     95e:	0f 93       	push	r16
+     960:	1f 93       	push	r17
+     962:	cf 93       	push	r28
+     964:	df 93       	push	r29
+     966:	18 2f       	mov	r17, r24
+     968:	06 2f       	mov	r16, r22
+     96a:	ea 01       	movw	r28, r20
+	while(num--)
+     96c:	0b c0       	rjmp	.+22     	; 0x984 <_ZN12OrangutanLCD6scrollEhhj+0x26>
+	{
+		if (direction == LCD_LEFT)
+     96e:	11 23       	and	r17, r17
+     970:	11 f4       	brne	.+4      	; 0x976 <_ZN12OrangutanLCD6scrollEhhj+0x18>
+			send_cmd(LCD_SHIFT_L);
+     972:	88 e1       	ldi	r24, 0x18	; 24
+     974:	01 c0       	rjmp	.+2      	; 0x978 <_ZN12OrangutanLCD6scrollEhhj+0x1a>
+		else
+			send_cmd(LCD_SHIFT_R);
+     976:	8c e1       	ldi	r24, 0x1C	; 28
+     978:	0e 94 dd 01 	call	0x3ba	; 0x3ba <_ZN12OrangutanLCD8send_cmdEh>
+     97c:	ce 01       	movw	r24, r28
+     97e:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+     982:	01 50       	subi	r16, 0x01	; 1
+// This is what you'd use for a scrolling display.
+// direction should be either LCD_LEFT or LCD_RIGHT
+void OrangutanLCD::scroll(unsigned char direction, unsigned char num, 
+						   unsigned int delay_time)
+{
+	while(num--)
+     984:	00 23       	and	r16, r16
+     986:	99 f7       	brne	.-26     	; 0x96e <_ZN12OrangutanLCD6scrollEhhj+0x10>
+			send_cmd(LCD_SHIFT_L);
+		else
+			send_cmd(LCD_SHIFT_R);
+		delay(delay_time);
+	}
+}
+     988:	df 91       	pop	r29
+     98a:	cf 91       	pop	r28
+     98c:	1f 91       	pop	r17
+     98e:	0f 91       	pop	r16
+     990:	08 95       	ret
+
+00000992 <lcd_scroll>:
+}
+
+extern "C" void lcd_scroll(unsigned char direction, unsigned char num, 
+					   unsigned int delay_time)
+{
+	OrangutanLCD::scroll(direction, num, delay_time);
+     992:	0e 94 af 04 	call	0x95e	; 0x95e <_ZN12OrangutanLCD6scrollEhhj>
+}
+     996:	08 95       	ret
+
+00000998 <_ZN12OrangutanLCD10initPrintfEv>:
+
+// Initializes the LCD library for printf support.  After this,
+// printf will start sending characters to the LCD.
+void OrangutanLCD::initPrintf()
+{
+	if (printf_chars != 0)
+     998:	80 91 20 01 	lds	r24, 0x0120
+     99c:	90 91 21 01 	lds	r25, 0x0121
+     9a0:	00 97       	sbiw	r24, 0x00	; 0
+     9a2:	11 f0       	breq	.+4      	; 0x9a8 <_ZN12OrangutanLCD10initPrintfEv+0x10>
+		free(printf_chars);
+     9a4:	0e 94 18 0a 	call	0x1430	; 0x1430 <free>
+		
+	printf_chars = (char*)malloc(sizeof(char)*SAVED_CHARS);
+     9a8:	20 91 18 01 	lds	r18, 0x0118
+     9ac:	30 e0       	ldi	r19, 0x00	; 0
+     9ae:	21 50       	subi	r18, 0x01	; 1
+     9b0:	30 40       	sbci	r19, 0x00	; 0
+     9b2:	80 91 19 01 	lds	r24, 0x0119
+     9b6:	90 e0       	ldi	r25, 0x00	; 0
+     9b8:	ac 01       	movw	r20, r24
+     9ba:	24 9f       	mul	r18, r20
+     9bc:	c0 01       	movw	r24, r0
+     9be:	25 9f       	mul	r18, r21
+     9c0:	90 0d       	add	r25, r0
+     9c2:	34 9f       	mul	r19, r20
+     9c4:	90 0d       	add	r25, r0
+     9c6:	11 24       	eor	r1, r1
+     9c8:	0e 94 7e 09 	call	0x12fc	; 0x12fc <malloc>
+     9cc:	90 93 21 01 	sts	0x0121, r25
+     9d0:	80 93 20 01 	sts	0x0120, r24
+	if (printf_chars == 0)
+     9d4:	00 97       	sbiw	r24, 0x00	; 0
+     9d6:	21 f1       	breq	.+72     	; 0xa20 <_ZN12OrangutanLCD10initPrintfEv+0x88>
+     9d8:	a0 e0       	ldi	r26, 0x00	; 0
+		return;
+	unsigned char i;
+	for (i = 0; i < SAVED_CHARS; i++)
+		printf_chars[i] = ' ';
+     9da:	b0 e2       	ldi	r27, 0x20	; 32
+     9dc:	08 c0       	rjmp	.+16     	; 0x9ee <_ZN12OrangutanLCD10initPrintfEv+0x56>
+     9de:	e0 91 20 01 	lds	r30, 0x0120
+     9e2:	f0 91 21 01 	lds	r31, 0x0121
+     9e6:	e2 0f       	add	r30, r18
+     9e8:	f3 1f       	adc	r31, r19
+     9ea:	b0 83       	st	Z, r27
+		
+	printf_chars = (char*)malloc(sizeof(char)*SAVED_CHARS);
+	if (printf_chars == 0)
+		return;
+	unsigned char i;
+	for (i = 0; i < SAVED_CHARS; i++)
+     9ec:	af 5f       	subi	r26, 0xFF	; 255
+     9ee:	2a 2f       	mov	r18, r26
+     9f0:	30 e0       	ldi	r19, 0x00	; 0
+     9f2:	80 91 18 01 	lds	r24, 0x0118
+     9f6:	90 e0       	ldi	r25, 0x00	; 0
+     9f8:	01 97       	sbiw	r24, 0x01	; 1
+     9fa:	60 91 19 01 	lds	r22, 0x0119
+     9fe:	70 e0       	ldi	r23, 0x00	; 0
+     a00:	86 9f       	mul	r24, r22
+     a02:	a0 01       	movw	r20, r0
+     a04:	87 9f       	mul	r24, r23
+     a06:	50 0d       	add	r21, r0
+     a08:	96 9f       	mul	r25, r22
+     a0a:	50 0d       	add	r21, r0
+     a0c:	11 24       	eor	r1, r1
+     a0e:	24 17       	cp	r18, r20
+     a10:	35 07       	cpc	r19, r21
+     a12:	2c f3       	brlt	.-54     	; 0x9de <_ZN12OrangutanLCD10initPrintfEv+0x46>
+		printf_chars[i] = ' ';
+	fdevopen(lcd_putchar, void_getchar);
+     a14:	86 e7       	ldi	r24, 0x76	; 118
+     a16:	93 e0       	ldi	r25, 0x03	; 3
+     a18:	6a e4       	ldi	r22, 0x4A	; 74
+     a1a:	71 e0       	ldi	r23, 0x01	; 1
+     a1c:	0e 94 b1 0a 	call	0x1562	; 0x1562 <fdevopen>
+     a20:	08 95       	ret
+
+00000a22 <lcd_init_printf>:
+	OrangutanLCD::gotoXY(col,row);
+}
+
+extern "C" void lcd_init_printf()
+{
+	OrangutanLCD::initPrintf();
+     a22:	0e 94 cc 04 	call	0x998	; 0x998 <_ZN12OrangutanLCD10initPrintfEv>
+}
+     a26:	08 95       	ret
+
+00000a28 <lcd_init_printf_with_dimensions>:
+	fdevopen(lcd_putchar, void_getchar);
+}
+
+void OrangutanLCD::initPrintf(unsigned char lcdWidth, unsigned char lcdHeight)
+{
+	numLCDCols = lcdWidth;
+     a28:	80 93 19 01 	sts	0x0119, r24
+	numLCDRows = lcdHeight;
+     a2c:	60 93 18 01 	sts	0x0118, r22
+	initPrintf();
+     a30:	0e 94 cc 04 	call	0x998	; 0x998 <_ZN12OrangutanLCD10initPrintfEv>
+}
+
+extern "C" void lcd_init_printf_with_dimensions(unsigned char width, unsigned char height)
+{
+	OrangutanLCD::initPrintf(width, height);
+}
+     a34:	08 95       	ret
+
+00000a36 <_ZN12OrangutanLCD10initPrintfEhh>:
+	fdevopen(lcd_putchar, void_getchar);
+}
+
+void OrangutanLCD::initPrintf(unsigned char lcdWidth, unsigned char lcdHeight)
+{
+	numLCDCols = lcdWidth;
+     a36:	80 93 19 01 	sts	0x0119, r24
+	numLCDRows = lcdHeight;
+     a3a:	60 93 18 01 	sts	0x0118, r22
+	initPrintf();
+     a3e:	0e 94 cc 04 	call	0x998	; 0x998 <_ZN12OrangutanLCD10initPrintfEv>
+}
+     a42:	08 95       	ret
+
+00000a44 <_ZN16OrangutanDigital14getIORegistersEP8IOStructh>:
+	
+	
+	// gets a structure with pointers to the three digital I/O registers associated
+	// with the specified pin (DDR, PORT, and PIN) along with a bitmask with a
+	// 1 in the position of the specified pin and 0s everywhere else.
+	inline static void getIORegisters(struct IOStruct* io, unsigned char pin)
+     a44:	fc 01       	movw	r30, r24
+	{
+		io->pinRegister = 0;
+     a46:	11 82       	std	Z+1, r1	; 0x01
+     a48:	10 82       	st	Z, r1
+		io->portRegister = 0;
+     a4a:	13 82       	std	Z+3, r1	; 0x03
+     a4c:	12 82       	std	Z+2, r1	; 0x02
+		io->ddrRegister = 0;
+     a4e:	15 82       	std	Z+5, r1	; 0x05
+     a50:	14 82       	std	Z+4, r1	; 0x04
+		io->bitmask = 0;
+     a52:	16 82       	std	Z+6, r1	; 0x06
+
+		if (pin < 8)			// pin 0 = PD0, ..., 7 = PD7
+     a54:	68 30       	cpi	r22, 0x08	; 8
+     a56:	68 f4       	brcc	.+26     	; 0xa72 <_ZN16OrangutanDigital14getIORegistersEP8IOStructh+0x2e>
+		{
+			io->pinRegister = (unsigned char*)&PIND;
+     a58:	89 e2       	ldi	r24, 0x29	; 41
+     a5a:	90 e0       	ldi	r25, 0x00	; 0
+     a5c:	91 83       	std	Z+1, r25	; 0x01
+     a5e:	80 83       	st	Z, r24
+			io->portRegister = (unsigned char*)&PORTD;
+     a60:	8b e2       	ldi	r24, 0x2B	; 43
+     a62:	90 e0       	ldi	r25, 0x00	; 0
+     a64:	93 83       	std	Z+3, r25	; 0x03
+     a66:	82 83       	std	Z+2, r24	; 0x02
+			io->ddrRegister = (unsigned char*)&DDRD;
+     a68:	8a e2       	ldi	r24, 0x2A	; 42
+     a6a:	90 e0       	ldi	r25, 0x00	; 0
+     a6c:	95 83       	std	Z+5, r25	; 0x05
+     a6e:	84 83       	std	Z+4, r24	; 0x04
+     a70:	11 c0       	rjmp	.+34     	; 0xa94 <_ZN16OrangutanDigital14getIORegistersEP8IOStructh+0x50>
+			io->bitmask = 1 << (31 - pin);
+		}
+
+#else
+
+		else if (pin < 14)		// pin 8 = PB0, ..., 13 = PB5 (PB6 and PB7 reserved for external clock)
+     a72:	6e 30       	cpi	r22, 0x0E	; 14
+     a74:	c0 f4       	brcc	.+48     	; 0xaa6 <_ZN16OrangutanDigital14getIORegistersEP8IOStructh+0x62>
+		{
+			io->pinRegister = (unsigned char*)&PINB;
+     a76:	83 e2       	ldi	r24, 0x23	; 35
+     a78:	90 e0       	ldi	r25, 0x00	; 0
+     a7a:	91 83       	std	Z+1, r25	; 0x01
+     a7c:	80 83       	st	Z, r24
+			io->portRegister = (unsigned char*)&PORTB;
+     a7e:	85 e2       	ldi	r24, 0x25	; 37
+     a80:	90 e0       	ldi	r25, 0x00	; 0
+     a82:	93 83       	std	Z+3, r25	; 0x03
+     a84:	82 83       	std	Z+2, r24	; 0x02
+			io->ddrRegister = (unsigned char*)&DDRB;
+     a86:	84 e2       	ldi	r24, 0x24	; 36
+     a88:	90 e0       	ldi	r25, 0x00	; 0
+     a8a:	95 83       	std	Z+5, r25	; 0x05
+     a8c:	84 83       	std	Z+4, r24	; 0x04
+			io->bitmask = 1 << (pin - 8);
+     a8e:	70 e0       	ldi	r23, 0x00	; 0
+     a90:	68 50       	subi	r22, 0x08	; 8
+     a92:	70 40       	sbci	r23, 0x00	; 0
+     a94:	81 e0       	ldi	r24, 0x01	; 1
+     a96:	90 e0       	ldi	r25, 0x00	; 0
+     a98:	02 c0       	rjmp	.+4      	; 0xa9e <_ZN16OrangutanDigital14getIORegistersEP8IOStructh+0x5a>
+     a9a:	88 0f       	add	r24, r24
+     a9c:	99 1f       	adc	r25, r25
+     a9e:	6a 95       	dec	r22
+     aa0:	e2 f7       	brpl	.-8      	; 0xa9a <_ZN16OrangutanDigital14getIORegistersEP8IOStructh+0x56>
+     aa2:	86 83       	std	Z+6, r24	; 0x06
+     aa4:	08 95       	ret
+		}
+		else if (pin < 21)		// pin 14 = PC0, ..., 19 = PC5 (PC6 is reset, PC7 doesn't exist)
+     aa6:	65 31       	cpi	r22, 0x15	; 21
+     aa8:	b8 f4       	brcc	.+46     	; 0xad8 <_ZN16OrangutanDigital14getIORegistersEP8IOStructh+0x94>
+		{
+			io->pinRegister = (unsigned char*)&PINC;
+     aaa:	86 e2       	ldi	r24, 0x26	; 38
+     aac:	90 e0       	ldi	r25, 0x00	; 0
+     aae:	91 83       	std	Z+1, r25	; 0x01
+     ab0:	80 83       	st	Z, r24
+			io->portRegister = (unsigned char*)&PORTC;
+     ab2:	88 e2       	ldi	r24, 0x28	; 40
+     ab4:	90 e0       	ldi	r25, 0x00	; 0
+     ab6:	93 83       	std	Z+3, r25	; 0x03
+     ab8:	82 83       	std	Z+2, r24	; 0x02
+			io->ddrRegister = (unsigned char*)&DDRC;
+     aba:	87 e2       	ldi	r24, 0x27	; 39
+     abc:	90 e0       	ldi	r25, 0x00	; 0
+     abe:	95 83       	std	Z+5, r25	; 0x05
+     ac0:	84 83       	std	Z+4, r24	; 0x04
+			io->bitmask = 1 << (pin - 14);
+     ac2:	70 e0       	ldi	r23, 0x00	; 0
+     ac4:	6e 50       	subi	r22, 0x0E	; 14
+     ac6:	70 40       	sbci	r23, 0x00	; 0
+     ac8:	81 e0       	ldi	r24, 0x01	; 1
+     aca:	90 e0       	ldi	r25, 0x00	; 0
+     acc:	02 c0       	rjmp	.+4      	; 0xad2 <_ZN16OrangutanDigital14getIORegistersEP8IOStructh+0x8e>
+     ace:	88 0f       	add	r24, r24
+     ad0:	99 1f       	adc	r25, r25
+     ad2:	6a 95       	dec	r22
+     ad4:	e2 f7       	brpl	.-8      	; 0xace <_ZN16OrangutanDigital14getIORegistersEP8IOStructh+0x8a>
+     ad6:	86 83       	std	Z+6, r24	; 0x06
+     ad8:	08 95       	ret
+
+00000ada <_ZN16OrangutanDigital16setDataDirectionEP8IOStructh>:
+	}
+
+
+	// low-level method for setting the data direction (i.e. input or output) of an pin or set of pins
+	// described by an IOStruct pointer.
+	inline static void setDataDirection(struct IOStruct* ioPin, unsigned char val)
+     ada:	fc 01       	movw	r30, r24
+     adc:	a4 81       	ldd	r26, Z+4	; 0x04
+     ade:	b5 81       	ldd	r27, Z+5	; 0x05
+     ae0:	86 81       	ldd	r24, Z+6	; 0x06
+	{
+		if (val)
+     ae2:	66 23       	and	r22, r22
+     ae4:	21 f0       	breq	.+8      	; 0xaee <_ZN16OrangutanDigital16setDataDirectionEP8IOStructh+0x14>
+			*(ioPin->ddrRegister) |= ioPin->bitmask;
+     ae6:	9c 91       	ld	r25, X
+     ae8:	98 2b       	or	r25, r24
+     aea:	9c 93       	st	X, r25
+     aec:	08 95       	ret
+		else
+			*(ioPin->ddrRegister) &= ~ioPin->bitmask;
+     aee:	9c 91       	ld	r25, X
+     af0:	80 95       	com	r24
+     af2:	89 23       	and	r24, r25
+     af4:	8c 93       	st	X, r24
+     af6:	08 95       	ret
+
+00000af8 <_ZN16OrangutanDigital14setOutputValueEP8IOStructh>:
+	// low-level method for setting the PORT register value of an pin or set of pins
+	// described by an IOStruct pointer.  If the pin is an input, this lets you choose between
+	// setting it as high-impedance (val = 0) or enabling the internal pull-up (val = 1).  If the pin is an
+	// output, this lets you choose between driving low (val = 0) and driving high (val = 1).
+	// NOTE: if val is 0xFF (255), this method will toggle the PORT register pin(s).
+	inline static void setOutputValue(struct IOStruct* ioPin, unsigned char val)
+     af8:	fc 01       	movw	r30, r24
+	{
+		if (val == 0xFF)
+     afa:	6f 3f       	cpi	r22, 0xFF	; 255
+     afc:	31 f4       	brne	.+12     	; 0xb0a <_ZN16OrangutanDigital14setOutputValueEP8IOStructh+0x12>
+			*(ioPin->portRegister) ^= ioPin->bitmask;
+     afe:	a2 81       	ldd	r26, Z+2	; 0x02
+     b00:	b3 81       	ldd	r27, Z+3	; 0x03
+     b02:	8c 91       	ld	r24, X
+     b04:	96 81       	ldd	r25, Z+6	; 0x06
+     b06:	89 27       	eor	r24, r25
+     b08:	0c c0       	rjmp	.+24     	; 0xb22 <_ZN16OrangutanDigital14setOutputValueEP8IOStructh+0x2a>
+     b0a:	a2 81       	ldd	r26, Z+2	; 0x02
+     b0c:	b3 81       	ldd	r27, Z+3	; 0x03
+     b0e:	86 81       	ldd	r24, Z+6	; 0x06
+		else if (val)
+     b10:	66 23       	and	r22, r22
+     b12:	21 f0       	breq	.+8      	; 0xb1c <_ZN16OrangutanDigital14setOutputValueEP8IOStructh+0x24>
+			*(ioPin->portRegister) |= ioPin->bitmask;
+     b14:	9c 91       	ld	r25, X
+     b16:	98 2b       	or	r25, r24
+     b18:	9c 93       	st	X, r25
+     b1a:	08 95       	ret
+		else
+			*(ioPin->portRegister) &= ~ioPin->bitmask;
+     b1c:	9c 91       	ld	r25, X
+     b1e:	80 95       	com	r24
+     b20:	89 23       	and	r24, r25
+     b22:	8c 93       	st	X, r24
+     b24:	08 95       	ret
+
+00000b26 <_ZN16OrangutanDigital9setOutputEhh>:
+
+	// high-level method for setting the specified pin as an output with the specified output state.
+	// An outputState value of 0 will cause the pin to drive low; a value of 1 will cause the pin to 
+	// drive high.  A value of 0xFF (255) will toggle the output state of the pin (i.e. high -> low and
+	// low -> high).
+	inline static void setOutput(unsigned char pin, unsigned char outputState)
+     b26:	a7 e0       	ldi	r26, 0x07	; 7
+     b28:	b0 e0       	ldi	r27, 0x00	; 0
+     b2a:	e9 e9       	ldi	r30, 0x99	; 153
+     b2c:	f5 e0       	ldi	r31, 0x05	; 5
+     b2e:	0c 94 40 09 	jmp	0x1280	; 0x1280 <__prologue_saves__+0x1a>
+     b32:	28 2f       	mov	r18, r24
+     b34:	f6 2e       	mov	r15, r22
+	{
+		struct IOStruct registers;
+		getIORegisters(&registers, pin);
+     b36:	8e 01       	movw	r16, r28
+     b38:	0f 5f       	subi	r16, 0xFF	; 255
+     b3a:	1f 4f       	sbci	r17, 0xFF	; 255
+     b3c:	c8 01       	movw	r24, r16
+     b3e:	62 2f       	mov	r22, r18
+     b40:	0e 94 22 05 	call	0xa44	; 0xa44 <_ZN16OrangutanDigital14getIORegistersEP8IOStructh>
+		setOutputValue(&registers, outputState);
+     b44:	c8 01       	movw	r24, r16
+     b46:	6f 2d       	mov	r22, r15
+     b48:	0e 94 7c 05 	call	0xaf8	; 0xaf8 <_ZN16OrangutanDigital14setOutputValueEP8IOStructh>
+		setDataDirection(&registers, 1);
+     b4c:	c8 01       	movw	r24, r16
+     b4e:	61 e0       	ldi	r22, 0x01	; 1
+     b50:	0e 94 6d 05 	call	0xada	; 0xada <_ZN16OrangutanDigital16setDataDirectionEP8IOStructh>
+	}
+     b54:	27 96       	adiw	r28, 0x07	; 7
+     b56:	e5 e0       	ldi	r30, 0x05	; 5
+     b58:	0c 94 5c 09 	jmp	0x12b8	; 0x12b8 <__epilogue_restores__+0x1a>
+
+00000b5c <_ZN15OrangutanMotorsC1Ev>:
+
+// constructor
+
+OrangutanMotors::OrangutanMotors()
+{
+}
+     b5c:	08 95       	ret
+
+00000b5e <_ZN15OrangutanMotors5init2Ev>:
+	*/
+
+	// configure for inverted fast PWM output on motor control pins:   
+    //  set OCxx on compare match, clear on timer overflow   
+    //  Timer0 and Timer2 counts up from 0 to 255 and then overflows directly to 0   
+    TCCR0A = TCCR2A = 0xF3;
+     b5e:	e0 eb       	ldi	r30, 0xB0	; 176
+     b60:	f0 e0       	ldi	r31, 0x00	; 0
+     b62:	83 ef       	ldi	r24, 0xF3	; 243
+     b64:	80 83       	st	Z, r24
+     b66:	80 81       	ld	r24, Z
+     b68:	84 bd       	out	0x24, r24	; 36
+ 
+#ifndef ARDUINO	
+    // use the system clock/8 (=2.5 MHz) as the timer clock,
+	// which will produce a PWM frequency of 10 kHz
+	// Arduino uses Timer0 for timing functions like micros() and delay() so we can't change it
+    TCCR0B = TCCR2B = 0x02;
+     b6a:	e1 eb       	ldi	r30, 0xB1	; 177
+     b6c:	f0 e0       	ldi	r31, 0x00	; 0
+     b6e:	82 e0       	ldi	r24, 0x02	; 2
+     b70:	80 83       	st	Z, r24
+     b72:	80 81       	ld	r24, Z
+     b74:	85 bd       	out	0x25, r24	; 37
+	// and 3Pi can support PWM frequencies this high.  The
+	// Orangutan LV-168 cannot support frequencies above 10 kHz.
+    //TCCR0B = TCCR2B = 0x01;
+
+    // initialize all PWMs to 0% duty cycle (braking)   
+    OCR0A = OCR0B = OCR2A = OCR2B = 0;
+     b76:	e4 eb       	ldi	r30, 0xB4	; 180
+     b78:	f0 e0       	ldi	r31, 0x00	; 0
+     b7a:	10 82       	st	Z, r1
+     b7c:	80 81       	ld	r24, Z
+     b7e:	e3 eb       	ldi	r30, 0xB3	; 179
+     b80:	f0 e0       	ldi	r31, 0x00	; 0
+     b82:	80 83       	st	Z, r24
+     b84:	80 81       	ld	r24, Z
+     b86:	88 bd       	out	0x28, r24	; 40
+     b88:	88 b5       	in	r24, 0x28	; 40
+     b8a:	87 bd       	out	0x27, r24	; 39
+	
+	OrangutanDigital::setOutput(PWM0A, 0);
+     b8c:	86 e0       	ldi	r24, 0x06	; 6
+     b8e:	60 e0       	ldi	r22, 0x00	; 0
+     b90:	0e 94 93 05 	call	0xb26	; 0xb26 <_ZN16OrangutanDigital9setOutputEhh>
+	OrangutanDigital::setOutput(PWM0B, 0);
+     b94:	85 e0       	ldi	r24, 0x05	; 5
+     b96:	60 e0       	ldi	r22, 0x00	; 0
+     b98:	0e 94 93 05 	call	0xb26	; 0xb26 <_ZN16OrangutanDigital9setOutputEhh>
+	OrangutanDigital::setOutput(PWM2A, 0);
+     b9c:	8b e0       	ldi	r24, 0x0B	; 11
+     b9e:	60 e0       	ldi	r22, 0x00	; 0
+     ba0:	0e 94 93 05 	call	0xb26	; 0xb26 <_ZN16OrangutanDigital9setOutputEhh>
+	OrangutanDigital::setOutput(PWM2B, 0);
+     ba4:	83 e0       	ldi	r24, 0x03	; 3
+     ba6:	60 e0       	ldi	r22, 0x00	; 0
+     ba8:	0e 94 93 05 	call	0xb26	; 0xb26 <_ZN16OrangutanDigital9setOutputEhh>
+
+#endif
+}
+     bac:	08 95       	ret
+
+00000bae <_ZN15OrangutanMotors4initEv>:
+
+	static inline void init()
+	{
+		static unsigned char initialized = 0;
+
+		if (!initialized)
+     bae:	80 91 29 01 	lds	r24, 0x0129
+     bb2:	88 23       	and	r24, r24
+     bb4:	29 f4       	brne	.+10     	; 0xbc0 <_ZN15OrangutanMotors4initEv+0x12>
+		{
+			initialized = 1;
+     bb6:	81 e0       	ldi	r24, 0x01	; 1
+     bb8:	80 93 29 01 	sts	0x0129, r24
+			init2();
+     bbc:	0e 94 af 05 	call	0xb5e	; 0xb5e <_ZN15OrangutanMotors5init2Ev>
+     bc0:	08 95       	ret
+
+00000bc2 <_ZN15OrangutanMotors10setM1SpeedEi>:
+
+// sets the motor speed.  The sign of 'speed' determines the direction
+// and the magnitude determines the speed.  limits: -255 <= speed < 255
+// |speed| = 255 produces the maximum speed while speed = 0 is full brake.
+void OrangutanMotors::setM1Speed(int speed)
+{
+     bc2:	cf 93       	push	r28
+     bc4:	df 93       	push	r29
+     bc6:	ec 01       	movw	r28, r24
+
+	OrangutanX2::setMotor(MOTOR1, IMMEDIATE_DRIVE, speed);
+
+#else
+
+	init();
+     bc8:	0e 94 d7 05 	call	0xbae	; 0xbae <_ZN15OrangutanMotors4initEv>
+	unsigned char reverse = 0;
+
+	if (speed < 0)
+     bcc:	d7 ff       	sbrs	r29, 7
+     bce:	05 c0       	rjmp	.+10     	; 0xbda <_ZN15OrangutanMotors10setM1SpeedEi+0x18>
+	{
+		speed = -speed;	// make speed a positive quantity
+     bd0:	d0 95       	com	r29
+     bd2:	c1 95       	neg	r28
+     bd4:	df 4f       	sbci	r29, 0xFF	; 255
+		reverse = 1;	// preserve the direction
+     bd6:	81 e0       	ldi	r24, 0x01	; 1
+     bd8:	01 c0       	rjmp	.+2      	; 0xbdc <_ZN15OrangutanMotors10setM1SpeedEi+0x1a>
+	OrangutanX2::setMotor(MOTOR1, IMMEDIATE_DRIVE, speed);
+
+#else
+
+	init();
+	unsigned char reverse = 0;
+     bda:	80 e0       	ldi	r24, 0x00	; 0
+
+	if (speed < 0)
+	{
+		speed = -speed;	// make speed a positive quantity
+     bdc:	cf 3f       	cpi	r28, 0xFF	; 255
+     bde:	d1 05       	cpc	r29, r1
+     be0:	19 f0       	breq	.+6      	; 0xbe8 <_ZN15OrangutanMotors10setM1SpeedEi+0x26>
+     be2:	14 f0       	brlt	.+4      	; 0xbe8 <_ZN15OrangutanMotors10setM1SpeedEi+0x26>
+     be4:	cf ef       	ldi	r28, 0xFF	; 255
+     be6:	d0 e0       	ldi	r29, 0x00	; 0
+			OrangutanDigital::setOutput(DIRA, LOW);
+		}
+	}
+
+#else
+	if (reverse)
+     be8:	88 23       	and	r24, r24
+     bea:	19 f0       	breq	.+6      	; 0xbf2 <_ZN15OrangutanMotors10setM1SpeedEi+0x30>
+	{
+		OCR0B = 0;		// hold one driver input high
+     bec:	18 bc       	out	0x28, r1	; 40
+		OCR0A = speed;	// pwm the other input
+     bee:	c7 bd       	out	0x27, r28	; 39
+     bf0:	02 c0       	rjmp	.+4      	; 0xbf6 <_ZN15OrangutanMotors10setM1SpeedEi+0x34>
+	}
+	else	// forward
+	{
+		OCR0B = speed;	// pwm one driver input
+     bf2:	c8 bd       	out	0x28, r28	; 40
+		OCR0A = 0;		// hold the other driver input high
+     bf4:	17 bc       	out	0x27, r1	; 39
+	}
+#endif // _ORANGUTAN_SVP
+#endif // _ORANGUTAN_X2
+}
+     bf6:	df 91       	pop	r29
+     bf8:	cf 91       	pop	r28
+     bfa:	08 95       	ret
+
+00000bfc <set_m1_speed>:
+#endif
+
+
+extern "C" void set_m1_speed(int speed)
+{
+	OrangutanMotors::setM1Speed(speed);
+     bfc:	0e 94 e1 05 	call	0xbc2	; 0xbc2 <_ZN15OrangutanMotors10setM1SpeedEi>
+}
+     c00:	08 95       	ret
+
+00000c02 <_ZN15OrangutanMotors10setM2SpeedEi>:
+#endif // _ORANGUTAN_SVP
+#endif // _ORANGUTAN_X2
+}
+
+void OrangutanMotors::setM2Speed(int speed)
+{
+     c02:	cf 93       	push	r28
+     c04:	df 93       	push	r29
+     c06:	ec 01       	movw	r28, r24
+
+	OrangutanX2::setMotor(MOTOR2, IMMEDIATE_DRIVE, speed);
+
+#else
+
+	init();
+     c08:	0e 94 d7 05 	call	0xbae	; 0xbae <_ZN15OrangutanMotors4initEv>
+	unsigned char reverse = 0;
+
+	if (speed < 0)
+     c0c:	d7 ff       	sbrs	r29, 7
+     c0e:	05 c0       	rjmp	.+10     	; 0xc1a <_ZN15OrangutanMotors10setM2SpeedEi+0x18>
+	{
+		speed = -speed;	// make speed a positive quantity
+     c10:	d0 95       	com	r29
+     c12:	c1 95       	neg	r28
+     c14:	df 4f       	sbci	r29, 0xFF	; 255
+		reverse = 1;	// preserve the direction
+     c16:	81 e0       	ldi	r24, 0x01	; 1
+     c18:	01 c0       	rjmp	.+2      	; 0xc1c <_ZN15OrangutanMotors10setM2SpeedEi+0x1a>
+	OrangutanX2::setMotor(MOTOR2, IMMEDIATE_DRIVE, speed);
+
+#else
+
+	init();
+	unsigned char reverse = 0;
+     c1a:	80 e0       	ldi	r24, 0x00	; 0
+
+	if (speed < 0)
+	{
+		speed = -speed;	// make speed a positive quantity
+     c1c:	cf 3f       	cpi	r28, 0xFF	; 255
+     c1e:	d1 05       	cpc	r29, r1
+     c20:	19 f0       	breq	.+6      	; 0xc28 <_ZN15OrangutanMotors10setM2SpeedEi+0x26>
+     c22:	14 f0       	brlt	.+4      	; 0xc28 <_ZN15OrangutanMotors10setM2SpeedEi+0x26>
+     c24:	cf ef       	ldi	r28, 0xFF	; 255
+     c26:	d0 e0       	ldi	r29, 0x00	; 0
+		}
+	}
+
+#else
+
+	if (reverse)
+     c28:	88 23       	and	r24, r24
+     c2a:	29 f0       	breq	.+10     	; 0xc36 <_ZN15OrangutanMotors10setM2SpeedEi+0x34>
+	{
+		OCR2B = 0;		// hold one driver input high
+     c2c:	10 92 b4 00 	sts	0x00B4, r1
+		OCR2A = speed;	// pwm the other input
+     c30:	c0 93 b3 00 	sts	0x00B3, r28
+     c34:	04 c0       	rjmp	.+8      	; 0xc3e <_ZN15OrangutanMotors10setM2SpeedEi+0x3c>
+	}
+	else	// forward
+	{
+		OCR2B = speed;	// pwm one driver input
+     c36:	c0 93 b4 00 	sts	0x00B4, r28
+		OCR2A = 0;		// hold the other driver input high
+     c3a:	10 92 b3 00 	sts	0x00B3, r1
+	}
+	
+#endif // _ORANGUTAN_SVP
+#endif // _ORANGUTAN_X2
+}
+     c3e:	df 91       	pop	r29
+     c40:	cf 91       	pop	r28
+     c42:	08 95       	ret
+
+00000c44 <set_m2_speed>:
+	OrangutanMotors::setM1Speed(speed);
+}
+
+extern "C" void set_m2_speed(int speed)
+{
+	OrangutanMotors::setM2Speed(speed);
+     c44:	0e 94 01 06 	call	0xc02	; 0xc02 <_ZN15OrangutanMotors10setM2SpeedEi>
+}
+     c48:	08 95       	ret
+
+00000c4a <_ZN15OrangutanMotors9setSpeedsEii>:
+#endif // _ORANGUTAN_X2
+}
+
+
+void OrangutanMotors::setSpeeds(int m1Speed, int m2Speed)
+{
+     c4a:	cf 93       	push	r28
+     c4c:	df 93       	push	r29
+     c4e:	eb 01       	movw	r28, r22
+	setM1Speed(m1Speed);
+     c50:	0e 94 e1 05 	call	0xbc2	; 0xbc2 <_ZN15OrangutanMotors10setM1SpeedEi>
+	setM2Speed(m2Speed);
+     c54:	ce 01       	movw	r24, r28
+     c56:	0e 94 01 06 	call	0xc02	; 0xc02 <_ZN15OrangutanMotors10setM2SpeedEi>
+}
+     c5a:	df 91       	pop	r29
+     c5c:	cf 91       	pop	r28
+     c5e:	08 95       	ret
+
+00000c60 <set_motors>:
+	OrangutanMotors::setM2Speed(speed);
+}
+
+extern "C" void set_motors(int m1, int m2)
+{
+	OrangutanMotors::setSpeeds(m1, m2);
+     c60:	0e 94 25 06 	call	0xc4a	; 0xc4a <_ZN15OrangutanMotors9setSpeedsEii>
+}
+     c64:	08 95       	ret
+
+00000c66 <_ZN20OrangutanPushbuttonsC1Ev>:
+// constructor
+
+OrangutanPushbuttons::OrangutanPushbuttons()
+{
+
+}
+     c66:	08 95       	ret
+
+00000c68 <_ZN20OrangutanPushbuttons5init2Ev>:
+}
+
+// initializes I/O pins for use as button inputs
+void OrangutanPushbuttons::init2()
+{
+	BUTTON_DDR &= ~ALL_BUTTONS;		// set the pushbutton pins to be inputs
+     c68:	84 b1       	in	r24, 0x04	; 4
+     c6a:	8d 7c       	andi	r24, 0xCD	; 205
+     c6c:	84 b9       	out	0x04, r24	; 4
+#ifndef _ORANGUTAN_X2
+	BUTTON_PORT |= ALL_BUTTONS;		// enable pullups on the pushbutton pins
+     c6e:	85 b1       	in	r24, 0x05	; 5
+     c70:	82 63       	ori	r24, 0x32	; 50
+     c72:	85 b9       	out	0x05, r24	; 5
+		    "   pop  r22"     "\n\t"   
+		    "   sbiw %0, 1"   "\n\t"
+		    "   brne 1b"
+		    : "=w" ( microseconds )  
+		    : "0" ( microseconds )
+		    );  
+     c74:	85 e0       	ldi	r24, 0x05	; 5
+     c76:	90 e0       	ldi	r25, 0x00	; 0
+     c78:	6f 93       	push	r22
+     c7a:	64 e0       	ldi	r22, 0x04	; 4
+     c7c:	6a 95       	dec	r22
+     c7e:	f1 f7       	brne	.-4      	; 0xc7c <_ZN20OrangutanPushbuttons5init2Ev+0x14>
+     c80:	6f 91       	pop	r22
+     c82:	01 97       	sbiw	r24, 0x01	; 1
+     c84:	c9 f7       	brne	.-14     	; 0xc78 <_ZN20OrangutanPushbuttons5init2Ev+0x10>
+#endif
+	delayMicroseconds(5);			// give pullups time to stabilize
+}
+     c86:	08 95       	ret
+
+00000c88 <_ZN20OrangutanPushbuttons4initEv>:
+inline void OrangutanPushbuttons::init()
+{
+	{
+		static unsigned char initialized = 0;
+
+		if (!initialized)
+     c88:	80 91 2a 01 	lds	r24, 0x012A
+     c8c:	88 23       	and	r24, r24
+     c8e:	29 f4       	brne	.+10     	; 0xc9a <_ZN20OrangutanPushbuttons4initEv+0x12>
+		{
+			initialized = 1;
+     c90:	81 e0       	ldi	r24, 0x01	; 1
+     c92:	80 93 2a 01 	sts	0x012A, r24
+			init2();
+     c96:	0e 94 34 06 	call	0xc68	; 0xc68 <_ZN20OrangutanPushbuttons5init2Ev>
+     c9a:	08 95       	ret
+
+00000c9c <_ZN20OrangutanPushbuttons12waitForPressEh>:
+// refer to multiple buttons using the bitwise OR operator |.  The
+// return value is the ID of the button that was pressed.  Note that
+// this method takes care of button debouncing.
+// Example: waitForPress(TOP_BUTTON | BOTTOM_BUTTON);
+unsigned char OrangutanPushbuttons::waitForPress(unsigned char buttons)
+{
+     c9c:	1f 93       	push	r17
+     c9e:	cf 93       	push	r28
+     ca0:	df 93       	push	r29
+     ca2:	18 2f       	mov	r17, r24
+	init();		// initialize pushbutton I/O pins if necessary
+     ca4:	0e 94 44 06 	call	0xc88	; 0xc88 <_ZN20OrangutanPushbuttons4initEv>
+	do
+	{
+		while (!(BUTTONS_DOWN & buttons))	// wait for a button to be pressed
+     ca8:	c1 2f       	mov	r28, r17
+     caa:	d0 e0       	ldi	r29, 0x00	; 0
+     cac:	23 b1       	in	r18, 0x03	; 3
+     cae:	30 e0       	ldi	r19, 0x00	; 0
+     cb0:	20 95       	com	r18
+     cb2:	30 95       	com	r19
+     cb4:	2c 23       	and	r18, r28
+     cb6:	3d 23       	and	r19, r29
+     cb8:	21 15       	cp	r18, r1
+     cba:	31 05       	cpc	r19, r1
+     cbc:	b9 f3       	breq	.-18     	; 0xcac <_ZN20OrangutanPushbuttons12waitForPressEh+0x10>
+}
+
+// These are alternative aliases:
+static inline void delay(unsigned int milliseconds) { delay_ms(milliseconds); }
+     cbe:	8a e0       	ldi	r24, 0x0A	; 10
+     cc0:	90 e0       	ldi	r25, 0x00	; 0
+     cc2:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+			;
+		delay(10);						// debounce the button press
+	}
+	while (!(BUTTONS_DOWN & buttons));		// if button isn't still pressed, loop
+     cc6:	23 b1       	in	r18, 0x03	; 3
+     cc8:	30 e0       	ldi	r19, 0x00	; 0
+     cca:	20 95       	com	r18
+     ccc:	30 95       	com	r19
+     cce:	2c 23       	and	r18, r28
+     cd0:	3d 23       	and	r19, r29
+// this method takes care of button debouncing.
+// Example: waitForPress(TOP_BUTTON | BOTTOM_BUTTON);
+unsigned char OrangutanPushbuttons::waitForPress(unsigned char buttons)
+{
+	init();		// initialize pushbutton I/O pins if necessary
+	do
+     cd2:	21 15       	cp	r18, r1
+     cd4:	31 05       	cpc	r19, r1
+     cd6:	51 f3       	breq	.-44     	; 0xcac <_ZN20OrangutanPushbuttons12waitForPressEh+0x10>
+		while (!(BUTTONS_DOWN & buttons))	// wait for a button to be pressed
+			;
+		delay(10);						// debounce the button press
+	}
+	while (!(BUTTONS_DOWN & buttons));		// if button isn't still pressed, loop
+	return BUTTONS_DOWN & buttons;			// return the pressed button(s)
+     cd8:	83 b1       	in	r24, 0x03	; 3
+     cda:	80 95       	com	r24
+}
+     cdc:	81 23       	and	r24, r17
+     cde:	df 91       	pop	r29
+     ce0:	cf 91       	pop	r28
+     ce2:	1f 91       	pop	r17
+     ce4:	08 95       	ret
+
+00000ce6 <wait_for_button_press>:
+#endif
+
+
+extern "C" unsigned char wait_for_button_press(unsigned char buttons)
+{
+	return OrangutanPushbuttons::waitForPress(buttons);
+     ce6:	0e 94 4e 06 	call	0xc9c	; 0xc9c <_ZN20OrangutanPushbuttons12waitForPressEh>
+}
+     cea:	08 95       	ret
+
+00000cec <_ZN20OrangutanPushbuttons14waitForReleaseEh>:
+// refer to multiple buttons using the bitwise OR operator |.  The
+// return value is the ID of the button that was released.  Note that
+// this method takes care of button debouncing.
+// Example: waitForRelease(TOP_BUTTON | BOTTOM_BUTTON);
+unsigned char OrangutanPushbuttons::waitForRelease(unsigned char buttons)
+{
+     cec:	cf 93       	push	r28
+     cee:	c8 2f       	mov	r28, r24
+	init();		// initialize pushbutton I/O pins if necessary
+     cf0:	0e 94 44 06 	call	0xc88	; 0xc88 <_ZN20OrangutanPushbuttons4initEv>
+	do
+	{
+		while (!(BUTTONS_UP & buttons))	// wait for a button to be released
+     cf4:	83 b1       	in	r24, 0x03	; 3
+     cf6:	8c 23       	and	r24, r28
+     cf8:	e9 f3       	breq	.-6      	; 0xcf4 <_ZN20OrangutanPushbuttons14waitForReleaseEh+0x8>
+     cfa:	8a e0       	ldi	r24, 0x0A	; 10
+     cfc:	90 e0       	ldi	r25, 0x00	; 0
+     cfe:	0e 94 70 08 	call	0x10e0	; 0x10e0 <delay_ms>
+			;
+			delay(10);						// debounce the button release
+	}
+	while (!(BUTTONS_UP & buttons));		// if button isn't still released, loop
+     d02:	83 b1       	in	r24, 0x03	; 3
+     d04:	8c 23       	and	r24, r28
+// this method takes care of button debouncing.
+// Example: waitForRelease(TOP_BUTTON | BOTTOM_BUTTON);
+unsigned char OrangutanPushbuttons::waitForRelease(unsigned char buttons)
+{
+	init();		// initialize pushbutton I/O pins if necessary
+	do
+     d06:	b1 f3       	breq	.-20     	; 0xcf4 <_ZN20OrangutanPushbuttons14waitForReleaseEh+0x8>
+		while (!(BUTTONS_UP & buttons))	// wait for a button to be released
+			;
+			delay(10);						// debounce the button release
+	}
+	while (!(BUTTONS_UP & buttons));		// if button isn't still released, loop
+	return BUTTONS_UP & buttons;			// return the released button(s)
+     d08:	83 b1       	in	r24, 0x03	; 3
+}
+     d0a:	8c 23       	and	r24, r28
+     d0c:	cf 91       	pop	r28
+     d0e:	08 95       	ret
+
+00000d10 <wait_for_button_release>:
+	return OrangutanPushbuttons::waitForPress(buttons);
+}
+
+extern "C" unsigned char wait_for_button_release(unsigned char buttons)
+{
+	return OrangutanPushbuttons::waitForRelease(buttons);
+     d10:	0e 94 76 06 	call	0xcec	; 0xcec <_ZN20OrangutanPushbuttons14waitForReleaseEh>
+}
+     d14:	08 95       	ret
+
+00000d16 <_ZN20OrangutanPushbuttons13waitForButtonEh>:
+// 'buttons' can refer to multiple buttons using the bitwise OR operator |.
+// The return value is the ID of the button that was pressed and released.
+// Note that this method takes care of button debouncing.
+// Example: waitForButton(TOP_BUTTON | BOTTOM_BUTTON);
+unsigned char OrangutanPushbuttons::waitForButton(unsigned char buttons)
+{
+     d16:	cf 93       	push	r28
+  unsigned char pressedButton = waitForPress(buttons);
+     d18:	0e 94 4e 06 	call	0xc9c	; 0xc9c <_ZN20OrangutanPushbuttons12waitForPressEh>
+     d1c:	c8 2f       	mov	r28, r24
+  waitForRelease(pressedButton);
+     d1e:	0e 94 76 06 	call	0xcec	; 0xcec <_ZN20OrangutanPushbuttons14waitForReleaseEh>
+  return pressedButton;
+}
+     d22:	8c 2f       	mov	r24, r28
+     d24:	cf 91       	pop	r28
+     d26:	08 95       	ret
+
+00000d28 <wait_for_button>:
+	return OrangutanPushbuttons::waitForRelease(buttons);
+}
+
+extern "C" unsigned char wait_for_button(unsigned char buttons)
+{
+	return OrangutanPushbuttons::waitForButton(buttons);
+     d28:	0e 94 8b 06 	call	0xd16	; 0xd16 <_ZN20OrangutanPushbuttons13waitForButtonEh>
+}
+     d2c:	08 95       	ret
+
+00000d2e <_ZN20OrangutanPushbuttons9isPressedEh>:
+// returns the value of any specified buttons that are currently pressed, or 0.
+// For example, if the top and middle buttons are both pressed, this method
+// will return (TOP_BUTTON | MIDDLE_BUTTON).  The argument 'buttons' can
+// refer to multiple buttons using the bitwise OR operator |.
+unsigned char OrangutanPushbuttons::isPressed(unsigned char buttons)
+{
+     d2e:	a1 e0       	ldi	r26, 0x01	; 1
+     d30:	b0 e0       	ldi	r27, 0x00	; 0
+     d32:	ed e9       	ldi	r30, 0x9D	; 157
+     d34:	f6 e0       	ldi	r31, 0x06	; 6
+     d36:	0c 94 43 09 	jmp	0x1286	; 0x1286 <__prologue_saves__+0x20>
+	init();		// initialize pushbutton I/O pins if necessary
+     d3a:	89 83       	std	Y+1, r24	; 0x01
+     d3c:	0e 94 44 06 	call	0xc88	; 0xc88 <_ZN20OrangutanPushbuttons4initEv>
+	return BUTTONS_DOWN & buttons;
+     d40:	93 b1       	in	r25, 0x03	; 3
+     d42:	90 95       	com	r25
+}
+     d44:	89 81       	ldd	r24, Y+1	; 0x01
+     d46:	89 23       	and	r24, r25
+     d48:	21 96       	adiw	r28, 0x01	; 1
+     d4a:	e2 e0       	ldi	r30, 0x02	; 2
+     d4c:	0c 94 5f 09 	jmp	0x12be	; 0x12be <__epilogue_restores__+0x20>
+
+00000d50 <button_is_pressed>:
+	return OrangutanPushbuttons::waitForButton(buttons);
+}
+
+extern "C" unsigned char button_is_pressed(unsigned char buttons)
+{
+	return OrangutanPushbuttons::isPressed(buttons);
+     d50:	0e 94 97 06 	call	0xd2e	; 0xd2e <_ZN20OrangutanPushbuttons9isPressedEh>
+}
+     d54:	08 95       	ret
+
+00000d56 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh>:
+// handles all necessary debouncing and should be called repeatedly in a loop
+// with the same button-mask argument.  The argument 'buttons' can refer to 
+// multiple buttons using the bitwise OR operator | or (e.g.
+// TOP_BUTTON | MIDDLE_BUTTON) or the value ANY_BUTTON.
+unsigned char OrangutanPushbuttons::getSingleDebouncedPress(unsigned char buttons)
+{
+     d56:	ef 92       	push	r14
+     d58:	ff 92       	push	r15
+     d5a:	0f 93       	push	r16
+     d5c:	1f 93       	push	r17
+     d5e:	cf 93       	push	r28
+     d60:	df 93       	push	r29
+     d62:	d8 2f       	mov	r29, r24
+	static unsigned char state = 0;
+	static unsigned long prevTimeMillis = 0;
+	static unsigned char mask = 0;
+	
+	unsigned char buttonsDown = BUTTONS_DOWN;
+     d64:	c3 b1       	in	r28, 0x03	; 3
+     d66:	c0 95       	com	r28
+static inline unsigned long millis(void) { return get_ms(); }
+     d68:	0e 94 aa 08 	call	0x1154	; 0x1154 <get_ms>
+     d6c:	7b 01       	movw	r14, r22
+     d6e:	8c 01       	movw	r16, r24
+	unsigned long timeMillis = millis();
+	
+	init();
+     d70:	0e 94 44 06 	call	0xc88	; 0xc88 <_ZN20OrangutanPushbuttons4initEv>
+	switch (state)
+     d74:	80 91 36 01 	lds	r24, 0x0136
+     d78:	81 30       	cpi	r24, 0x01	; 1
+     d7a:	29 f1       	breq	.+74     	; 0xdc6 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x70>
+     d7c:	81 30       	cpi	r24, 0x01	; 1
+     d7e:	38 f0       	brcs	.+14     	; 0xd8e <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x38>
+     d80:	82 30       	cpi	r24, 0x02	; 2
+     d82:	09 f4       	brne	.+2      	; 0xd86 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x30>
+     d84:	47 c0       	rjmp	.+142    	; 0xe14 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0xbe>
+     d86:	83 30       	cpi	r24, 0x03	; 3
+     d88:	09 f0       	breq	.+2      	; 0xd8c <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x36>
+     d8a:	82 c0       	rjmp	.+260    	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+     d8c:	64 c0       	rjmp	.+200    	; 0xe56 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x100>
+	{
+		case 0:
+			if (~buttonsDown & buttons)				// if one of the specified buttons is up
+     d8e:	2d 2f       	mov	r18, r29
+     d90:	30 e0       	ldi	r19, 0x00	; 0
+     d92:	4c 2f       	mov	r20, r28
+     d94:	50 e0       	ldi	r21, 0x00	; 0
+     d96:	40 95       	com	r20
+     d98:	50 95       	com	r21
+     d9a:	24 23       	and	r18, r20
+     d9c:	35 23       	and	r19, r21
+     d9e:	21 15       	cp	r18, r1
+     da0:	31 05       	cpc	r19, r1
+     da2:	09 f4       	brne	.+2      	; 0xda6 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x50>
+     da4:	75 c0       	rjmp	.+234    	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+			{
+				mask = ~buttonsDown & buttons;		// mask becomes all of masked up buttons
+     da6:	c0 95       	com	r28
+     da8:	cd 23       	and	r28, r29
+     daa:	c0 93 31 01 	sts	0x0131, r28
+				prevTimeMillis = timeMillis;
+     dae:	e0 92 32 01 	sts	0x0132, r14
+     db2:	f0 92 33 01 	sts	0x0133, r15
+     db6:	00 93 34 01 	sts	0x0134, r16
+     dba:	10 93 35 01 	sts	0x0135, r17
+				state = 1;
+     dbe:	81 e0       	ldi	r24, 0x01	; 1
+     dc0:	80 93 36 01 	sts	0x0136, r24
+     dc4:	65 c0       	rjmp	.+202    	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+			}
+			break;
+			
+		case 1:
+			if (timeMillis - prevTimeMillis >= 15)	// if 15 ms or longer has elapsed
+     dc6:	80 91 32 01 	lds	r24, 0x0132
+     dca:	90 91 33 01 	lds	r25, 0x0133
+     dce:	a0 91 34 01 	lds	r26, 0x0134
+     dd2:	b0 91 35 01 	lds	r27, 0x0135
+     dd6:	e8 1a       	sub	r14, r24
+     dd8:	f9 0a       	sbc	r15, r25
+     dda:	0a 0b       	sbc	r16, r26
+     ddc:	1b 0b       	sbc	r17, r27
+     dde:	8f e0       	ldi	r24, 0x0F	; 15
+     de0:	e8 16       	cp	r14, r24
+     de2:	f1 04       	cpc	r15, r1
+     de4:	01 05       	cpc	r16, r1
+     de6:	11 05       	cpc	r17, r1
+     de8:	08 f4       	brcc	.+2      	; 0xdec <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x96>
+     dea:	52 c0       	rjmp	.+164    	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+			{
+				if (~buttonsDown & mask)			// and if a masked button is still up
+     dec:	40 91 31 01 	lds	r20, 0x0131
+     df0:	8c 2f       	mov	r24, r28
+     df2:	90 e0       	ldi	r25, 0x00	; 0
+     df4:	80 95       	com	r24
+     df6:	90 95       	com	r25
+     df8:	24 2f       	mov	r18, r20
+     dfa:	30 e0       	ldi	r19, 0x00	; 0
+     dfc:	82 23       	and	r24, r18
+     dfe:	93 23       	and	r25, r19
+     e00:	00 97       	sbiw	r24, 0x00	; 0
+     e02:	31 f1       	breq	.+76     	; 0xe50 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0xfa>
+				{
+					state = 2;						// proceed to next state
+     e04:	82 e0       	ldi	r24, 0x02	; 2
+     e06:	80 93 36 01 	sts	0x0136, r24
+					mask = ~buttonsDown & mask;		// new mask becomes all of masked up buttons
+     e0a:	c0 95       	com	r28
+     e0c:	c4 23       	and	r28, r20
+     e0e:	c0 93 31 01 	sts	0x0131, r28
+     e12:	3e c0       	rjmp	.+124    	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+				}
+			}
+			break;
+			
+		case 2:
+			if (buttonsDown & mask)					// if a masked button is now down
+     e14:	20 91 31 01 	lds	r18, 0x0131
+     e18:	8c 2f       	mov	r24, r28
+     e1a:	82 23       	and	r24, r18
+     e1c:	71 f0       	breq	.+28     	; 0xe3a <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0xe4>
+			{
+				state = 3;							// proceed to next state
+     e1e:	93 e0       	ldi	r25, 0x03	; 3
+     e20:	90 93 36 01 	sts	0x0136, r25
+				mask = buttonsDown & mask;			// new mask becomes all of masked down buttons
+     e24:	80 93 31 01 	sts	0x0131, r24
+				prevTimeMillis = timeMillis;
+     e28:	e0 92 32 01 	sts	0x0132, r14
+     e2c:	f0 92 33 01 	sts	0x0133, r15
+     e30:	00 93 34 01 	sts	0x0134, r16
+     e34:	10 93 35 01 	sts	0x0135, r17
+     e38:	2b c0       	rjmp	.+86     	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+			}
+			else if (mask != (~buttonsDown & buttons))	// if our mask becomes inaccurate
+     e3a:	30 e0       	ldi	r19, 0x00	; 0
+     e3c:	8d 2f       	mov	r24, r29
+     e3e:	90 e0       	ldi	r25, 0x00	; 0
+     e40:	d0 e0       	ldi	r29, 0x00	; 0
+     e42:	c0 95       	com	r28
+     e44:	d0 95       	com	r29
+     e46:	8c 23       	and	r24, r28
+     e48:	9d 23       	and	r25, r29
+     e4a:	28 17       	cp	r18, r24
+     e4c:	39 07       	cpc	r19, r25
+     e4e:	01 f1       	breq	.+64     	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+			{
+				state = 0;							// go back to the initial state
+     e50:	10 92 36 01 	sts	0x0136, r1
+     e54:	1d c0       	rjmp	.+58     	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+			}
+			break;
+			
+		case 3:
+			if (timeMillis - prevTimeMillis >= 15)	// if 15 ms or longer has elapsed
+     e56:	80 91 32 01 	lds	r24, 0x0132
+     e5a:	90 91 33 01 	lds	r25, 0x0133
+     e5e:	a0 91 34 01 	lds	r26, 0x0134
+     e62:	b0 91 35 01 	lds	r27, 0x0135
+     e66:	e8 1a       	sub	r14, r24
+     e68:	f9 0a       	sbc	r15, r25
+     e6a:	0a 0b       	sbc	r16, r26
+     e6c:	1b 0b       	sbc	r17, r27
+     e6e:	8f e0       	ldi	r24, 0x0F	; 15
+     e70:	e8 16       	cp	r14, r24
+     e72:	f1 04       	cpc	r15, r1
+     e74:	01 05       	cpc	r16, r1
+     e76:	11 05       	cpc	r17, r1
+     e78:	58 f0       	brcs	.+22     	; 0xe90 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13a>
+			{
+				if (buttonsDown & mask)				// and if a masked button is still down
+     e7a:	80 91 31 01 	lds	r24, 0x0131
+     e7e:	8c 23       	and	r24, r28
+     e80:	19 f0       	breq	.+6      	; 0xe88 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x132>
+				{
+					state = 0;						// next state becomes initial state
+     e82:	10 92 36 01 	sts	0x0136, r1
+					return buttonsDown & mask;		// return masked down buttons
+     e86:	05 c0       	rjmp	.+10     	; 0xe92 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13c>
+				}
+				else
+				{
+					state = 2;						// go back to previous state
+     e88:	92 e0       	ldi	r25, 0x02	; 2
+     e8a:	90 93 36 01 	sts	0x0136, r25
+     e8e:	01 c0       	rjmp	.+2      	; 0xe92 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh+0x13c>
+				}
+			}
+			break;
+	}
+	
+	return 0;
+     e90:	80 e0       	ldi	r24, 0x00	; 0
+}
+     e92:	cd b7       	in	r28, 0x3d	; 61
+     e94:	de b7       	in	r29, 0x3e	; 62
+     e96:	e6 e0       	ldi	r30, 0x06	; 6
+     e98:	0c 94 5b 09 	jmp	0x12b6	; 0x12b6 <__epilogue_restores__+0x18>
+
+00000e9c <get_single_debounced_button_press>:
+	return OrangutanPushbuttons::isPressed(buttons);
+}
+
+extern "C" unsigned char get_single_debounced_button_press(unsigned char buttons)
+{
+	return OrangutanPushbuttons::getSingleDebouncedPress(buttons);
+     e9c:	0e 94 ab 06 	call	0xd56	; 0xd56 <_ZN20OrangutanPushbuttons23getSingleDebouncedPressEh>
+}
+     ea0:	08 95       	ret
+
+00000ea2 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh>:
+// handles all necessary debouncing and should be called repeatedly in a loop
+// with the same button-mask argument.  The argument 'buttons' can refer to 
+// multiple buttons using the bitwise OR operator | or (e.g.
+// TOP_BUTTON | MIDDLE_BUTTON) or the value ANY_BUTTON.
+unsigned char OrangutanPushbuttons::getSingleDebouncedRelease(unsigned char buttons)
+{
+     ea2:	ef 92       	push	r14
+     ea4:	ff 92       	push	r15
+     ea6:	0f 93       	push	r16
+     ea8:	1f 93       	push	r17
+     eaa:	cf 93       	push	r28
+     eac:	df 93       	push	r29
+     eae:	d8 2f       	mov	r29, r24
+	static unsigned char state = 0;
+	static unsigned long prevTimeMillis = 0;
+	static unsigned char mask = 0;
+	
+	unsigned char buttonsUp = BUTTONS_UP;
+     eb0:	c3 b1       	in	r28, 0x03	; 3
+     eb2:	0e 94 aa 08 	call	0x1154	; 0x1154 <get_ms>
+     eb6:	7b 01       	movw	r14, r22
+     eb8:	8c 01       	movw	r16, r24
+	unsigned long timeMillis = millis();
+	
+	init();
+     eba:	0e 94 44 06 	call	0xc88	; 0xc88 <_ZN20OrangutanPushbuttons4initEv>
+	switch (state)
+     ebe:	80 91 30 01 	lds	r24, 0x0130
+     ec2:	81 30       	cpi	r24, 0x01	; 1
+     ec4:	29 f1       	breq	.+74     	; 0xf10 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x6e>
+     ec6:	81 30       	cpi	r24, 0x01	; 1
+     ec8:	38 f0       	brcs	.+14     	; 0xed8 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x36>
+     eca:	82 30       	cpi	r24, 0x02	; 2
+     ecc:	09 f4       	brne	.+2      	; 0xed0 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x2e>
+     ece:	47 c0       	rjmp	.+142    	; 0xf5e <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0xbc>
+     ed0:	83 30       	cpi	r24, 0x03	; 3
+     ed2:	09 f0       	breq	.+2      	; 0xed6 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x34>
+     ed4:	82 c0       	rjmp	.+260    	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+     ed6:	64 c0       	rjmp	.+200    	; 0xfa0 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0xfe>
+	{
+		case 0:
+			if (~buttonsUp & buttons)				// if one of the specified buttons is down
+     ed8:	2d 2f       	mov	r18, r29
+     eda:	30 e0       	ldi	r19, 0x00	; 0
+     edc:	4c 2f       	mov	r20, r28
+     ede:	50 e0       	ldi	r21, 0x00	; 0
+     ee0:	40 95       	com	r20
+     ee2:	50 95       	com	r21
+     ee4:	24 23       	and	r18, r20
+     ee6:	35 23       	and	r19, r21
+     ee8:	21 15       	cp	r18, r1
+     eea:	31 05       	cpc	r19, r1
+     eec:	09 f4       	brne	.+2      	; 0xef0 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x4e>
+     eee:	75 c0       	rjmp	.+234    	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+			{
+				mask = ~buttonsUp & buttons;		// mask becomes all of masked down buttons
+     ef0:	c0 95       	com	r28
+     ef2:	cd 23       	and	r28, r29
+     ef4:	c0 93 2b 01 	sts	0x012B, r28
+				prevTimeMillis = timeMillis;
+     ef8:	e0 92 2c 01 	sts	0x012C, r14
+     efc:	f0 92 2d 01 	sts	0x012D, r15
+     f00:	00 93 2e 01 	sts	0x012E, r16
+     f04:	10 93 2f 01 	sts	0x012F, r17
+				state = 1;
+     f08:	81 e0       	ldi	r24, 0x01	; 1
+     f0a:	80 93 30 01 	sts	0x0130, r24
+     f0e:	65 c0       	rjmp	.+202    	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+			}
+			break;
+			
+		case 1:
+			if (timeMillis - prevTimeMillis >= 15)	// if 15 ms or longer has elapsed
+     f10:	80 91 2c 01 	lds	r24, 0x012C
+     f14:	90 91 2d 01 	lds	r25, 0x012D
+     f18:	a0 91 2e 01 	lds	r26, 0x012E
+     f1c:	b0 91 2f 01 	lds	r27, 0x012F
+     f20:	e8 1a       	sub	r14, r24
+     f22:	f9 0a       	sbc	r15, r25
+     f24:	0a 0b       	sbc	r16, r26
+     f26:	1b 0b       	sbc	r17, r27
+     f28:	8f e0       	ldi	r24, 0x0F	; 15
+     f2a:	e8 16       	cp	r14, r24
+     f2c:	f1 04       	cpc	r15, r1
+     f2e:	01 05       	cpc	r16, r1
+     f30:	11 05       	cpc	r17, r1
+     f32:	08 f4       	brcc	.+2      	; 0xf36 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x94>
+     f34:	52 c0       	rjmp	.+164    	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+			{
+				if (~buttonsUp & mask)				// and if a masked button is still down
+     f36:	40 91 2b 01 	lds	r20, 0x012B
+     f3a:	8c 2f       	mov	r24, r28
+     f3c:	90 e0       	ldi	r25, 0x00	; 0
+     f3e:	80 95       	com	r24
+     f40:	90 95       	com	r25
+     f42:	24 2f       	mov	r18, r20
+     f44:	30 e0       	ldi	r19, 0x00	; 0
+     f46:	82 23       	and	r24, r18
+     f48:	93 23       	and	r25, r19
+     f4a:	00 97       	sbiw	r24, 0x00	; 0
+     f4c:	31 f1       	breq	.+76     	; 0xf9a <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0xf8>
+				{
+					state = 2;						// proceed to next state
+     f4e:	82 e0       	ldi	r24, 0x02	; 2
+     f50:	80 93 30 01 	sts	0x0130, r24
+					mask = ~buttonsUp & mask;		// new mask becomes all of masked down buttons
+     f54:	c0 95       	com	r28
+     f56:	c4 23       	and	r28, r20
+     f58:	c0 93 2b 01 	sts	0x012B, r28
+     f5c:	3e c0       	rjmp	.+124    	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+				}
+			}
+			break;
+			
+		case 2:
+			if (buttonsUp & mask)					// if a masked button is now up
+     f5e:	20 91 2b 01 	lds	r18, 0x012B
+     f62:	82 2f       	mov	r24, r18
+     f64:	8c 23       	and	r24, r28
+     f66:	71 f0       	breq	.+28     	; 0xf84 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0xe2>
+			{
+				state = 3;							// proceed to next state
+     f68:	93 e0       	ldi	r25, 0x03	; 3
+     f6a:	90 93 30 01 	sts	0x0130, r25
+				mask = buttonsUp & mask;			// new mask becomes all of masked up buttons
+     f6e:	80 93 2b 01 	sts	0x012B, r24
+				prevTimeMillis = timeMillis;
+     f72:	e0 92 2c 01 	sts	0x012C, r14
+     f76:	f0 92 2d 01 	sts	0x012D, r15
+     f7a:	00 93 2e 01 	sts	0x012E, r16
+     f7e:	10 93 2f 01 	sts	0x012F, r17
+     f82:	2b c0       	rjmp	.+86     	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+			}
+			else if (mask != (~buttonsUp & buttons))	// if our mask becomes inaccurate
+     f84:	30 e0       	ldi	r19, 0x00	; 0
+     f86:	8d 2f       	mov	r24, r29
+     f88:	90 e0       	ldi	r25, 0x00	; 0
+     f8a:	d0 e0       	ldi	r29, 0x00	; 0
+     f8c:	c0 95       	com	r28
+     f8e:	d0 95       	com	r29
+     f90:	8c 23       	and	r24, r28
+     f92:	9d 23       	and	r25, r29
+     f94:	28 17       	cp	r18, r24
+     f96:	39 07       	cpc	r19, r25
+     f98:	01 f1       	breq	.+64     	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+			{
+				state = 0;							// go back to the initial state
+     f9a:	10 92 30 01 	sts	0x0130, r1
+     f9e:	1d c0       	rjmp	.+58     	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+			break;
+
+			break;
+			
+		case 3:
+			if (timeMillis - prevTimeMillis >= 15)	// if 15 ms or longer has elapsed
+     fa0:	80 91 2c 01 	lds	r24, 0x012C
+     fa4:	90 91 2d 01 	lds	r25, 0x012D
+     fa8:	a0 91 2e 01 	lds	r26, 0x012E
+     fac:	b0 91 2f 01 	lds	r27, 0x012F
+     fb0:	e8 1a       	sub	r14, r24
+     fb2:	f9 0a       	sbc	r15, r25
+     fb4:	0a 0b       	sbc	r16, r26
+     fb6:	1b 0b       	sbc	r17, r27
+     fb8:	8f e0       	ldi	r24, 0x0F	; 15
+     fba:	e8 16       	cp	r14, r24
+     fbc:	f1 04       	cpc	r15, r1
+     fbe:	01 05       	cpc	r16, r1
+     fc0:	11 05       	cpc	r17, r1
+     fc2:	58 f0       	brcs	.+22     	; 0xfda <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x138>
+			{
+				if (buttonsUp & mask)				// and if a masked button is still up
+     fc4:	80 91 2b 01 	lds	r24, 0x012B
+     fc8:	8c 23       	and	r24, r28
+     fca:	19 f0       	breq	.+6      	; 0xfd2 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x130>
+				{
+					state = 0;						// next state becomes initial state
+     fcc:	10 92 30 01 	sts	0x0130, r1
+					return buttonsUp & mask;		// return masked up buttons
+     fd0:	05 c0       	rjmp	.+10     	; 0xfdc <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x13a>
+				}
+				else
+				{
+					state = 2;						// go back to previous state
+     fd2:	92 e0       	ldi	r25, 0x02	; 2
+     fd4:	90 93 30 01 	sts	0x0130, r25
+     fd8:	01 c0       	rjmp	.+2      	; 0xfdc <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh+0x13a>
+				}
+			}
+			break;
+	}
+	
+	return 0;
+     fda:	80 e0       	ldi	r24, 0x00	; 0
+}
+     fdc:	cd b7       	in	r28, 0x3d	; 61
+     fde:	de b7       	in	r29, 0x3e	; 62
+     fe0:	e6 e0       	ldi	r30, 0x06	; 6
+     fe2:	0c 94 5b 09 	jmp	0x12b6	; 0x12b6 <__epilogue_restores__+0x18>
+
+00000fe6 <get_single_debounced_button_release>:
+	return OrangutanPushbuttons::getSingleDebouncedPress(buttons);
+}
+
+extern "C" unsigned char get_single_debounced_button_release(unsigned char buttons)
+{
+	return OrangutanPushbuttons::getSingleDebouncedRelease(buttons);
+     fe6:	0e 94 51 07 	call	0xea2	; 0xea2 <_ZN20OrangutanPushbuttons25getSingleDebouncedReleaseEh>
+}
+     fea:	08 95       	ret
+
+00000fec <_ZN13OrangutanTime17delayMicrosecondsEj>:
+						  "   pop  r22"     "\n\t"   
+						  "   sbiw %0, 1"   "\n\t"
+						  "   brne 1b"
+						  : "=w" ( microseconds )  
+						  : "0" ( microseconds )
+						  );  
+     fec:	6f 93       	push	r22
+     fee:	64 e0       	ldi	r22, 0x04	; 4
+     ff0:	6a 95       	dec	r22
+     ff2:	f1 f7       	brne	.-4      	; 0xff0 <_ZN13OrangutanTime17delayMicrosecondsEj+0x4>
+     ff4:	6f 91       	pop	r22
+     ff6:	01 97       	sbiw	r24, 0x01	; 1
+     ff8:	c9 f7       	brne	.-14     	; 0xfec <_ZN13OrangutanTime17delayMicrosecondsEj>
+	}
+     ffa:	08 95       	ret
+
+00000ffc <__vector_9>:
+		"pop r25"					"\n\t"	// restore the registers we used in this ISR
+		"pop r24"					"\n\t"
+		"pop r2"					"\n\t"
+
+		"reti"						"\n\t"	// return
+		);
+     ffc:	2f 92       	push	r2
+     ffe:	8f 93       	push	r24
+    1000:	9f 93       	push	r25
+    1002:	2f b6       	in	r2, 0x3f	; 63
+    1004:	80 91 38 01 	lds	r24, 0x0138
+    1008:	90 91 39 01 	lds	r25, 0x0139
+    100c:	01 96       	adiw	r24, 0x01	; 1
+    100e:	80 93 38 01 	sts	0x0138, r24
+    1012:	90 93 39 01 	sts	0x0139, r25
+    1016:	90 e0       	ldi	r25, 0x00	; 0
+    1018:	80 91 3a 01 	lds	r24, 0x013A
+    101c:	89 1f       	adc	r24, r25
+    101e:	80 93 3a 01 	sts	0x013A, r24
+    1022:	90 91 40 01 	lds	r25, 0x0140
+    1026:	9c 5f       	subi	r25, 0xFC	; 252
+    1028:	90 93 40 01 	sts	0x0140, r25
+    102c:	80 91 3f 01 	lds	r24, 0x013F
+    1030:	80 51       	subi	r24, 0x10	; 16
+    1032:	97 42       	sbci	r25, 0x27	; 39
+    1034:	c0 f0       	brcs	.+48     	; 0x1066 <end>
+    1036:	90 93 40 01 	sts	0x0140, r25
+    103a:	80 93 3f 01 	sts	0x013F, r24
+    103e:	80 91 3b 01 	lds	r24, 0x013B
+    1042:	90 91 3c 01 	lds	r25, 0x013C
+    1046:	01 96       	adiw	r24, 0x01	; 1
+    1048:	80 93 3b 01 	sts	0x013B, r24
+    104c:	90 93 3c 01 	sts	0x013C, r25
+    1050:	90 e0       	ldi	r25, 0x00	; 0
+    1052:	80 91 3d 01 	lds	r24, 0x013D
+    1056:	89 1f       	adc	r24, r25
+    1058:	80 93 3d 01 	sts	0x013D, r24
+    105c:	80 91 3e 01 	lds	r24, 0x013E
+    1060:	89 1f       	adc	r24, r25
+    1062:	80 93 3e 01 	sts	0x013E, r24
+
+00001066 <end>:
+    1066:	2f be       	out	0x3f, r2	; 63
+    1068:	9f 91       	pop	r25
+    106a:	8f 91       	pop	r24
+    106c:	2f 90       	pop	r2
+    106e:	18 95       	reti
+
+00001070 <ticks_to_microseconds>:
+// inline assembly code.
+
+extern "C" {
+	unsigned long get_ticks() { return OrangutanTime::ticks(); }
+	unsigned long ticks_to_microseconds(unsigned long numTicks)
+	{
+    1070:	0f 93       	push	r16
+    1072:	1f 93       	push	r17
+// unsigned long ticks = OrangutanTime::ticks();
+// ... (do something)
+// unsigned long elapsedMicroseconds = OrangutanTime::ticksToMicroseconds(OrangutanTime::ticks() - ticks);
+unsigned long OrangutanTime::ticksToMicroseconds(unsigned long numTicks)
+{
+	return (numTicks * 2 + 2) / 5;
+    1074:	6f 5f       	subi	r22, 0xFF	; 255
+    1076:	7f 4f       	sbci	r23, 0xFF	; 255
+    1078:	8f 4f       	sbci	r24, 0xFF	; 255
+    107a:	9f 4f       	sbci	r25, 0xFF	; 255
+    107c:	66 0f       	add	r22, r22
+    107e:	77 1f       	adc	r23, r23
+    1080:	88 1f       	adc	r24, r24
+    1082:	99 1f       	adc	r25, r25
+    1084:	25 e0       	ldi	r18, 0x05	; 5
+    1086:	30 e0       	ldi	r19, 0x00	; 0
+    1088:	40 e0       	ldi	r20, 0x00	; 0
+    108a:	50 e0       	ldi	r21, 0x00	; 0
+    108c:	0e 94 11 09 	call	0x1222	; 0x1222 <__udivmodsi4>
+extern "C" {
+	unsigned long get_ticks() { return OrangutanTime::ticks(); }
+	unsigned long ticks_to_microseconds(unsigned long numTicks)
+	{
+		return OrangutanTime::ticksToMicroseconds(numTicks);
+	}
+    1090:	b9 01       	movw	r22, r18
+    1092:	ca 01       	movw	r24, r20
+    1094:	1f 91       	pop	r17
+    1096:	0f 91       	pop	r16
+    1098:	08 95       	ret
+
+0000109a <_ZN13OrangutanTime19ticksToMicrosecondsEm>:
+// elapsed over a period.  For example:
+// unsigned long ticks = OrangutanTime::ticks();
+// ... (do something)
+// unsigned long elapsedMicroseconds = OrangutanTime::ticksToMicroseconds(OrangutanTime::ticks() - ticks);
+unsigned long OrangutanTime::ticksToMicroseconds(unsigned long numTicks)
+{
+    109a:	0f 93       	push	r16
+    109c:	1f 93       	push	r17
+	return (numTicks * 2 + 2) / 5;
+    109e:	6f 5f       	subi	r22, 0xFF	; 255
+    10a0:	7f 4f       	sbci	r23, 0xFF	; 255
+    10a2:	8f 4f       	sbci	r24, 0xFF	; 255
+    10a4:	9f 4f       	sbci	r25, 0xFF	; 255
+    10a6:	66 0f       	add	r22, r22
+    10a8:	77 1f       	adc	r23, r23
+    10aa:	88 1f       	adc	r24, r24
+    10ac:	99 1f       	adc	r25, r25
+    10ae:	25 e0       	ldi	r18, 0x05	; 5
+    10b0:	30 e0       	ldi	r19, 0x00	; 0
+    10b2:	40 e0       	ldi	r20, 0x00	; 0
+    10b4:	50 e0       	ldi	r21, 0x00	; 0
+    10b6:	0e 94 11 09 	call	0x1222	; 0x1222 <__udivmodsi4>
+}
+    10ba:	b9 01       	movw	r22, r18
+    10bc:	ca 01       	movw	r24, r20
+    10be:	1f 91       	pop	r17
+    10c0:	0f 91       	pop	r16
+    10c2:	08 95       	ret
+
+000010c4 <_ZN13OrangutanTime17delayMillisecondsEj>:
+	TIMSK2 |= 1 << TOIE2;	// enable timer2 overflow interrupt
+	return value;
+}
+
+void OrangutanTime::delayMilliseconds(unsigned int milliseconds)
+{
+    10c4:	cf 93       	push	r28
+    10c6:	df 93       	push	r29
+    10c8:	ec 01       	movw	r28, r24
+	while (milliseconds--)
+    10ca:	05 c0       	rjmp	.+10     	; 0x10d6 <_ZN13OrangutanTime17delayMillisecondsEj+0x12>
+	  delayMicroseconds(1000);
+    10cc:	88 ee       	ldi	r24, 0xE8	; 232
+    10ce:	93 e0       	ldi	r25, 0x03	; 3
+    10d0:	0e 94 f6 07 	call	0xfec	; 0xfec <_ZN13OrangutanTime17delayMicrosecondsEj>
+    10d4:	21 97       	sbiw	r28, 0x01	; 1
+	return value;
+}
+
+void OrangutanTime::delayMilliseconds(unsigned int milliseconds)
+{
+	while (milliseconds--)
+    10d6:	20 97       	sbiw	r28, 0x00	; 0
+    10d8:	c9 f7       	brne	.-14     	; 0x10cc <_ZN13OrangutanTime17delayMillisecondsEj+0x8>
+	  delayMicroseconds(1000);
+}
+    10da:	df 91       	pop	r29
+    10dc:	cf 91       	pop	r28
+    10de:	08 95       	ret
+
+000010e0 <delay_ms>:
+	unsigned long ticks_to_microseconds(unsigned long numTicks)
+	{
+		return OrangutanTime::ticksToMicroseconds(numTicks);
+	}
+	unsigned long get_ms() { return OrangutanTime::ms(); }
+	void delay_ms(unsigned int milliseconds) { OrangutanTime::delayMilliseconds(milliseconds); }
+    10e0:	0e 94 62 08 	call	0x10c4	; 0x10c4 <_ZN13OrangutanTime17delayMillisecondsEj>
+    10e4:	08 95       	ret
+
+000010e6 <_ZN13OrangutanTime5init2Ev>:
+	  delayMicroseconds(1000);
+}
+
+void OrangutanTime::init2()
+{
+	TIMSK2 &= ~(1 << TOIE2);	// disable timer2 overflow interrupt
+    10e6:	e0 e7       	ldi	r30, 0x70	; 112
+    10e8:	f0 e0       	ldi	r31, 0x00	; 0
+    10ea:	80 81       	ld	r24, Z
+    10ec:	8e 7f       	andi	r24, 0xFE	; 254
+    10ee:	80 83       	st	Z, r24
+		TCCR2A |= 0x01;
+		TCCR2B &= 0xF0;
+		TCCR2B |= 0x01;		// timer2 ticks at 20 MHz (prescaler = 1)
+*/
+
+	TCCR2A |= 0x03;		// fast PWM, TOP = 0xFF
+    10f0:	a0 eb       	ldi	r26, 0xB0	; 176
+    10f2:	b0 e0       	ldi	r27, 0x00	; 0
+    10f4:	8c 91       	ld	r24, X
+    10f6:	83 60       	ori	r24, 0x03	; 3
+    10f8:	8c 93       	st	X, r24
+	TCCR2B &= 0xF0;
+    10fa:	a1 eb       	ldi	r26, 0xB1	; 177
+    10fc:	b0 e0       	ldi	r27, 0x00	; 0
+    10fe:	8c 91       	ld	r24, X
+    1100:	80 7f       	andi	r24, 0xF0	; 240
+    1102:	8c 93       	st	X, r24
+	TCCR2B |= 0x02;		// timer 2 ticks at 2.5 MHz (prescaler = 8)
+    1104:	8c 91       	ld	r24, X
+    1106:	82 60       	ori	r24, 0x02	; 2
+    1108:	8c 93       	st	X, r24
+
+	TIFR2 |= 1 << TOV2;	// clear timer2 overflow flag
+    110a:	b8 9a       	sbi	0x17, 0	; 23
+	TIMSK2 |= 1 << TOIE2;	// enable timer2 overflow interrupt
+    110c:	80 81       	ld	r24, Z
+    110e:	81 60       	ori	r24, 0x01	; 1
+    1110:	80 83       	st	Z, r24
+	sei();				// enable global interrupts
+    1112:	78 94       	sei
+}
+    1114:	08 95       	ret
+
+00001116 <_ZN13OrangutanTime4initEv>:
+
+	static inline void init()
+	{
+		static unsigned char initialized = 0;
+
+		if (!initialized)
+    1116:	80 91 41 01 	lds	r24, 0x0141
+    111a:	88 23       	and	r24, r24
+    111c:	29 f4       	brne	.+10     	; 0x1128 <_ZN13OrangutanTime4initEv+0x12>
+		{
+			initialized = 1;
+    111e:	81 e0       	ldi	r24, 0x01	; 1
+    1120:	80 93 41 01 	sts	0x0141, r24
+			init2();
+    1124:	0e 94 73 08 	call	0x10e6	; 0x10e6 <_ZN13OrangutanTime5init2Ev>
+    1128:	08 95       	ret
+
+0000112a <_ZN13OrangutanTime2msEv>:
+// differential time computations would give an incorrect result across an overflow.  Our
+// method for tracking elapsed milliseconds gives a correct result when performing a time
+// differential across an overflow.
+unsigned long OrangutanTime::ms()
+{
+	init();
+    112a:	0e 94 8b 08 	call	0x1116	; 0x1116 <_ZN13OrangutanTime4initEv>
+	unsigned long value;
+	TIMSK2 &= ~(1 << TOIE2);	// disable timer2 overflow interrupt
+    112e:	e0 e7       	ldi	r30, 0x70	; 112
+    1130:	f0 e0       	ldi	r31, 0x00	; 0
+    1132:	80 81       	ld	r24, Z
+    1134:	8e 7f       	andi	r24, 0xFE	; 254
+    1136:	80 83       	st	Z, r24
+	value = msCounter;
+    1138:	20 91 3b 01 	lds	r18, 0x013B
+    113c:	30 91 3c 01 	lds	r19, 0x013C
+    1140:	40 91 3d 01 	lds	r20, 0x013D
+    1144:	50 91 3e 01 	lds	r21, 0x013E
+	TIMSK2 |= 1 << TOIE2;	// enable timer2 overflow interrupt
+    1148:	80 81       	ld	r24, Z
+    114a:	81 60       	ori	r24, 0x01	; 1
+    114c:	80 83       	st	Z, r24
+	return value;
+}
+    114e:	b9 01       	movw	r22, r18
+    1150:	ca 01       	movw	r24, r20
+    1152:	08 95       	ret
+
+00001154 <get_ms>:
+	unsigned long get_ticks() { return OrangutanTime::ticks(); }
+	unsigned long ticks_to_microseconds(unsigned long numTicks)
+	{
+		return OrangutanTime::ticksToMicroseconds(numTicks);
+	}
+	unsigned long get_ms() { return OrangutanTime::ms(); }
+    1154:	0e 94 95 08 	call	0x112a	; 0x112a <_ZN13OrangutanTime2msEv>
+    1158:	08 95       	ret
+
+0000115a <_ZN13OrangutanTime5ticksEv>:
+
+// number of ticks (in units of 0.4 us) that have elapsed since OrangutanTime was
+// initialized.
+unsigned long OrangutanTime::ticks()
+{
+	init();
+    115a:	0e 94 8b 08 	call	0x1116	; 0x1116 <_ZN13OrangutanTime4initEv>
+	TIMSK2 &= ~(1 << TOIE2);	// disable timer2 overflow interrupt
+    115e:	80 91 70 00 	lds	r24, 0x0070
+    1162:	8e 7f       	andi	r24, 0xFE	; 254
+    1164:	80 93 70 00 	sts	0x0070, r24
+	unsigned long numTicks = TCNT2 | tickCount;	// TCNT2 is lowest byte of tickCount
+    1168:	20 91 b2 00 	lds	r18, 0x00B2
+    116c:	80 91 37 01 	lds	r24, 0x0137
+    1170:	90 91 38 01 	lds	r25, 0x0138
+    1174:	a0 91 39 01 	lds	r26, 0x0139
+    1178:	b0 91 3a 01 	lds	r27, 0x013A
+	if (TIFR2 & (1 << TOV2))	// if TCNT2 has overflowed since we disabled t2 ovf interrupt
+    117c:	b8 99       	sbic	0x17, 0	; 23
+    117e:	04 c0       	rjmp	.+8      	; 0x1188 <_ZN13OrangutanTime5ticksEv+0x2e>
+// initialized.
+unsigned long OrangutanTime::ticks()
+{
+	init();
+	TIMSK2 &= ~(1 << TOIE2);	// disable timer2 overflow interrupt
+	unsigned long numTicks = TCNT2 | tickCount;	// TCNT2 is lowest byte of tickCount
+    1180:	30 e0       	ldi	r19, 0x00	; 0
+    1182:	40 e0       	ldi	r20, 0x00	; 0
+    1184:	50 e0       	ldi	r21, 0x00	; 0
+    1186:	11 c0       	rjmp	.+34     	; 0x11aa <_ZN13OrangutanTime5ticksEv+0x50>
+	{
+		// NOTE: it is important to perform this computation again.  If we use a value of TCNT2 read
+		// before we checked for the overflow, it might be something like 255 while it becomes 0 after
+		// the overflow.  Using an old value could produce a result that is bigger than it should be.
+		// For example, the following line should *NOT* be: numTicks += 256;
+		numTicks = TCNT2 | (tickCount + 256);		// compute ticks again and add 256 for the overflow
+    1188:	80 91 b2 00 	lds	r24, 0x00B2
+    118c:	20 91 37 01 	lds	r18, 0x0137
+    1190:	30 91 38 01 	lds	r19, 0x0138
+    1194:	40 91 39 01 	lds	r20, 0x0139
+    1198:	50 91 3a 01 	lds	r21, 0x013A
+    119c:	20 50       	subi	r18, 0x00	; 0
+    119e:	3f 4f       	sbci	r19, 0xFF	; 255
+    11a0:	4f 4f       	sbci	r20, 0xFF	; 255
+    11a2:	5f 4f       	sbci	r21, 0xFF	; 255
+    11a4:	90 e0       	ldi	r25, 0x00	; 0
+    11a6:	a0 e0       	ldi	r26, 0x00	; 0
+    11a8:	b0 e0       	ldi	r27, 0x00	; 0
+    11aa:	28 2b       	or	r18, r24
+    11ac:	39 2b       	or	r19, r25
+    11ae:	4a 2b       	or	r20, r26
+    11b0:	5b 2b       	or	r21, r27
+	}
+	TIMSK2 |= 1 << TOIE2;	// enable timer2 overflow interrupt
+    11b2:	80 91 70 00 	lds	r24, 0x0070
+    11b6:	81 60       	ori	r24, 0x01	; 1
+    11b8:	80 93 70 00 	sts	0x0070, r24
+	return numTicks;
+}
+    11bc:	b9 01       	movw	r22, r18
+    11be:	ca 01       	movw	r24, r20
+    11c0:	08 95       	ret
+
+000011c2 <get_ticks>:
+// There are some inline ones defined to alias to these in the C
+// header files.  Also, delay_us() is only in the header, since it's
+// inline assembly code.
+
+extern "C" {
+	unsigned long get_ticks() { return OrangutanTime::ticks(); }
+    11c2:	0e 94 ad 08 	call	0x115a	; 0x115a <_ZN13OrangutanTime5ticksEv>
+    11c6:	08 95       	ret
+
+000011c8 <_ZN13OrangutanTime5resetEv>:
+}
+
+// resets millisecond counter, but does not reset tick counter
+void OrangutanTime::reset()
+{
+	init();
+    11c8:	0e 94 8b 08 	call	0x1116	; 0x1116 <_ZN13OrangutanTime4initEv>
+	TIMSK2 &= ~(1 << TOIE2);	// disable timer2 overflow interrupt
+    11cc:	e0 e7       	ldi	r30, 0x70	; 112
+    11ce:	f0 e0       	ldi	r31, 0x00	; 0
+    11d0:	80 81       	ld	r24, Z
+    11d2:	8e 7f       	andi	r24, 0xFE	; 254
+    11d4:	80 83       	st	Z, r24
+	msCounter = 0;
+    11d6:	10 92 3b 01 	sts	0x013B, r1
+    11da:	10 92 3c 01 	sts	0x013C, r1
+    11de:	10 92 3d 01 	sts	0x013D, r1
+    11e2:	10 92 3e 01 	sts	0x013E, r1
+	us_over_10 = 0;
+    11e6:	10 92 40 01 	sts	0x0140, r1
+    11ea:	10 92 3f 01 	sts	0x013F, r1
+	TIMSK2 |= 1 << TOIE2;	// enable timer2 overflow interrupt
+    11ee:	80 81       	ld	r24, Z
+    11f0:	81 60       	ori	r24, 0x01	; 1
+    11f2:	80 83       	st	Z, r24
+}
+    11f4:	08 95       	ret
+
+000011f6 <time_reset>:
+	{
+		return OrangutanTime::ticksToMicroseconds(numTicks);
+	}
+	unsigned long get_ms() { return OrangutanTime::ms(); }
+	void delay_ms(unsigned int milliseconds) { OrangutanTime::delayMilliseconds(milliseconds); }
+	void time_reset() { OrangutanTime::reset(); }
+    11f6:	0e 94 e4 08 	call	0x11c8	; 0x11c8 <_ZN13OrangutanTime5resetEv>
+    11fa:	08 95       	ret
+
+000011fc <__divmodhi4>:
+    11fc:	97 fb       	bst	r25, 7
+    11fe:	09 2e       	mov	r0, r25
+    1200:	07 26       	eor	r0, r23
+    1202:	0a d0       	rcall	.+20     	; 0x1218 <__divmodhi4_neg1>
+    1204:	77 fd       	sbrc	r23, 7
+    1206:	04 d0       	rcall	.+8      	; 0x1210 <__divmodhi4_neg2>
+    1208:	65 d0       	rcall	.+202    	; 0x12d4 <__udivmodhi4>
+    120a:	06 d0       	rcall	.+12     	; 0x1218 <__divmodhi4_neg1>
+    120c:	00 20       	and	r0, r0
+    120e:	1a f4       	brpl	.+6      	; 0x1216 <__divmodhi4_exit>
+
+00001210 <__divmodhi4_neg2>:
+    1210:	70 95       	com	r23
+    1212:	61 95       	neg	r22
+    1214:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00001216 <__divmodhi4_exit>:
+    1216:	08 95       	ret
+
+00001218 <__divmodhi4_neg1>:
+    1218:	f6 f7       	brtc	.-4      	; 0x1216 <__divmodhi4_exit>
+    121a:	90 95       	com	r25
+    121c:	81 95       	neg	r24
+    121e:	9f 4f       	sbci	r25, 0xFF	; 255
+    1220:	08 95       	ret
+
+00001222 <__udivmodsi4>:
+    1222:	a1 e2       	ldi	r26, 0x21	; 33
+    1224:	1a 2e       	mov	r1, r26
+    1226:	aa 1b       	sub	r26, r26
+    1228:	bb 1b       	sub	r27, r27
+    122a:	fd 01       	movw	r30, r26
+    122c:	0d c0       	rjmp	.+26     	; 0x1248 <__udivmodsi4_ep>
+
+0000122e <__udivmodsi4_loop>:
+    122e:	aa 1f       	adc	r26, r26
+    1230:	bb 1f       	adc	r27, r27
+    1232:	ee 1f       	adc	r30, r30
+    1234:	ff 1f       	adc	r31, r31
+    1236:	a2 17       	cp	r26, r18
+    1238:	b3 07       	cpc	r27, r19
+    123a:	e4 07       	cpc	r30, r20
+    123c:	f5 07       	cpc	r31, r21
+    123e:	20 f0       	brcs	.+8      	; 0x1248 <__udivmodsi4_ep>
+    1240:	a2 1b       	sub	r26, r18
+    1242:	b3 0b       	sbc	r27, r19
+    1244:	e4 0b       	sbc	r30, r20
+    1246:	f5 0b       	sbc	r31, r21
+
+00001248 <__udivmodsi4_ep>:
+    1248:	66 1f       	adc	r22, r22
+    124a:	77 1f       	adc	r23, r23
+    124c:	88 1f       	adc	r24, r24
+    124e:	99 1f       	adc	r25, r25
+    1250:	1a 94       	dec	r1
+    1252:	69 f7       	brne	.-38     	; 0x122e <__udivmodsi4_loop>
+    1254:	60 95       	com	r22
+    1256:	70 95       	com	r23
+    1258:	80 95       	com	r24
+    125a:	90 95       	com	r25
+    125c:	9b 01       	movw	r18, r22
+    125e:	ac 01       	movw	r20, r24
+    1260:	bd 01       	movw	r22, r26
+    1262:	cf 01       	movw	r24, r30
+    1264:	08 95       	ret
+
+00001266 <__prologue_saves__>:
+    1266:	2f 92       	push	r2
+    1268:	3f 92       	push	r3
+    126a:	4f 92       	push	r4
+    126c:	5f 92       	push	r5
+    126e:	6f 92       	push	r6
+    1270:	7f 92       	push	r7
+    1272:	8f 92       	push	r8
+    1274:	9f 92       	push	r9
+    1276:	af 92       	push	r10
+    1278:	bf 92       	push	r11
+    127a:	cf 92       	push	r12
+    127c:	df 92       	push	r13
+    127e:	ef 92       	push	r14
+    1280:	ff 92       	push	r15
+    1282:	0f 93       	push	r16
+    1284:	1f 93       	push	r17
+    1286:	cf 93       	push	r28
+    1288:	df 93       	push	r29
+    128a:	cd b7       	in	r28, 0x3d	; 61
+    128c:	de b7       	in	r29, 0x3e	; 62
+    128e:	ca 1b       	sub	r28, r26
+    1290:	db 0b       	sbc	r29, r27
+    1292:	0f b6       	in	r0, 0x3f	; 63
+    1294:	f8 94       	cli
+    1296:	de bf       	out	0x3e, r29	; 62
+    1298:	0f be       	out	0x3f, r0	; 63
+    129a:	cd bf       	out	0x3d, r28	; 61
+    129c:	09 94       	ijmp
+
+0000129e <__epilogue_restores__>:
+    129e:	2a 88       	ldd	r2, Y+18	; 0x12
+    12a0:	39 88       	ldd	r3, Y+17	; 0x11
+    12a2:	48 88       	ldd	r4, Y+16	; 0x10
+    12a4:	5f 84       	ldd	r5, Y+15	; 0x0f
+    12a6:	6e 84       	ldd	r6, Y+14	; 0x0e
+    12a8:	7d 84       	ldd	r7, Y+13	; 0x0d
+    12aa:	8c 84       	ldd	r8, Y+12	; 0x0c
+    12ac:	9b 84       	ldd	r9, Y+11	; 0x0b
+    12ae:	aa 84       	ldd	r10, Y+10	; 0x0a
+    12b0:	b9 84       	ldd	r11, Y+9	; 0x09
+    12b2:	c8 84       	ldd	r12, Y+8	; 0x08
+    12b4:	df 80       	ldd	r13, Y+7	; 0x07
+    12b6:	ee 80       	ldd	r14, Y+6	; 0x06
+    12b8:	fd 80       	ldd	r15, Y+5	; 0x05
+    12ba:	0c 81       	ldd	r16, Y+4	; 0x04
+    12bc:	1b 81       	ldd	r17, Y+3	; 0x03
+    12be:	aa 81       	ldd	r26, Y+2	; 0x02
+    12c0:	b9 81       	ldd	r27, Y+1	; 0x01
+    12c2:	ce 0f       	add	r28, r30
+    12c4:	d1 1d       	adc	r29, r1
+    12c6:	0f b6       	in	r0, 0x3f	; 63
+    12c8:	f8 94       	cli
+    12ca:	de bf       	out	0x3e, r29	; 62
+    12cc:	0f be       	out	0x3f, r0	; 63
+    12ce:	cd bf       	out	0x3d, r28	; 61
+    12d0:	ed 01       	movw	r28, r26
+    12d2:	08 95       	ret
+
+000012d4 <__udivmodhi4>:
+    12d4:	aa 1b       	sub	r26, r26
+    12d6:	bb 1b       	sub	r27, r27
+    12d8:	51 e1       	ldi	r21, 0x11	; 17
+    12da:	07 c0       	rjmp	.+14     	; 0x12ea <__udivmodhi4_ep>
+
+000012dc <__udivmodhi4_loop>:
+    12dc:	aa 1f       	adc	r26, r26
+    12de:	bb 1f       	adc	r27, r27
+    12e0:	a6 17       	cp	r26, r22
+    12e2:	b7 07       	cpc	r27, r23
+    12e4:	10 f0       	brcs	.+4      	; 0x12ea <__udivmodhi4_ep>
+    12e6:	a6 1b       	sub	r26, r22
+    12e8:	b7 0b       	sbc	r27, r23
+
+000012ea <__udivmodhi4_ep>:
+    12ea:	88 1f       	adc	r24, r24
+    12ec:	99 1f       	adc	r25, r25
+    12ee:	5a 95       	dec	r21
+    12f0:	a9 f7       	brne	.-22     	; 0x12dc <__udivmodhi4_loop>
+    12f2:	80 95       	com	r24
+    12f4:	90 95       	com	r25
+    12f6:	bc 01       	movw	r22, r24
+    12f8:	cd 01       	movw	r24, r26
+    12fa:	08 95       	ret
+
+000012fc <malloc>:
+    12fc:	cf 93       	push	r28
+    12fe:	df 93       	push	r29
+    1300:	82 30       	cpi	r24, 0x02	; 2
+    1302:	91 05       	cpc	r25, r1
+    1304:	10 f4       	brcc	.+4      	; 0x130a <malloc+0xe>
+    1306:	82 e0       	ldi	r24, 0x02	; 2
+    1308:	90 e0       	ldi	r25, 0x00	; 0
+    130a:	e0 91 44 01 	lds	r30, 0x0144
+    130e:	f0 91 45 01 	lds	r31, 0x0145
+    1312:	40 e0       	ldi	r20, 0x00	; 0
+    1314:	50 e0       	ldi	r21, 0x00	; 0
+    1316:	20 e0       	ldi	r18, 0x00	; 0
+    1318:	30 e0       	ldi	r19, 0x00	; 0
+    131a:	26 c0       	rjmp	.+76     	; 0x1368 <malloc+0x6c>
+    131c:	60 81       	ld	r22, Z
+    131e:	71 81       	ldd	r23, Z+1	; 0x01
+    1320:	68 17       	cp	r22, r24
+    1322:	79 07       	cpc	r23, r25
+    1324:	e0 f0       	brcs	.+56     	; 0x135e <malloc+0x62>
+    1326:	68 17       	cp	r22, r24
+    1328:	79 07       	cpc	r23, r25
+    132a:	81 f4       	brne	.+32     	; 0x134c <malloc+0x50>
+    132c:	82 81       	ldd	r24, Z+2	; 0x02
+    132e:	93 81       	ldd	r25, Z+3	; 0x03
+    1330:	21 15       	cp	r18, r1
+    1332:	31 05       	cpc	r19, r1
+    1334:	31 f0       	breq	.+12     	; 0x1342 <malloc+0x46>
+    1336:	d9 01       	movw	r26, r18
+    1338:	13 96       	adiw	r26, 0x03	; 3
+    133a:	9c 93       	st	X, r25
+    133c:	8e 93       	st	-X, r24
+    133e:	12 97       	sbiw	r26, 0x02	; 2
+    1340:	2b c0       	rjmp	.+86     	; 0x1398 <malloc+0x9c>
+    1342:	90 93 45 01 	sts	0x0145, r25
+    1346:	80 93 44 01 	sts	0x0144, r24
+    134a:	26 c0       	rjmp	.+76     	; 0x1398 <malloc+0x9c>
+    134c:	41 15       	cp	r20, r1
+    134e:	51 05       	cpc	r21, r1
+    1350:	19 f0       	breq	.+6      	; 0x1358 <malloc+0x5c>
+    1352:	64 17       	cp	r22, r20
+    1354:	75 07       	cpc	r23, r21
+    1356:	18 f4       	brcc	.+6      	; 0x135e <malloc+0x62>
+    1358:	ab 01       	movw	r20, r22
+    135a:	e9 01       	movw	r28, r18
+    135c:	df 01       	movw	r26, r30
+    135e:	9f 01       	movw	r18, r30
+    1360:	72 81       	ldd	r23, Z+2	; 0x02
+    1362:	63 81       	ldd	r22, Z+3	; 0x03
+    1364:	e7 2f       	mov	r30, r23
+    1366:	f6 2f       	mov	r31, r22
+    1368:	30 97       	sbiw	r30, 0x00	; 0
+    136a:	c1 f6       	brne	.-80     	; 0x131c <malloc+0x20>
+    136c:	41 15       	cp	r20, r1
+    136e:	51 05       	cpc	r21, r1
+    1370:	01 f1       	breq	.+64     	; 0x13b2 <malloc+0xb6>
+    1372:	48 1b       	sub	r20, r24
+    1374:	59 0b       	sbc	r21, r25
+    1376:	44 30       	cpi	r20, 0x04	; 4
+    1378:	51 05       	cpc	r21, r1
+    137a:	80 f4       	brcc	.+32     	; 0x139c <malloc+0xa0>
+    137c:	12 96       	adiw	r26, 0x02	; 2
+    137e:	8d 91       	ld	r24, X+
+    1380:	9c 91       	ld	r25, X
+    1382:	13 97       	sbiw	r26, 0x03	; 3
+    1384:	20 97       	sbiw	r28, 0x00	; 0
+    1386:	19 f0       	breq	.+6      	; 0x138e <malloc+0x92>
+    1388:	9b 83       	std	Y+3, r25	; 0x03
+    138a:	8a 83       	std	Y+2, r24	; 0x02
+    138c:	04 c0       	rjmp	.+8      	; 0x1396 <malloc+0x9a>
+    138e:	90 93 45 01 	sts	0x0145, r25
+    1392:	80 93 44 01 	sts	0x0144, r24
+    1396:	fd 01       	movw	r30, r26
+    1398:	32 96       	adiw	r30, 0x02	; 2
+    139a:	46 c0       	rjmp	.+140    	; 0x1428 <malloc+0x12c>
+    139c:	fd 01       	movw	r30, r26
+    139e:	e4 0f       	add	r30, r20
+    13a0:	f5 1f       	adc	r31, r21
+    13a2:	81 93       	st	Z+, r24
+    13a4:	91 93       	st	Z+, r25
+    13a6:	42 50       	subi	r20, 0x02	; 2
+    13a8:	50 40       	sbci	r21, 0x00	; 0
+    13aa:	11 96       	adiw	r26, 0x01	; 1
+    13ac:	5c 93       	st	X, r21
+    13ae:	4e 93       	st	-X, r20
+    13b0:	3b c0       	rjmp	.+118    	; 0x1428 <malloc+0x12c>
+    13b2:	20 91 42 01 	lds	r18, 0x0142
+    13b6:	30 91 43 01 	lds	r19, 0x0143
+    13ba:	21 15       	cp	r18, r1
+    13bc:	31 05       	cpc	r19, r1
+    13be:	41 f4       	brne	.+16     	; 0x13d0 <malloc+0xd4>
+    13c0:	20 91 1c 01 	lds	r18, 0x011C
+    13c4:	30 91 1d 01 	lds	r19, 0x011D
+    13c8:	30 93 43 01 	sts	0x0143, r19
+    13cc:	20 93 42 01 	sts	0x0142, r18
+    13d0:	20 91 1e 01 	lds	r18, 0x011E
+    13d4:	30 91 1f 01 	lds	r19, 0x011F
+    13d8:	21 15       	cp	r18, r1
+    13da:	31 05       	cpc	r19, r1
+    13dc:	41 f4       	brne	.+16     	; 0x13ee <malloc+0xf2>
+    13de:	2d b7       	in	r18, 0x3d	; 61
+    13e0:	3e b7       	in	r19, 0x3e	; 62
+    13e2:	40 91 1a 01 	lds	r20, 0x011A
+    13e6:	50 91 1b 01 	lds	r21, 0x011B
+    13ea:	24 1b       	sub	r18, r20
+    13ec:	35 0b       	sbc	r19, r21
+    13ee:	e0 91 42 01 	lds	r30, 0x0142
+    13f2:	f0 91 43 01 	lds	r31, 0x0143
+    13f6:	e2 17       	cp	r30, r18
+    13f8:	f3 07       	cpc	r31, r19
+    13fa:	a0 f4       	brcc	.+40     	; 0x1424 <malloc+0x128>
+    13fc:	2e 1b       	sub	r18, r30
+    13fe:	3f 0b       	sbc	r19, r31
+    1400:	28 17       	cp	r18, r24
+    1402:	39 07       	cpc	r19, r25
+    1404:	78 f0       	brcs	.+30     	; 0x1424 <malloc+0x128>
+    1406:	ac 01       	movw	r20, r24
+    1408:	4e 5f       	subi	r20, 0xFE	; 254
+    140a:	5f 4f       	sbci	r21, 0xFF	; 255
+    140c:	24 17       	cp	r18, r20
+    140e:	35 07       	cpc	r19, r21
+    1410:	48 f0       	brcs	.+18     	; 0x1424 <malloc+0x128>
+    1412:	4e 0f       	add	r20, r30
+    1414:	5f 1f       	adc	r21, r31
+    1416:	50 93 43 01 	sts	0x0143, r21
+    141a:	40 93 42 01 	sts	0x0142, r20
+    141e:	81 93       	st	Z+, r24
+    1420:	91 93       	st	Z+, r25
+    1422:	02 c0       	rjmp	.+4      	; 0x1428 <malloc+0x12c>
+    1424:	e0 e0       	ldi	r30, 0x00	; 0
+    1426:	f0 e0       	ldi	r31, 0x00	; 0
+    1428:	cf 01       	movw	r24, r30
+    142a:	df 91       	pop	r29
+    142c:	cf 91       	pop	r28
+    142e:	08 95       	ret
+
+00001430 <free>:
+    1430:	cf 93       	push	r28
+    1432:	df 93       	push	r29
+    1434:	00 97       	sbiw	r24, 0x00	; 0
+    1436:	09 f4       	brne	.+2      	; 0x143a <free+0xa>
+    1438:	91 c0       	rjmp	.+290    	; 0x155c <free+0x12c>
+    143a:	fc 01       	movw	r30, r24
+    143c:	32 97       	sbiw	r30, 0x02	; 2
+    143e:	13 82       	std	Z+3, r1	; 0x03
+    1440:	12 82       	std	Z+2, r1	; 0x02
+    1442:	60 91 44 01 	lds	r22, 0x0144
+    1446:	70 91 45 01 	lds	r23, 0x0145
+    144a:	61 15       	cp	r22, r1
+    144c:	71 05       	cpc	r23, r1
+    144e:	81 f4       	brne	.+32     	; 0x1470 <free+0x40>
+    1450:	20 81       	ld	r18, Z
+    1452:	31 81       	ldd	r19, Z+1	; 0x01
+    1454:	28 0f       	add	r18, r24
+    1456:	39 1f       	adc	r19, r25
+    1458:	80 91 42 01 	lds	r24, 0x0142
+    145c:	90 91 43 01 	lds	r25, 0x0143
+    1460:	82 17       	cp	r24, r18
+    1462:	93 07       	cpc	r25, r19
+    1464:	99 f5       	brne	.+102    	; 0x14cc <free+0x9c>
+    1466:	f0 93 43 01 	sts	0x0143, r31
+    146a:	e0 93 42 01 	sts	0x0142, r30
+    146e:	76 c0       	rjmp	.+236    	; 0x155c <free+0x12c>
+    1470:	db 01       	movw	r26, r22
+    1472:	80 e0       	ldi	r24, 0x00	; 0
+    1474:	90 e0       	ldi	r25, 0x00	; 0
+    1476:	02 c0       	rjmp	.+4      	; 0x147c <free+0x4c>
+    1478:	cd 01       	movw	r24, r26
+    147a:	d9 01       	movw	r26, r18
+    147c:	ae 17       	cp	r26, r30
+    147e:	bf 07       	cpc	r27, r31
+    1480:	48 f4       	brcc	.+18     	; 0x1494 <free+0x64>
+    1482:	12 96       	adiw	r26, 0x02	; 2
+    1484:	2d 91       	ld	r18, X+
+    1486:	3c 91       	ld	r19, X
+    1488:	13 97       	sbiw	r26, 0x03	; 3
+    148a:	21 15       	cp	r18, r1
+    148c:	31 05       	cpc	r19, r1
+    148e:	a1 f7       	brne	.-24     	; 0x1478 <free+0x48>
+    1490:	cd 01       	movw	r24, r26
+    1492:	21 c0       	rjmp	.+66     	; 0x14d6 <free+0xa6>
+    1494:	b3 83       	std	Z+3, r27	; 0x03
+    1496:	a2 83       	std	Z+2, r26	; 0x02
+    1498:	ef 01       	movw	r28, r30
+    149a:	49 91       	ld	r20, Y+
+    149c:	59 91       	ld	r21, Y+
+    149e:	9e 01       	movw	r18, r28
+    14a0:	24 0f       	add	r18, r20
+    14a2:	35 1f       	adc	r19, r21
+    14a4:	a2 17       	cp	r26, r18
+    14a6:	b3 07       	cpc	r27, r19
+    14a8:	79 f4       	brne	.+30     	; 0x14c8 <free+0x98>
+    14aa:	2d 91       	ld	r18, X+
+    14ac:	3c 91       	ld	r19, X
+    14ae:	11 97       	sbiw	r26, 0x01	; 1
+    14b0:	24 0f       	add	r18, r20
+    14b2:	35 1f       	adc	r19, r21
+    14b4:	2e 5f       	subi	r18, 0xFE	; 254
+    14b6:	3f 4f       	sbci	r19, 0xFF	; 255
+    14b8:	31 83       	std	Z+1, r19	; 0x01
+    14ba:	20 83       	st	Z, r18
+    14bc:	12 96       	adiw	r26, 0x02	; 2
+    14be:	2d 91       	ld	r18, X+
+    14c0:	3c 91       	ld	r19, X
+    14c2:	13 97       	sbiw	r26, 0x03	; 3
+    14c4:	33 83       	std	Z+3, r19	; 0x03
+    14c6:	22 83       	std	Z+2, r18	; 0x02
+    14c8:	00 97       	sbiw	r24, 0x00	; 0
+    14ca:	29 f4       	brne	.+10     	; 0x14d6 <free+0xa6>
+    14cc:	f0 93 45 01 	sts	0x0145, r31
+    14d0:	e0 93 44 01 	sts	0x0144, r30
+    14d4:	43 c0       	rjmp	.+134    	; 0x155c <free+0x12c>
+    14d6:	dc 01       	movw	r26, r24
+    14d8:	13 96       	adiw	r26, 0x03	; 3
+    14da:	fc 93       	st	X, r31
+    14dc:	ee 93       	st	-X, r30
+    14de:	12 97       	sbiw	r26, 0x02	; 2
+    14e0:	4d 91       	ld	r20, X+
+    14e2:	5d 91       	ld	r21, X+
+    14e4:	a4 0f       	add	r26, r20
+    14e6:	b5 1f       	adc	r27, r21
+    14e8:	ea 17       	cp	r30, r26
+    14ea:	fb 07       	cpc	r31, r27
+    14ec:	69 f4       	brne	.+26     	; 0x1508 <free+0xd8>
+    14ee:	20 81       	ld	r18, Z
+    14f0:	31 81       	ldd	r19, Z+1	; 0x01
+    14f2:	24 0f       	add	r18, r20
+    14f4:	35 1f       	adc	r19, r21
+    14f6:	2e 5f       	subi	r18, 0xFE	; 254
+    14f8:	3f 4f       	sbci	r19, 0xFF	; 255
+    14fa:	ec 01       	movw	r28, r24
+    14fc:	39 83       	std	Y+1, r19	; 0x01
+    14fe:	28 83       	st	Y, r18
+    1500:	22 81       	ldd	r18, Z+2	; 0x02
+    1502:	33 81       	ldd	r19, Z+3	; 0x03
+    1504:	3b 83       	std	Y+3, r19	; 0x03
+    1506:	2a 83       	std	Y+2, r18	; 0x02
+    1508:	e0 e0       	ldi	r30, 0x00	; 0
+    150a:	f0 e0       	ldi	r31, 0x00	; 0
+    150c:	02 c0       	rjmp	.+4      	; 0x1512 <free+0xe2>
+    150e:	fb 01       	movw	r30, r22
+    1510:	bc 01       	movw	r22, r24
+    1512:	db 01       	movw	r26, r22
+    1514:	12 96       	adiw	r26, 0x02	; 2
+    1516:	8d 91       	ld	r24, X+
+    1518:	9c 91       	ld	r25, X
+    151a:	13 97       	sbiw	r26, 0x03	; 3
+    151c:	00 97       	sbiw	r24, 0x00	; 0
+    151e:	b9 f7       	brne	.-18     	; 0x150e <free+0xde>
+    1520:	9b 01       	movw	r18, r22
+    1522:	2e 5f       	subi	r18, 0xFE	; 254
+    1524:	3f 4f       	sbci	r19, 0xFF	; 255
+    1526:	8d 91       	ld	r24, X+
+    1528:	9c 91       	ld	r25, X
+    152a:	11 97       	sbiw	r26, 0x01	; 1
+    152c:	82 0f       	add	r24, r18
+    152e:	93 1f       	adc	r25, r19
+    1530:	40 91 42 01 	lds	r20, 0x0142
+    1534:	50 91 43 01 	lds	r21, 0x0143
+    1538:	48 17       	cp	r20, r24
+    153a:	59 07       	cpc	r21, r25
+    153c:	79 f4       	brne	.+30     	; 0x155c <free+0x12c>
+    153e:	30 97       	sbiw	r30, 0x00	; 0
+    1540:	29 f4       	brne	.+10     	; 0x154c <free+0x11c>
+    1542:	10 92 45 01 	sts	0x0145, r1
+    1546:	10 92 44 01 	sts	0x0144, r1
+    154a:	02 c0       	rjmp	.+4      	; 0x1550 <free+0x120>
+    154c:	13 82       	std	Z+3, r1	; 0x03
+    154e:	12 82       	std	Z+2, r1	; 0x02
+    1550:	22 50       	subi	r18, 0x02	; 2
+    1552:	30 40       	sbci	r19, 0x00	; 0
+    1554:	30 93 43 01 	sts	0x0143, r19
+    1558:	20 93 42 01 	sts	0x0142, r18
+    155c:	df 91       	pop	r29
+    155e:	cf 91       	pop	r28
+    1560:	08 95       	ret
+
+00001562 <fdevopen>:
+    1562:	0f 93       	push	r16
+    1564:	1f 93       	push	r17
+    1566:	cf 93       	push	r28
+    1568:	df 93       	push	r29
+    156a:	8c 01       	movw	r16, r24
+    156c:	eb 01       	movw	r28, r22
+    156e:	00 97       	sbiw	r24, 0x00	; 0
+    1570:	11 f4       	brne	.+4      	; 0x1576 <fdevopen+0x14>
+    1572:	20 97       	sbiw	r28, 0x00	; 0
+    1574:	c9 f1       	breq	.+114    	; 0x15e8 <fdevopen+0x86>
+    1576:	81 e0       	ldi	r24, 0x01	; 1
+    1578:	90 e0       	ldi	r25, 0x00	; 0
+    157a:	6e e0       	ldi	r22, 0x0E	; 14
+    157c:	70 e0       	ldi	r23, 0x00	; 0
+    157e:	0e 94 fc 0a 	call	0x15f8	; 0x15f8 <calloc>
+    1582:	fc 01       	movw	r30, r24
+    1584:	9c 01       	movw	r18, r24
+    1586:	00 97       	sbiw	r24, 0x00	; 0
+    1588:	89 f1       	breq	.+98     	; 0x15ec <fdevopen+0x8a>
+    158a:	80 e8       	ldi	r24, 0x80	; 128
+    158c:	83 83       	std	Z+3, r24	; 0x03
+    158e:	20 97       	sbiw	r28, 0x00	; 0
+    1590:	71 f0       	breq	.+28     	; 0x15ae <fdevopen+0x4c>
+    1592:	d3 87       	std	Z+11, r29	; 0x0b
+    1594:	c2 87       	std	Z+10, r28	; 0x0a
+    1596:	81 e8       	ldi	r24, 0x81	; 129
+    1598:	83 83       	std	Z+3, r24	; 0x03
+    159a:	80 91 46 01 	lds	r24, 0x0146
+    159e:	90 91 47 01 	lds	r25, 0x0147
+    15a2:	00 97       	sbiw	r24, 0x00	; 0
+    15a4:	21 f4       	brne	.+8      	; 0x15ae <fdevopen+0x4c>
+    15a6:	f0 93 47 01 	sts	0x0147, r31
+    15aa:	e0 93 46 01 	sts	0x0146, r30
+    15ae:	01 15       	cp	r16, r1
+    15b0:	11 05       	cpc	r17, r1
+    15b2:	e1 f0       	breq	.+56     	; 0x15ec <fdevopen+0x8a>
+    15b4:	11 87       	std	Z+9, r17	; 0x09
+    15b6:	00 87       	std	Z+8, r16	; 0x08
+    15b8:	83 81       	ldd	r24, Z+3	; 0x03
+    15ba:	82 60       	ori	r24, 0x02	; 2
+    15bc:	83 83       	std	Z+3, r24	; 0x03
+    15be:	80 91 48 01 	lds	r24, 0x0148
+    15c2:	90 91 49 01 	lds	r25, 0x0149
+    15c6:	00 97       	sbiw	r24, 0x00	; 0
+    15c8:	89 f4       	brne	.+34     	; 0x15ec <fdevopen+0x8a>
+    15ca:	f0 93 49 01 	sts	0x0149, r31
+    15ce:	e0 93 48 01 	sts	0x0148, r30
+    15d2:	80 91 4a 01 	lds	r24, 0x014A
+    15d6:	90 91 4b 01 	lds	r25, 0x014B
+    15da:	00 97       	sbiw	r24, 0x00	; 0
+    15dc:	39 f4       	brne	.+14     	; 0x15ec <fdevopen+0x8a>
+    15de:	f0 93 4b 01 	sts	0x014B, r31
+    15e2:	e0 93 4a 01 	sts	0x014A, r30
+    15e6:	02 c0       	rjmp	.+4      	; 0x15ec <fdevopen+0x8a>
+    15e8:	20 e0       	ldi	r18, 0x00	; 0
+    15ea:	30 e0       	ldi	r19, 0x00	; 0
+    15ec:	c9 01       	movw	r24, r18
+    15ee:	df 91       	pop	r29
+    15f0:	cf 91       	pop	r28
+    15f2:	1f 91       	pop	r17
+    15f4:	0f 91       	pop	r16
+    15f6:	08 95       	ret
+
+000015f8 <calloc>:
+    15f8:	0f 93       	push	r16
+    15fa:	1f 93       	push	r17
+    15fc:	cf 93       	push	r28
+    15fe:	df 93       	push	r29
+    1600:	68 9f       	mul	r22, r24
+    1602:	80 01       	movw	r16, r0
+    1604:	69 9f       	mul	r22, r25
+    1606:	10 0d       	add	r17, r0
+    1608:	78 9f       	mul	r23, r24
+    160a:	10 0d       	add	r17, r0
+    160c:	11 24       	eor	r1, r1
+    160e:	c8 01       	movw	r24, r16
+    1610:	0e 94 7e 09 	call	0x12fc	; 0x12fc <malloc>
+    1614:	c8 2f       	mov	r28, r24
+    1616:	d9 2f       	mov	r29, r25
+    1618:	20 97       	sbiw	r28, 0x00	; 0
+    161a:	31 f0       	breq	.+12     	; 0x1628 <calloc+0x30>
+    161c:	8c 2f       	mov	r24, r28
+    161e:	60 e0       	ldi	r22, 0x00	; 0
+    1620:	70 e0       	ldi	r23, 0x00	; 0
+    1622:	a8 01       	movw	r20, r16
+    1624:	0e 94 1a 0b 	call	0x1634	; 0x1634 <memset>
+    1628:	ce 01       	movw	r24, r28
+    162a:	df 91       	pop	r29
+    162c:	cf 91       	pop	r28
+    162e:	1f 91       	pop	r17
+    1630:	0f 91       	pop	r16
+    1632:	08 95       	ret
+
+00001634 <memset>:
+    1634:	dc 01       	movw	r26, r24
+    1636:	01 c0       	rjmp	.+2      	; 0x163a <memset+0x6>
+    1638:	6d 93       	st	X+, r22
+    163a:	41 50       	subi	r20, 0x01	; 1
+    163c:	50 40       	sbci	r21, 0x00	; 0
+    163e:	e0 f7       	brcc	.-8      	; 0x1638 <memset+0x4>
+    1640:	08 95       	ret
+
+00001642 <_exit>:
+    1642:	f8 94       	cli
+
+00001644 <__stop_program>:
+    1644:	ff cf       	rjmp	.-2      	; 0x1644 <__stop_program>

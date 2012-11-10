@@ -1,0 +1,15 @@
+/*
+ * main.cc
+ *
+ *  Created on: Nov 9, 2012
+ *      Author: lucho
+ */
+
+include "pololu/3pi.h"
+void
+
+int main (){
+	while (1) {
+
+	}
+}
