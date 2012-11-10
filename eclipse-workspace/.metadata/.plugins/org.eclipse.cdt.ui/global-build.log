@@ -638,3 +638,34 @@ Data:         76 bytes (3.7% Full)
 
 Finished building: sizedummy
  
+18:13:45 **** Build of configuration Debug for project pololu3pi ****
+make all 
+Building file: ../main.cc
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -funsigned-char -funsigned-bitfields -fno-exceptions -mmcu=atmega328p -DF_CPU=20000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.cc"
+Finished building: ../main.cc
+ 
+Building target: pololu3pi.elf
+Invoking: AVR C++ Linker
+avr-g++ -Wl,-Map,pololu3pi.map,--cref -mmcu=atmega328p -o "pololu3pi.elf"  ./main.o   -lpololu_atmega328p
+Finished building target: pololu3pi.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S pololu3pi.elf  >"pololu3pi.lss"
+Finished building: pololu3pi.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p pololu3pi.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    5734 bytes (17.5% Full)
+(.text + .data + .bootloader)
+
+Data:         76 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

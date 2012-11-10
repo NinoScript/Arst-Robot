@@ -158,10 +158,10 @@ static void __attribute__((used)) _pololu_atmel_studio_6_workaround(void)
       e8:	08 95       	ret
 
 000000ea <_Z8adelantei>:
+ *      Author: lucho
  */
 
 #include "pololu/3pi.h"
-
 
 void adelante (int velmax){
       ea:	df 93       	push	r29
