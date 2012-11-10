@@ -9,6 +9,8 @@
 
 void adelante (int velmax){
 	OrangutanMotors::setSpeeds(velmax,velmax);
+
+
 }
 
 void giroIzquierda (int velmax){
