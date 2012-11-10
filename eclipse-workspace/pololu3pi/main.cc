@@ -7,7 +7,6 @@
 
 #include "pololu/3pi.h"
 
-
 void adelante (int velmax){
 	OrangutanMotors::setSpeeds(velmax,velmax);
 }
