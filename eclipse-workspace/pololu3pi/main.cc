@@ -46,6 +46,7 @@ int main (){
 		max = ajustavelmax(max);
 		wait_for_button_release(BUTTON_B);
 
+
 		clear();
 		print("Press B");
 		lcd_goto_xy(0,1);
