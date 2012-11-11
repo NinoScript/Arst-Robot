@@ -8,16 +8,17 @@
 #include "Movimiento.h"
 
 void Movimiento::avanzarUnCuadrado () {
-	OrangutanMotors::setSpeeds(velmax, velmax);
-	delay_ms(500);
+	OrangutanMotors::setSpeeds(velocidad_maxima, velocidad_maxima);
+	delay_ms(factor_velocidad);
 }
 
 void Movimiento::girarDerecha () {
-	OrangutanMotors::setSpeeds(velmax, -velmax);
-	delay_ms(tProp);
+	OrangutanMotors::setSpeeds(velocidad_maxima, -velocidad_maxima);
+	delay_ms(factor_giro);
 }
 
-void Movimiento::actualizarFactores(unsigned char velocidad_maxima) {
-	factorVelocidad = 47500/velmax;
-	factorGiro      = 16000/velmax;
+void Movimiento::actualizarFactores(unsigned char nueva_velocidad_maxima) {
+	velocidad_maxima = nueva_velocidad_maxima;
+	factor_velocidad = 47500 / velocidad_maxima;
+	factor_giro      = 16000 / velocidad_maxima;
 }

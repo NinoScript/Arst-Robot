@@ -12,10 +12,10 @@
 
 class Robot3PI {
 	int max;
-	Movimiento movedor;
+	Movimiento & movedor;
 
 public:
-	Robot3PI ();
+	Robot3PI (Movimiento & movedor);
 	int main ();
 
 	int ajustavelmax (int max);
