@@ -12,10 +12,13 @@
 
 class Movimiento {
 public:
-	unsigned int velmax;
+	unsigned int factorVelocidad;
+	unsigned int factorGiro;
 
 	void avanzarUnCuadrado ();
 	void girarDerecha ();
+
+	void actualizarFactores(unsigned char velocidad_maxima);
 };
 
 #endif /* MOVIMIENTO_H_ */

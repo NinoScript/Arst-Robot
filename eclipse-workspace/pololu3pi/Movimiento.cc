@@ -16,3 +16,8 @@ void Movimiento::girarDerecha () {
 	OrangutanMotors::setSpeeds(velmax, -velmax);
 	delay_ms(tProp);
 }
+
+void Movimiento::actualizarFactores(unsigned char velocidad_maxima) {
+	factorVelocidad = 47500/velmax;
+	factorGiro      = 16000/velmax;
+}
