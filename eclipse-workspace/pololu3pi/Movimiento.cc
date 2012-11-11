@@ -7,12 +7,12 @@
 
 #include "Movimiento.h"
 
-Movimiento::Movimiento() {
-	// TODO Auto-generated constructor stub
-
+void Movimiento::avanzarUnCuadrado () {
+	OrangutanMotors::setSpeeds(velmax, velmax);
+	delay_ms(500);
 }
 
-Movimiento::~Movimiento() {
-	// TODO Auto-generated destructor stub
+void Movimiento::girarDerecha () {
+	OrangutanMotors::setSpeeds(velmax, -velmax);
+	delay_ms(tProp);
 }
-
