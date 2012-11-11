@@ -7,6 +7,7 @@
 
 #include "pololu/3pi.h"
 
+<<<<<<< HEAD
 
 
 int adelante (int velmax){
@@ -18,6 +19,15 @@ int adelante (int velmax){
 
 int giroIzquierda (int velmax){
 	int tProp = 16000/velmax; //16000 proporcion giro 90
+=======
+void adelante (int velmax) {
+	OrangutanMotors::setSpeeds(velmax,velmax);
+}
+
+void giroIzquierda (int velmax) {
+	int tProp = 16000/velmax; //1600 numero sacado de ejemplos de pololu
+
+>>>>>>> parent of 3ee52ed... Revert "lucho estúpido"
 	OrangutanMotors::setSpeeds(-velmax,velmax);
 	delay_ms(tProp);
 	return tProp;
