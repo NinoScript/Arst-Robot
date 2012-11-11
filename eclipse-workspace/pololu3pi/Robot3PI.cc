@@ -27,6 +27,7 @@ int Robot3PI::main() {
 		wait_for_button_release(BUTTON_B);
 		delay_ms(300);
 
+
 		movedor.avanzarUnCuadrado();
 
 		clear();
