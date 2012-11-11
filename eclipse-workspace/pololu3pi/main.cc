@@ -25,20 +25,18 @@ void detenerse(){
 }
 
 int ajustavelmax(int max){
-	while(!OrangutanPushbuttons::isPressed(BUTTON_B)){
+	while(!button_is_pressed(BUTTON_B)){
 		OrangutanLCD::gotoXY(0,0);
 		OrangutanLCD::print("Vel: ");
 		OrangutanLCD::print(max);
 		if(button_is_pressed(BUTTON_A)){
 			max>10? max-=10: max;
-
-			OrangutanPushbuttons::waitForRelease(BUTTON_A);
+			wait_for_button_release(BUTTON_A);
 		} else if(button_is_pressed(BUTTON_C)){
 			max<246? max+=10: max;
-			OrangutanPushbuttons::waitForRelease(BUTTON_C);
+			wait_for_button_release(BUTTON_C);
 		}
 	}
-
 	return max;
 }
 
@@ -56,8 +54,8 @@ int main (){
 		print("Press B");
 		lcd_goto_xy(0,1);
 		print("And Wait");
-		OrangutanPushbuttons::waitForPress(BUTTON_B);
-		OrangutanPushbuttons::waitForRelease(BUTTON_B);
+		wait_for_button_press(BUTTON_B);
+		wait_for_button_release(BUTTON_B);
 		delay_ms(100);
 
 		adelante(max);
