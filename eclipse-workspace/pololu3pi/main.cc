@@ -7,13 +7,15 @@
 
 #include "pololu/3pi.h"
 
-void adelante (int velmax) {
+void adelante (int velmax){
 	OrangutanMotors::setSpeeds(velmax,velmax);
+
+
 }
 
-void giroIzquierda (int velmax) {
+void giroIzquierda (int velmax){
 	int tProp = 16000/velmax; //1600 numero sacado de ejemplos de pololu
-
+							//
 	OrangutanMotors::setSpeeds(-velmax,velmax);
 	delay_ms(tProp);
 }
