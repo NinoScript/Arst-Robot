@@ -18,6 +18,7 @@ void giroIzquierda (int velmax){
 							//
 	OrangutanMotors::setSpeeds(-velmax,velmax);
 	delay_ms(tProp);
+
 }
 
 void detenerse(){
