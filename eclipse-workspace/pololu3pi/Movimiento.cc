@@ -17,8 +17,8 @@ void Movimiento::girarDerecha () {
 	delay_ms(factor_giro);
 }
 
-void Movimiento::actualizarFactores(unsigned char nueva_velocidad_maxima) {
+void Movimiento::actualizarFactores (unsigned char nueva_velocidad_maxima) {
 	velocidad_maxima = nueva_velocidad_maxima;
 	factor_velocidad = 47500 / velocidad_maxima;
-	factor_giro      = 16000 / velocidad_maxima;
+	factor_giro = 16000 / velocidad_maxima;
 }

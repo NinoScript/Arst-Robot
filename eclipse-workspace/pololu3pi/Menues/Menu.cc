@@ -13,24 +13,26 @@ const char Menu::beep_button_a[] = "!c32";
 const char Menu::beep_button_b[] = "!e32";
 const char Menu::beep_button_c[] = "!g32";
 
-Menu::Menu(MenuItem ** funcs_array, unsigned int amount_of_funcs) :
-		MenuItem("Menu"), funcs_array(funcs_array), amount_of_funcs(
-				amount_of_funcs), menu_index(amount_of_funcs) {
+Menu::Menu (MenuItem ** funcs_array, unsigned int amount_of_funcs) :
+		MenuItem("Menu"),
+		funcs_array(funcs_array),
+		amount_of_funcs(amount_of_funcs),
+		menu_index(amount_of_funcs) {
 }
 
-void Menu::playSound(unsigned char button) {
+void Menu::playSound (unsigned char button) {
 	if (checkPressedState(button, BUTTON_A)) {
-	play_from_program_space(Menu::beep_button_a);
+		play_from_program_space(Menu::beep_button_a);
 	} else if (checkPressedState(button, BUTTON_B)) {
-	play_from_program_space(Menu::beep_button_b);
+		play_from_program_space(Menu::beep_button_b);
 
 	} else if (checkPressedState(button, BUTTON_C)) {
-	play_from_program_space(Menu::beep_button_c);
+		play_from_program_space(Menu::beep_button_c);
 	}
 }
 
-unsigned char Menu::open() {
-	set_motors(0,0);
+unsigned char Menu::open () {
+	set_motors(0, 0);
 	stop_playing();
 	red_led(0);
 	green_led(0);
@@ -50,7 +52,8 @@ unsigned char Menu::open() {
 		// the cursor will be blinking at the end of the option name
 
 		// wait for all buttons to be released, then a press
-		while(button_is_pressed(ANY_BUTTON));
+		while (button_is_pressed(ANY_BUTTON))
+			;
 		char button = wait_for_button_press(ANY_BUTTON);
 		Menu::playSound(button);
 
@@ -65,7 +68,8 @@ unsigned char Menu::open() {
 					return 0;
 				} else {
 					lcd_goto_xy(3, 1);
-					print_from_program_space(Menu::back_line2);
+					print_from_program_space(
+							Menu::back_line2);
 					lcd_goto_xy(0, 0);
 					// funcs_array[menu_index]();
 					button = funcs_array[menu_index]->open();

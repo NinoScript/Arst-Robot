@@ -18,7 +18,7 @@ public:
 	void avanzarUnCuadrado ();
 	void girarDerecha ();
 
-	void actualizarFactores(unsigned char nueva_velocidad_maxima);
+	void actualizarFactores (unsigned char nueva_velocidad_maxima);
 };
 
 #endif /* MOVIMIENTO_H_ */
