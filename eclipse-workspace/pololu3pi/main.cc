@@ -10,6 +10,7 @@
 
 int main() {
 	Movimiento movedor;
+
 	while (1) {
 
 		movedor.actualizarFactores();
