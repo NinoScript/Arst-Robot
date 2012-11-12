@@ -10,11 +10,11 @@
 
 Robot3PI::Robot3PI(Movimiento & movedor) :
 		movedor(movedor) {
+	max = 125;
 }
 
 int Robot3PI::main() {
 	OrangutanBuzzer::play(">g32>>c32");
-	max = 125;
 	while (1) {
 		max = ajustavelmax(max);
 		OrangutanPushbuttons::waitForButton(BUTTON_B);

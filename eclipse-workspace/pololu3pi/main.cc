@@ -13,7 +13,7 @@ int main() {
 
 	while (1) {
 
-		movedor.actualizarFactores();
+		movedor.actualizarFactores(200);
 
 		Robot3PI robot(movedor);
 		robot.main();
