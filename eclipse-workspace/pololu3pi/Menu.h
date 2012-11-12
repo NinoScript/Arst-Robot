@@ -84,7 +84,7 @@ class Menu: public MenuItem {
 public:
 	MenuItem ** funcs_array;
 	unsigned int amount_of_funcs;
-	unsigned int menu_index;
+	int menu_index;
 
 	Menu(MenuItem ** funcs_array, unsigned int amount_of_funcs);
 
