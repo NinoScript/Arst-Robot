@@ -11,14 +11,11 @@
 #include "Movimiento.h"
 
 class Robot3PI {
-	int max;
 	Movimiento & movedor;
 
 public:
 	Robot3PI (Movimiento & movedor);
-	int main ();
-
-	int ajustavelmax (int max);
+	int run ();
 };
 
 #endif /* ROBOT3PI_H_ */
