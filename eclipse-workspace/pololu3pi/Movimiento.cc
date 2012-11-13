@@ -10,19 +10,35 @@
 void Movimiento::avanzarUnCuadrado () {
 	OrangutanMotors::setSpeeds(velocidad_maxima_avance,
 				   velocidad_maxima_avance);
-	delay_ms(factor_velocidad);
+	delay_ms(tiempo_velocidad);
+	detenerse();
 }
 
-void Movimiento::girarDerecha () {
+void Movimiento::girarDer () {
 	OrangutanMotors::setSpeeds(velocidad_maxima_giro,
 				   -velocidad_maxima_giro);
-	delay_ms(factor_giro);
+	delay_ms(tiempo_giro);
+	detenerse();
 }
 
-void Movimiento::actualizarFactores (unsigned char new_velocidad_maxima_avance,
-				     unsigned char new_velocidad_maxima_giro) {
-	velocidad_maxima_avance = new_velocidad_maxima_avance;
-	velocidad_maxima_giro = new_velocidad_maxima_giro;
-	factor_velocidad = 47500 / velocidad_maxima_avance;
-	factor_giro = 16000 / velocidad_maxima_giro;
+void Movimiento::girarIzq () {
+	OrangutanMotors::setSpeeds(-velocidad_maxima_giro,
+				   velocidad_maxima_giro);
+	delay_ms(tiempo_giro);
+	detenerse();
+}
+
+void Movimiento::girarEnU () {
+	girarDer();
+	girarDer();
+	detenerse();
+}
+
+void Movimiento::detenerse () {
+	OrangutanMotors::setSpeeds(0, 0);
+}
+
+void Movimiento::actualizarFactores () {
+	tiempo_velocidad = 10 * factor_distancia / (velocidad_maxima_avance);
+	tiempo_giro = 10 * factor_angulo / velocidad_maxima_giro;
 }

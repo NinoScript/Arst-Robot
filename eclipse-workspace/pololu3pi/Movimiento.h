@@ -11,16 +11,27 @@
 #include "pololu/3pi.h"
 
 class Movimiento {
-	unsigned char velocidad_maxima_avance;
-	unsigned char velocidad_maxima_giro;
-	unsigned int factor_velocidad;
-	unsigned int factor_giro;
 public:
 	void avanzarUnCuadrado ();
-	void girarDerecha ();
+	void girarDer ();
+	void girarIzq ();
+	void girarEnU ();
+	void detenerse ();
 
-	void actualizarFactores (unsigned char velocidad_maxima_avance,
-				 unsigned char velocidad_maxima_giro);
+//	void actualizarFactores (unsigned char new_velocidad_maxima_avance,
+//				 unsigned char new_velocidad_maxima_giro,
+//				 unsigned int new_factor_distancia,
+//				 unsigned int new_factor_angulo);
+
+	uint8_t velocidad_maxima_avance;
+	uint8_t velocidad_maxima_giro;
+	uint16_t factor_distancia; //47500
+	uint16_t factor_angulo;    //16000
+	void actualizarFactores ();
+private:
+
+	uint16_t tiempo_velocidad;
+	uint16_t tiempo_giro;
 };
 
 #endif /* MOVIMIENTO_H_ */
