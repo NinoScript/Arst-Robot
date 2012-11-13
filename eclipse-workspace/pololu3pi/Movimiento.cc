@@ -20,6 +20,7 @@ void Movimiento::girarDer () {
 	detenerse();
 }
 
+<<<<<<< HEAD
 void Movimiento::girarIzq () {
 	OrangutanMotors::setSpeeds(-velocidad_maxima_giro,
 				   velocidad_maxima_giro);
@@ -67,3 +68,10 @@ int Movimiento::mover (point & posicion, point const & objetivo, point & direcci
 	return posicion.distancia(objetivo);
 
 }
+=======
+void Movimiento::actualizarFactores(unsigned char nueva_velocidad_maxima) {
+	velocidad_maxima = nueva_velocidad_maxima;
+	factor_velocidad = 47500 / velocidad_maxima;
+	factor_giro      = 16000 / velocidad_maxima;
+}
+>>>>>>> Revert "Se añaden clase point. Comienza programación de mover inteligentemente"
