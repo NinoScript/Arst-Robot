@@ -8,15 +8,19 @@
 #ifndef MOVIMIENTO_H_
 #define MOVIMIENTO_H_
 
-#include "pololu/3pi.h"
+#include <pololu/3pi.h>
+#include "point.h"
 
 class Movimiento {
 public:
+
 	void avanzarUnCuadrado ();
 	void girarDer ();
 	void girarIzq ();
 	void girarEnU ();
 	void detenerse ();
+
+	int mover (point & posicion, point const & objetivo, point & direccion);
 
 //	void actualizarFactores (unsigned char new_velocidad_maxima_avance,
 //				 unsigned char new_velocidad_maxima_giro,
