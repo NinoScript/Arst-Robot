@@ -8,6 +8,10 @@
 #ifndef VALUECHOOSER_H_
 #define VALUECHOOSER_H_
 
+#define CREAR_VALUE_CHOOSER(obj, var, titulo, minv, defv, maxv, step) \
+	obj.var = defv; \
+	ValueChooser<typeof(obj.var)> menu_##var (obj.var, minv, maxv, step, PSTR(titulo))
+
 #include "MenuItem.h"
 
 template<typename T>
@@ -16,13 +20,13 @@ public:
 	T & value;
 	T minimum, maximum, step_size;
 	ValueChooser (T & value, T minimum, T maximum, T step_size,
-		      const char * titulo);
+	              pgmspace_string titulo);
 	virtual unsigned char open ();
 };
 
 template<typename T>
 ValueChooser<T>::ValueChooser (T & value, T minimum, T maximum, T step_size,
-			       const char * titulo) :
+                               pgmspace_string titulo) :
 		MenuItem(titulo),
 		value(value),
 		minimum(minimum),
@@ -30,6 +34,8 @@ ValueChooser<T>::ValueChooser (T & value, T minimum, T maximum, T step_size,
 		step_size(step_size) {
 
 }
+
+typedef int16_t bignum_t;
 
 template<typename T>
 unsigned char ValueChooser<T>::open () {
@@ -42,13 +48,16 @@ unsigned char ValueChooser<T>::open () {
 	OrangutanLCD::print("+C");
 	OrangutanLCD::gotoXY(0, 0);
 
-	while (button_is_pressed(ANY_BUTTON));
+	while (button_is_pressed(ANY_BUTTON))
+		;
 	char button = wait_for_button_press(ANY_BUTTON);
 
 	if (checkPressedState(button, BUTTON_A)) {
-		value = max(value - step_size, static_cast<int>(minimum));
+		value = max(static_cast<bignum_t>(value - step_size),
+			    static_cast<bignum_t>(minimum));
 	} else if (checkPressedState(button, BUTTON_C)) {
-		value = min(value + step_size, static_cast<int>(maximum));
+		value = min(static_cast<bignum_t>(value + step_size),
+			    static_cast<bignum_t>(maximum));
 	}
 	return button;
 }
