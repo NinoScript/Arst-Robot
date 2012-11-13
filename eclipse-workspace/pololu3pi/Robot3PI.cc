@@ -6,14 +6,16 @@
  */
 
 #include "Robot3PI.h"
-#include <pololu/3pi.h>
+#include "Arst.h"
+
+#include "Math/Point.h"
 
 Robot3PI::Robot3PI (Movimiento & movedor) :
 		movedor(movedor) {
 }
 
 int Robot3PI::run () {
-
+	Point e;
 	movedor.avanzarUnCuadrado();
 	movedor.girarDerecha();
 

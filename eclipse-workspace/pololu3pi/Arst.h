@@ -9,21 +9,7 @@
 #define ARST_H_
 
 #include <pololu/3pi.h>
-
-template<typename T>
-T max (T a, T b) {
-	return a > b ? a : b;
-}
-
-template<typename T>
-T min (T a, T b) {
-	return a < b ? a : b;
-}
-
-template<typename T>
-T abs (T a) {
-	return a < 0 ? -a : a;
-}
+#include "Math/Math.h"
 
 #define checkPressedState(button_list, button_to_check) (button_list & button_to_check)
 
