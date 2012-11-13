@@ -27,7 +27,6 @@ void MainMenu::playSound (unsigned char button) {
 		play_from_program_space(MainMenu::beep_button_a);
 	} else if (checkPressedState(button, BUTTON_B)) {
 		play_from_program_space(MainMenu::beep_button_b);
-
 	} else if (checkPressedState(button, BUTTON_C)) {
 		play_from_program_space(MainMenu::beep_button_c);
 	}

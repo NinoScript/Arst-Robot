@@ -17,12 +17,7 @@ public:
 	int main ();
 private:
 	static const char back_arrow[] PROGMEM;
-//	void aplicarValores ();
 	Movimiento movedor;
-//	unsigned char velocidad_maxima_avance;
-//	unsigned char velocidad_maxima_giro;
-//	unsigned int factor_distancia;
-//	unsigned int factor_angulo;
 };
 
 #endif /* ARST3PI_H_ */

@@ -23,7 +23,19 @@ int Arst3Pi::main () {
 	OrangutanLCD::clear();
 	OrangutanLCD::print("3Pi-ARST");
 	OrangutanBuzzer::play(">g32>>c32>g32>>c32>g32>>c32");
-	while (OrangutanBuzzer::isPlaying())
+
+	/* Mostrar estado de las baterías al inicio */
+	while (!button_is_pressed(ALL_BUTTONS)) {
+		int bat = read_battery_millivolts();
+
+		lcd_goto_xy(0, 1);
+		print_long(bat);
+		print(" mV");
+
+		delay_ms(100);
+	}
+
+	while (button_is_pressed(ALL_BUTTONS))
 		;
 
 	/* Cargar el caracter "devolverse", lo ocupan varias cosas en \6 */
