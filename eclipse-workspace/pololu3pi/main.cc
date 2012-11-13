@@ -15,6 +15,7 @@ const char back_arrow[] PROGMEM = { 0b00000, 0b00010, 0b00001, 0b00101, 0b01001,
 				    0b11110, 0b01000, 0b00100, };
 
 int main () {
+
 	/* Hacer unos ruiditos al inicio y mostrar algo en la pantalla */
 	OrangutanLCD::clear();
 	OrangutanLCD::print("3Pi-ARST");
