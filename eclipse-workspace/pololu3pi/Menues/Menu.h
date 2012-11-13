@@ -5,21 +5,18 @@
  *      Author: ninoscript
  */
 
-#ifndef MAINMENU_H_
-#define MAINMENU_H_
+#ifndef MENU_H_
+#define MENU_H_
 
 #include "MenuItem.h"
-#include "../utils/Binder.h"
 
-class MainMenu : public MenuItem {
+class Menu : public MenuItem {
 public:
 	MenuItem ** funcs_array;
 	int amount_of_funcs;
 	int menu_index;
-	Caller * callback;
 
-	MainMenu (MenuItem ** funcs_array, unsigned int amount_of_funcs,
-		  Caller * callback);
+	Menu (MenuItem ** funcs_array, unsigned int amount_of_funcs);
 
 	virtual unsigned char open ();
 	static void playSound (unsigned char button);
@@ -33,4 +30,4 @@ private:
 
 };
 
-#endif /* MAINMENU_H_ */
+#endif /* MENU_H_ */

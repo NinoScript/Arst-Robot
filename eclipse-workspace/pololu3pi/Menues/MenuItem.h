@@ -8,16 +8,14 @@
 #ifndef MENUITEM_H_
 #define MENUITEM_H_
 
-#include "../Arst.h"
-typedef const PROGMEM char * pgmspace_string;
-
+#include "../Arst.h" // Para usar PROGMEM
 class MenuItem {
 protected:
-	MenuItem (pgmspace_string titulo) :
+	MenuItem (const char * titulo) :
 			titulo(titulo) {
 	}
 public:
-	pgmspace_string titulo;
+	const char * titulo;
 	virtual unsigned char open () {
 		return 0;
 	}

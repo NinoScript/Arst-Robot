@@ -18,16 +18,10 @@ public:
 	Point (int8_t x, int8_t y);
 
 	// Taxicab Geometry
-	int8_t taxicabDistanceTo (Point const & objetivo) const;
-	Point taxicabDirection () const;
+	int8_t TaxicabDistanceTo (Point const & objetivo) const;
 
-	Point rotated90CW () const;
-	Point rotated90CCW () const;
-
-	Point operator- () const;
 	Point operator- (const Point &otro) const;
 	Point operator+ (const Point &otro) const;
-	bool operator== (const Point &otro) const;
 	Point operator= (const Point &otro);
 	Point operator-= (const Point &otro);
 	Point operator+= (const Point &otro);
