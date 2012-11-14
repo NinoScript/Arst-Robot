@@ -7,8 +7,7 @@
 
 #include "Movimiento.h"
 
-Movimiento::Movimiento() {
-	 robot.init(2000);
+Movimiento::Movimiento(Pololu3pi & robot) : robot(robot) {
 }
 
 void Movimiento::calibrar() {
@@ -25,14 +24,13 @@ void Movimiento::calibrar() {
 	    // IR_EMITTERS_ON argument means that the IR LEDs will be
 	    // turned on during the reading, which is usually what you
 	    // want.
-	    movedor.calibrar();
+	    robot.calibrateLineSensors(IR_EMITTERS_ON);
 
 	    // Since our counter runs to 80, the total delay will be
 	    // 80*20 = 1600 ms.
 	    delay(20);
 	  }
 	  OrangutanMotors::setSpeeds(0, 0);
-	robot.calibrateLineSensors(IR_EMITTERS_ON);
 }
 
 void Movimiento::seguirLineaHastaCruce() {

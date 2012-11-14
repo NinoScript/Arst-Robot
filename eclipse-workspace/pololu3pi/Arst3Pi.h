@@ -15,9 +15,11 @@
 class Arst3Pi {
 public:
 	int main ();
+	Arst3Pi ();
 private:
 	static const char back_arrow[] PROGMEM;
 	Movimiento movedor;
+	Pololu3pi robot;
 };
 
 #endif /* ARST3PI_H_ */

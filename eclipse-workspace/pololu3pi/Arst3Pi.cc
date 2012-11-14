@@ -17,8 +17,11 @@
 const char Arst3Pi::back_arrow[] PROGMEM
 = { 0b00000, 0b00010, 0b00001, 0b00101, 0b01001, 0b11110, 0b01000, 0b00100, };
 
-int Arst3Pi::main () {
+Arst3Pi::Arst3Pi () :
+		movedor(robot) {
+}
 
+int Arst3Pi::main () {
 	/* Hacer unos ruiditos al inicio y mostrar algo en la pantalla */
 	OrangutanLCD::clear();
 	OrangutanLCD::print("3Pi-ARST");
@@ -38,6 +41,10 @@ int Arst3Pi::main () {
 	while (button_is_pressed(ALL_BUTTONS))
 		;
 
+	/* Se preparan los sensores para que se puedan ocupar después */
+	robot.init(2000);
+	movedor.calibrar();
+
 	/* Cargar el caracter "devolverse", lo ocupan varias cosas en \6 */
 	lcd_load_custom_character(Arst3Pi::back_arrow, 6);
 
@@ -51,12 +58,13 @@ int Arst3Pi::main () {
 	CREAR_VALUE_CHOOSER(movedor, factor_angulo, //
 			    "F.angulo", 500, 1500, 3000, 100);
 	CREAR_METHOD_INVOKER(menu_giro_test, movedor, girarDer, "giro");
+	CREAR_METHOD_INVOKER(menu_calibrador, movedor, calibrar, "calibrar");
 
 	/* luego meto los elementos al menú y creo el menú */
 	MenuItem* menu_items[] = { &menu_velocidad_maxima_avance,
 				   &menu_velocidad_maxima_giro,
 				   &menu_factor_distancia, &menu_factor_angulo,
-				   &menu_giro_test };
+				   &menu_giro_test, &menu_calibrador };
 
 	/* esto se llama al entrar al menu principal
 	 * o al salir de alguno de sus elementos */
@@ -67,10 +75,10 @@ int Arst3Pi::main () {
 				&aplicador);
 
 	Algoritmo::calibrarSensores();
-	while (1)
+	while (1) {
 		menu_principal.open();
 
-		Algoritmo robot(movedor);
+		Algoritmo algoritmo(movedor);
 
 		clear();
 		print("Press B");
@@ -83,7 +91,7 @@ int Arst3Pi::main () {
 		delay_ms(500);
 
 //		for (unsigned char i = 0; i < veces; ++i)
-		robot.run();
+		algoritmo.run();
 	}
 
 	return 0;

@@ -12,7 +12,7 @@
 
 class Movimiento {
 public:
-	Movimiento ();
+	Movimiento (Pololu3pi & robot);
 	void seguirLineaHastaCruce();
 	void avanzarUnCuadrado (uint8_t cm);
 	void girarDer ();
@@ -35,7 +35,7 @@ private:
 
 	uint16_t tiempo_velocidad;
 	uint16_t tiempo_giro;
-	Pololu3pi robot;
+	Pololu3pi & robot;
 	unsigned int sensors[5];
 
 	static const char levels[] ;
