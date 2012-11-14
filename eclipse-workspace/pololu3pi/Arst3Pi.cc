@@ -23,16 +23,23 @@ Arst3Pi::Arst3Pi () :
 
 void Arst3Pi::lecturaSensores(){
 	uint8_t button;
+
+//	for (int i = 5; i<20; i+=1) {
+//		movedor.avanzarUnCuadrado(i);
+//		OrangutanMotors::setSpeeds(0, 0);
+//		OrangutanPushbuttons::waitForButton(BUTTON_B);
+//		delay_ms(500);
+//	}
 	do {
 		button = OrangutanPushbuttons::isPressed(ANY_BUTTON);
+		OrangutanLCD::clear();
 		OrangutanLCD::gotoXY(0, 0);
-		OrangutanLCD::print("        ");
 //		OrangutanLCD::gotoXY(0, 0);
-//		OrangutanLCD::print(robot.readLine(sensors, IR_EMITTERS_ON));
-		robot.readLine(sensors, IR_EMITTERS_ON);
-		OrangutanLCD::gotoXY(0, 0);
+		OrangutanLCD::print(robot.readLine(sensors, IR_EMITTERS_ON));
+//		robot.readLine(sensors, IR_EMITTERS_ON);
+		OrangutanLCD::gotoXY(0, 1);
 		OrangutanLCD::print(sensors[0]);
-		OrangutanLCD::gotoXY(4, 0);
+		OrangutanLCD::gotoXY(4, 1);
 		OrangutanLCD::print(sensors[4]);
 		delay_ms(200);
 	} while (!button);

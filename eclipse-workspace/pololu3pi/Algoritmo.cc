@@ -11,12 +11,12 @@
 #include "Math/Point.h"
 
 Algoritmo::Algoritmo (Movimiento & movedor) :
-		movedor(movedor) {
-	puntos[0] = Point(1, 0);
-	puntos[1] = Point(1, 1);
+		movedor(movedor), rojo(3, 4) {
+	puntos[0] = Point(2, 0);
+	puntos[1] = Point(2, 1);
 	puntos[2] = Point(1, 2);
-	puntos[3] = Point(2, 2);
-	puntos[4] = Point(2, 1);
+	puntos[3] = Point(4, 3);
+	puntos[4] = Point(2, 5);
 
 	direccion = Point(0, 1);
 }
@@ -76,9 +76,24 @@ void Algoritmo::ejecutarSiguienteMovimiento (Point const & objetivo) {
 }
 
 void Algoritmo::avanzar () {
-	movedor.avanzarUnCuadrado(5);
-	movedor.avanzarUnCuadrado(0);
 	posicion += direccion;
+
+	if (posicion.x == rojo.x || posicion.y == rojo.y) {
+		uint8_t distancia;
+		if (direccion.y == 0) { //Estamos avanzando en X
+			distancia = 10;
+		} else { //Estamos avanzando en Y
+			distancia = 12;
+		}
+		distancia-=1; //para el frenado
+		movedor.avanzarUnCuadrado(distancia);
+//		movedor.avanzarUnCuadrado(0); // ajustarse al final de la linea
+		movedor.frenarSuave();
+	} else { // Podemos seguir lineas
+		movedor.avanzarUnCuadrado(5); // avanzar un poco
+		movedor.avanzarUnCuadrado(0); // seguir linea
+		movedor.frenarSuave();
+	}
 }
 
 void Algoritmo::girar(Point nueva_direccion) {

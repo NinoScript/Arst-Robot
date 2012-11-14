@@ -29,6 +29,8 @@ private:
 	lista_puntos_t puntos;
 	Point posicion;
 	Point direccion;
+
+	const Point rojo;
 };
 
 #endif /* ALGORITMO_H_ */

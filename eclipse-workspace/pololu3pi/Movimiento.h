@@ -20,6 +20,7 @@ public:
 	void girarEnU ();
 	void detenerse ();
 	void calibrar();
+	void frenarSuave ();
 
 //	void actualizarFactores (unsigned char new_velocidad_maxima_avance,
 //				 unsigned char new_velocidad_maxima_giro,

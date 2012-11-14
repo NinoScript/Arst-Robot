@@ -102,6 +102,9 @@ void Movimiento::seguirLineaHastaCruce() {
 		}
 
 	}
+}
+
+void Movimiento::frenarSuave () {
 	// Drive straight while slowing down, as before.
 	const uint8_t pasos = 5;
 	for (uint8_t i = pasos-1; i>0; i--) {
