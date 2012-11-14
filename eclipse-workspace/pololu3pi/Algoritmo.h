@@ -18,6 +18,7 @@ class Algoritmo {
 public:
 	Algoritmo (Movimiento & movedor);
 	int run ();
+	static void calibrarSensores ();
 
 private:
 	void ejecutarSiguienteMovimiento (Point const & objetivo);

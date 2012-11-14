@@ -12,11 +12,14 @@
 
 class Movimiento {
 public:
-	void avanzarUnCuadrado ();
+	Movimiento ();
+	void seguirLineaHastaCruce();
+	void avanzarUnCuadrado (uint8_t cm);
 	void girarDer ();
 	void girarIzq ();
 	void girarEnU ();
 	void detenerse ();
+	void calibrar();
 
 //	void actualizarFactores (unsigned char new_velocidad_maxima_avance,
 //				 unsigned char new_velocidad_maxima_giro,
@@ -32,6 +35,12 @@ private:
 
 	uint16_t tiempo_velocidad;
 	uint16_t tiempo_giro;
+	Pololu3pi robot;
+	unsigned int sensors[5];
+
+	static const char levels[] ;
+	void load_custom_characters();
+	void display_readings(const unsigned int *calibrated_values);
 };
 
 #endif /* MOVIMIENTO_H_ */

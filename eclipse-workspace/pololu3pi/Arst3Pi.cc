@@ -47,7 +47,7 @@ int Arst3Pi::main () {
 	CREAR_VALUE_CHOOSER(movedor, velocidad_maxima_giro, //
 			    "V.giro", 50, 80, 180, 5);
 	CREAR_VALUE_CHOOSER(movedor, factor_distancia, //
-			    "F.dist", 1000, 4750, 8000, 250);
+			    "F.dist", 100, 500, 900, 25);
 	CREAR_VALUE_CHOOSER(movedor, factor_angulo, //
 			    "F.angulo", 500, 1500, 3000, 100);
 	CREAR_METHOD_INVOKER(menu_giro_test, movedor, girarDer, "giro");
@@ -66,7 +66,8 @@ int Arst3Pi::main () {
 				sizeof(menu_items) / sizeof(menu_items[0]),
 				&aplicador);
 
-	while (1) {
+	Algoritmo::calibrarSensores();
+	while (1)
 		menu_principal.open();
 
 		Algoritmo robot(movedor);

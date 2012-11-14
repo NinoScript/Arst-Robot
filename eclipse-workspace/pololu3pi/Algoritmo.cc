@@ -12,20 +12,27 @@
 
 Algoritmo::Algoritmo (Movimiento & movedor) :
 		movedor(movedor) {
-	puntos[0] = Point(2, 0);
-	puntos[1] = Point(2, 2);
-	puntos[2] = Point(0, 4);
-	puntos[3] = Point(4, 4);
-	puntos[4] = Point(3, 1);
+	puntos[0] = Point(1, 0);
+	puntos[1] = Point(1, 1);
+	puntos[2] = Point(1, 2);
+	puntos[3] = Point(2, 2);
+	puntos[4] = Point(2, 1);
+
+	direccion = Point(0, 1);
+}
+
+void Algoritmo::calibrarSensores(){
+
 }
 
 int Algoritmo::run () {
 //	Point e;
 //	movedor.avanzarUnCuadrado();
 //	movedor.girarDerecha();
+//	calibrarSensores();
+//	delay(500);
 
 	posicion = puntos[0];
-	direccion = Point(1, 0);
 
 	for (uint8_t i = 1; i < puntos.size(); ++i) {
 		Point & objetivo = puntos[i];
@@ -36,11 +43,13 @@ int Algoritmo::run () {
 
 		/* Si estamos aquí es porque ya llegamos a un punto
 		 * ergo, podemos hacer ruiditos y ser felices */
-		OrangutanBuzzer::playFrequency(440*i, 2000, 255);
-		movedor.girarDer();
-		movedor.girarIzq();
-		movedor.girarIzq();
-		movedor.girarDer();
+		movedor.detenerse();
+		OrangutanBuzzer::playFrequency(440*i, 1000, 255);
+		delay_ms(1000);
+//		movedor.girarDer();
+//		movedor.girarIzq();
+//		movedor.girarIzq();
+//		movedor.girarDer();
 	}
 
 	return 0;
@@ -67,7 +76,8 @@ void Algoritmo::ejecutarSiguienteMovimiento (Point const & objetivo) {
 }
 
 void Algoritmo::avanzar () {
-	movedor.avanzarUnCuadrado();
+	movedor.avanzarUnCuadrado(5);
+	movedor.avanzarUnCuadrado(0);
 	posicion += direccion;
 }
 
