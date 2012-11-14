@@ -26,9 +26,10 @@ void Arst3Pi::lecturaSensores(){
 	do {
 		button = OrangutanPushbuttons::isPressed(ANY_BUTTON);
 		OrangutanLCD::gotoXY(0, 0);
-		OrangutanLCD::print("    ");
+		OrangutanLCD::print("        ");
 		OrangutanLCD::gotoXY(0, 0);
 		OrangutanLCD::print(robot.readLine(sensors, IR_EMITTERS_ON));
+		delay_ms(200);
 	} while (!button);
 }
 
