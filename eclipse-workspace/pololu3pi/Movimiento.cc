@@ -96,16 +96,21 @@ void Movimiento::seguirLineaHastaCruce() {
 		// sensors 0 and 4 for detecting lines going to the left and
 		// right.
 
-		if (sensors[1] < 100 && sensors[2] < 100 && sensors[3] < 100) {
-			// There is no line visible ahead, and we didn't see any
-			// intersection.  Must be a dead end.
-			return;
-		} else if (sensors[0] > 200 || sensors[4] > 200) {
+		if (sensors[0] > 200 || sensors[4] > 200) {
 			// Found an intersection.
-			return;
+			break;
 		}
 
 	}
+	// Drive straight while slowing down, as before.
+	const uint8_t pasos = 5;
+	for (uint8_t i = pasos-1; i>0; i--) {
+		uint8_t velocidad = velocidad_maxima_avance*i/pasos;
+		OrangutanMotors::setSpeeds(velocidad,velocidad);
+		delay_ms(200/pasos);
+	}
+	OrangutanMotors::setSpeeds(0,0);
+	delay_ms(50);
 }
 
 const char Movimiento::levels[]  = { 0b00000, 0b00000, 0b00000, 0b00000,
