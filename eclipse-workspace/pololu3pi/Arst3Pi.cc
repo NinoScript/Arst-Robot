@@ -21,6 +21,17 @@ Arst3Pi::Arst3Pi () :
 		movedor(robot) {
 }
 
+void Arst3Pi::lecturaSensores(){
+	uint8_t button;
+	do {
+		button = OrangutanPushbuttons::isPressed(ANY_BUTTON);
+		OrangutanLCD::gotoXY(0, 0);
+		OrangutanLCD::print("    ");
+		OrangutanLCD::gotoXY(0, 0);
+		OrangutanLCD::print(robot.readLine(sensors, IR_EMITTERS_ON));
+	} while (!button);
+}
+
 int Arst3Pi::main () {
 	/* Hacer unos ruiditos al inicio y mostrar algo en la pantalla */
 	OrangutanLCD::clear();
@@ -58,13 +69,14 @@ int Arst3Pi::main () {
 	CREAR_VALUE_CHOOSER(movedor, factor_angulo, //
 			    "F.angulo", 500, 1500, 3000, 100);
 	CREAR_METHOD_INVOKER(menu_giro_test, movedor, girarDer, "giro");
+	CREAR_METHOD_INVOKER(menu_leer_sensores, *this, lecturaSensores, "Sensores");
 	CREAR_METHOD_INVOKER(menu_calibrador, movedor, calibrar, "calibrar");
 
 	/* luego meto los elementos al menú y creo el menú */
 	MenuItem* menu_items[] = { &menu_velocidad_maxima_avance,
 				   &menu_velocidad_maxima_giro,
 				   &menu_factor_distancia, &menu_factor_angulo,
-				   &menu_giro_test, &menu_calibrador };
+				   &menu_giro_test, &menu_calibrador, &menu_leer_sensores };
 
 	/* esto se llama al entrar al menu principal
 	 * o al salir de alguno de sus elementos */

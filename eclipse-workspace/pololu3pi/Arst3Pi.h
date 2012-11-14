@@ -20,6 +20,8 @@ private:
 	static const char back_arrow[] PROGMEM;
 	Movimiento movedor;
 	Pololu3pi robot;
+	void lecturaSensores();
+	unsigned int sensors[5];
 };
 
 #endif /* ARST3PI_H_ */
