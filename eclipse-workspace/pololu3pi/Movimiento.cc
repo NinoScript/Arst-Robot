@@ -96,7 +96,7 @@ void Movimiento::seguirLineaHastaCruce() {
 		// sensors 0 and 4 for detecting lines going to the left and
 		// right.
 
-		if (sensors[0] > 200 || sensors[4] > 200) {
+		if (sensors[0] > 200 && sensors[4] > 200) {
 			// Found an intersection.
 			break;
 		}
